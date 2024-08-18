@@ -1,0 +1,29 @@
+// styles/Intro.module.scss
+.container {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+}
+
+.svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pulse-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: pulseAnimation 5s linear infinite;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        stroke-dashoffset: 1000;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}
