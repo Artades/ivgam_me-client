@@ -1,0 +1,49 @@
+// Variables for dark and light themes
+
+// Primary Colors
+$color-dark-background: #080B10;
+$color-dark-primary: #081C3C;
+$color-dark-accent: #5483B3;
+$color-dark-highlight: #C1E8FF;
+
+$color-light-background: #C1E8FF;
+$color-light-primary: #5483B3;
+$color-light-accent: #081C3C;
+$color-light-highlight: #080B10;
+
+// Typography
+$font-primary: 'Arial, sans-serif';
+$font-secondary: 'Roboto, sans-serif';
+
+// Border radius
+$border-radius: 8px;
+
+// Box shadows for themes
+$box-shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-dark: 0px 4px 6px rgba(255, 255, 255, 0.1);
+
+// Spacing (padding/margins)
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+
+// Transition (for smooth theme switching)
+$transition-default: all 0.3s ease-in-out;
+
+// Theme Mixins
+
+@mixin theme-dark {
+  background-color: $color-dark-background;
+  color: $color-dark-highlight;
+  box-shadow: $box-shadow-dark;
+}
+
+@mixin theme-light {
+  background-color: $color-light-background;
+  color: $color-light-highlight;
+  box-shadow: $box-shadow-light;
+}
+
+// Utility classes
+
+

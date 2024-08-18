@@ -1,0 +1,135 @@
+// Импортируем переменные и миксины
+@import './variables.scss';
+
+// Global resets
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    line-height: 1.6;
+    transition: $transition-default;
+}
+
+// Темы
+
+body.dark-theme {
+    background-color: $color-dark-background;
+    color: $color-dark-highlight;
+
+    a {
+        color: $color-dark-accent;
+    }
+
+   
+
+    input,
+    textarea,
+    select {
+        background-color: $color-dark-primary;
+        color: $color-dark-highlight;
+        border: 1px solid lighten($color-dark-primary, 10%);
+    }
+}
+
+body.light-theme {
+    background-color: $color-light-background;
+    color: $color-light-highlight;
+
+    a {
+        color: $color-light-accent;
+    }
+
+    input,
+    textarea,
+    select {
+        background-color: $color-light-primary;
+        color: $color-light-highlight;
+        border: 1px solid darken($color-light-primary, 10%);
+    }
+}
+
+// Стили для ссылок
+a {
+    text-decoration: none;
+    transition: $transition-default;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Заголовки
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-secondary;
+    margin-bottom: $spacing-medium;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+// Utility классы для отступов
+.mt-small {
+    margin-top: $spacing-small;
+}
+
+.mt-medium {
+    margin-top: $spacing-medium;
+}
+
+.mt-large {
+    margin-top: $spacing-large;
+}
+
+.mb-small {
+    margin-bottom: $spacing-small;
+}
+
+.mb-medium {
+    margin-bottom: $spacing-medium;
+}
+
+.mb-large {
+    margin-bottom: $spacing-large;
+}
+
+// Формы
+input,
+textarea,
+select {
+    padding: $spacing-small;
+    border-radius: $border-radius;
+    border: 1px solid lighten($color-dark-primary, 10%);
+    font-size: 1rem;
+    transition: $transition-default;
+
+    &:focus {
+        outline: none;
+        border-color: $color-dark-accent;
+    }
+}
+
