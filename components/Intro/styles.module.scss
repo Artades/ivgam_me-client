@@ -5,139 +5,110 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background:
-       
-   
-        url('../../public/assets/Intro/grid-pattern.svg') repeat,
-        /* Паттерн */
-        radial-gradient(circle at center,
-            #041A3E 0%,
-            #04193b 20%,
-            #0a101c 50%,
-            #080b10 80%,
-            #060b12 100%
-            /* Градиент */
-        );
-
-
-
-
+    background: 
+    url('../../public/assets/Intro/grid-pattern.svg') repeat,
+    /* Паттерн */
+    radial-gradient(circle at center,
+        #041A3E 0%,
+        #04193b 20%,
+        #0a101c 50%,
+        #080b10 80%,
+        #060b12 100%
+        /* Градиент */
+    );
+  
     .introContent {
-        width: 100%;
-        height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      z-index: 1;
+      color: var(--color-light);
+  
+      .introHeading {
+        font-weight: 800;
+        font-size: 4.2rem;
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        z-index: 1;
-
-        .introHeading {
-            font-weight: 800;
-            max-width: 40%;
-            font-size: 4.2rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            & span:nth-child(2) {
-                color: var(--color-accent);
-                display: inline-flex;
-                align-items: center;
-
-                & svg {
-                    color: var(--color-accent);
-                    filter: brightness(70%);
-                    width: 3rem;
-                    height: 3rem;
-                }
-            }
+        color: var(--color-light);
+  
+        & span {
+          display: inline-block;
+          opacity: 0;
+          transform: translateY(50px);
         }
-
-        .introText {
-            font-weight: 300;
-            max-width: 50%;
-            font-size: 1.2rem;
-            text-align: center;
-            color: var(--color-light);
-            opacity:60%;
-            
-            text-rendering: optimizeLegibility;
-
-            & span {
-                color: var(--color-accent);
-                opacity: 1;
-            }
+  
+        & span:nth-child(2) {
+          color: var(--color-accent);
         }
+      }
+  
+      .introText {
+        font-weight: 300;
+        max-width: 60%;
+        font-size: 1.2rem;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(30px);
+        color: var(--color-light);
+        text-rendering: optimizeLegibility;
+        line-height: 1.6;
+  
+        & span {
+          color: var(--color-accent);
+          opacity: 1;
+        }
+      }
+  
     }
-
+  
     /* Медиазапросы */
     @media (max-width: 1200px) {
-        .introContent {
-            .introHeading {
-                font-size: 3.5rem;
-                max-width: 60%;
-
-                & span {
-                    & svg {
-                        color: var(--color-accent);
-                        filter: brightness(70%);
-                        width: 2.5rem;
-                        height: 2.5rem;
-                    }
-                }
-            }
-
-            .introText {
-                font-size: 1.1rem;
-                max-width: 70%;
-            }
+      .introContent {
+        .introHeading {
+          font-size: 3.5rem;
+          max-width: 70%;
         }
+        .introText {
+          font-size: 1.1rem;
+          max-width: 80%;
+        }
+      }
     }
-
-
-
+  
     @media (max-width: 768px) {
-        .introContent {
-            .introHeading {
-                font-size: 3rem;
-                max-width: 80%;
-
-                & span {
-                    & svg {
-                        color: var(--color-accent);
-                        filter: brightness(70%);
-                        width: 2rem;
-                        height: 2rem;
-                    }
-                }
-            }
-
-            .introText {
-                font-size: 1.2rem;
-                max-width: 90%;
-
-            }
+      .introContent {
+        .introHeading {
+          font-size: 3rem;
+          max-width: 80%;
         }
+        .introText {
+          font-size: 1.2rem;
+          max-width: 90%;
+        }
+      }
     }
-
+  
     @media (max-width: 576px) {
-        .introContent {
-            gap: 1rem;
-
-            .introHeading {
-                font-size: 2.5rem;
-                max-width: 90%;
-            }
-
-            .introText {
-                font-size: 1.1rem;
-                max-width: 100%;
-            }
+      .introContent {
+        gap: 1rem;
+  
+        .introHeading {
+          font-size: 2.5rem;
+          max-width: 90%;
         }
+  
+        .introText {
+          font-size: 1.1rem;
+          max-width: 100%;
+        }
+      }
     }
 
 
-}
+    
+  }
+  

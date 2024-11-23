@@ -1,12 +1,13 @@
-
 .button {
     display: inline-flex;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    border-radius: var(--rad-larger);
-    transition: background-color 0.3s;
+    border-radius: var(--rad-medium);
+    transition: background-color .3s;
     padding: 1rem;
+    user-select: none;
+    outline:  0.1rem solid var(--color-accent);
 
     &.small {
         font-size: var(--fz-small);
@@ -36,7 +37,6 @@
     &.primary {
         background-color: var(--color-accent);
         color: white;
-
     }
 
     &.outline {
@@ -60,9 +60,14 @@
     }
 
     &:hover {
-        background-color: var(--color-accent);
-        outline: 0.1rem solid rgba(91, 207, 253, 0.9);
-        
-
+        background-color: rgba(24, 170, 255, 0.5);
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px); 
     }
+    &:active {
+        outline: 0.1srem solid var(--color-accent);
+        transform: scale(0.95);
+    }  
+     
+   
 }
