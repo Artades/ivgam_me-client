@@ -1,19 +1,15 @@
 // Variables for dark and light themes
 
 // Primary Colors
-$color-dark-background: #080B10;
-$color-dark-primary: #081C3C;
-$color-dark-accent: #5483B3;
-$color-dark-highlight: #C1E8FF;
+$dark: #080B10;
+$dark-blue: #081C3C;
+$accent: #18aaff;
+$light: #C1E8FF;
 
-$color-light-background: #C1E8FF;
-$color-light-primary: #5483B3;
-$color-light-accent: #081C3C;
-$color-light-highlight: #080B10;
 
-// Typography
-$font-primary: 'Arial, sans-serif';
-$font-secondary: 'Roboto, sans-serif';
+
+
+
 
 // Border radius
 $border-radius: 8px;
@@ -30,20 +26,24 @@ $spacing-large: 24px;
 // Transition (for smooth theme switching)
 $transition-default: all 0.3s ease-in-out;
 
-// Theme Mixins
+$rad-small: 4px;
+$rad-medium: 8px;
+$rad-large: 16px;
+$rad-circle: 50%;
 
-@mixin theme-dark {
-  background-color: $color-dark-background;
-  color: $color-dark-highlight;
-  box-shadow: $box-shadow-dark;
-}
 
-@mixin theme-light {
-  background-color: $color-light-background;
-  color: $color-light-highlight;
-  box-shadow: $box-shadow-light;
-}
+$fz-xs: 0.75em; // 12px / 16px
+$fz-sm: 0.875em; // 14px / 16px
+$fz-md: 1em; // 16px / 16px
+$fz-lg: 1.25em; // 20px / 16px
+$fz-xl: 1.5em; // 24px / 16px
+$fz-xxl: 2em; // 32px / 16px
 
-// Utility classes
 
+$spacing-xs: 0.25em; // 4px
+$spacing-sm: 0.5em; // 8px
+$spacing-md: 1em; // 16px
+$spacing-lg: 1.5em; // 24px
+$spacing-xl: 2em; // 32px
+$spacing-xxl: 3em;
 

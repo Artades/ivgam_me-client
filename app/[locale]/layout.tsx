@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import {  Noto_Sans } from "next/font/google";
-import "../styles/globals.css"
+import {Codystar, Noto_Sans, Gowun_Dodum, Noto_Sans_Mono, Noto_Sans_Display, Nokora} from "next/font/google";
+import "../styles/globals.scss"
 
-const notoSans = Noto_Sans({
-  subsets: ["cyrillic", "latin"],
+const notoSans = Nokora({
+  subsets: [ "latin",],
+  weight: [ "400", "700"]
  
 })
 
