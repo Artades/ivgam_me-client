@@ -65,7 +65,7 @@ export default function Intro() {
     <div className={styles.intro} ref={container}>
       <div className={styles.introContent}>
         <h1 className={styles.introHeading} ref={headingRef}>
-          <span>Innovate.</span>
+          <span>Advance.</span>
           <span>Create.</span>
           <span>Inspire.</span>
         </h1>
