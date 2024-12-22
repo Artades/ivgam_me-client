@@ -76,7 +76,7 @@ export default function Intro() {
 
      
       tl.to([introImageCircleBefore.current, introImageCircleAfter.current], {
-        rotation: 45, 
+        rotation: 45,
         duration: 0.5,
         ease: "power2.out",
         stagger: 0.1,
@@ -107,7 +107,7 @@ export default function Intro() {
       <div className={styles.introImage} ref={introImageRef}>
         <div className={styles.circleBefore} ref={introImageCircleBefore}></div>
         <div className={styles.circleAfter} ref={introImageCircleAfter}></div>
-        <Image width={400} height={400} alt="Artyom Galay" src={"/assets/Intro/me.jpg"} />
+        <Image width={400} height={400} alt="Artyom Galay" src={"/assets/Intro/m2.jpg"} />
       </div>
     </div>
   );

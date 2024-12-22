@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {Codystar, DM_Sans, Montserrat, Noto_Sans, Poppins} from "next/font/google";
 import "../styles/globals.scss"
+import Container from "@/components/Layout/Container/Container";
 
 const notoSans = DM_Sans({
   subsets: [ "latin"],
@@ -22,7 +23,11 @@ export default function RootLayout({
 }>) { 
   return (
     <html lang="en">
-      <body className={notoSans.className}>{children}</body>
+      <body className={notoSans.className}>
+      <Container>
+        {children}
+      </Container>
+      </body>
     </html>
   );
 }
