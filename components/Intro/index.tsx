@@ -75,22 +75,17 @@ export default function Intro() {
       });
 
      
-      tl.to([introImageCircleBefore.current, introImageCircleAfter.current], {
-        rotation: 45,
-        duration: 0.5,
-        ease: "power2.out",
-        stagger: 0.1,
-      });
     },
     { scope: container }
   );
 
   return (
     <div className={styles.intro} ref={container}>
+      
       <div className={styles.introContent}>
         <div ref={headingLine} className={styles.introHeadingLine} />
         <h1 className={styles.introHeading} ref={headingRef}>
-          Hello, i'm <br />
+          Hello, i&#39;m <br />
           <span>Artyom</span>
         </h1>
         <p className={styles.introText} ref={textRef}>
@@ -105,9 +100,7 @@ export default function Intro() {
         />
       </div>
       <div className={styles.introImage} ref={introImageRef}>
-        <div className={styles.circleBefore} ref={introImageCircleBefore}></div>
-        <div className={styles.circleAfter} ref={introImageCircleAfter}></div>
-        <Image width={400} height={400} alt="Artyom Galay" src={"/assets/Intro/m2.jpg"} />
+        <Image quality={100} width={1000} height={1000} alt="Artyom Galay" src={"/assets/Intro/m2.jpg"} />
       </div>
     </div>
   );

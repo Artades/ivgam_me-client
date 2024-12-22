@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import {Codystar, DM_Sans, Montserrat, Noto_Sans, Poppins} from "next/font/google";
 import "../styles/globals.scss"
 import Container from "@/components/Layout/Container/Container";
+import BackgroundShape from "@/components/BackgroundEffect";
 
-const notoSans = DM_Sans({
+const notoSans = Montserrat({
   subsets: [ "latin"],
   weight: [ "400","500", "600", "700", "800"]
  
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={notoSans.className}>
+      <BackgroundShape />
       <Container>
         {children}
       </Container>
