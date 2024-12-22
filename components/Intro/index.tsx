@@ -100,7 +100,7 @@ export default function Intro() {
         />
       </div>
       <div className={styles.introImage} ref={introImageRef}>
-        <Image quality={100} width={1000} height={1000} alt="Artyom Galay" src={"/assets/Intro/m2.jpg"} />
+        <Image quality={100} width={2000} height={2000} alt="Artyom Galay" src={"/assets/Intro/m2.jpg"} />
       </div>
     </div>
   );
