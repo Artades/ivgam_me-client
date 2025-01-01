@@ -1,15 +1,11 @@
 import Blank from "@/components/Blank";
-import Intro from "@/components/Intro";
+import Intro from "@/components/Intro/Intro";
 
 const Page = () => {
   return (
     <>
       <Intro />
-      <Blank />
-      <Blank />
-      <Blank />
-      <Blank />
-      <Blank />
+     
     </>
   );
 };

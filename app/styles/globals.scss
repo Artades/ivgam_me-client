@@ -12,7 +12,7 @@
 
 :root {
     --color-accent: #{$accent};
-    --color-dark-accent: #{darken($accent, 25%)};
+    --color-dark-accent: #{darken($accent, 15%)};
     --color-light: #{$light};
     --color-light-darken: #{darken($accent, 25%)};
     --color-dark-blue: #{$dark-blue};

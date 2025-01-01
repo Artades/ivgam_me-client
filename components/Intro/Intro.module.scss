@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,12 +10,11 @@
   .introContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 1.5rem;
     z-index: 1;
     color: var(--color-light);
-    text-align: center;
 
     .introHeadingLine {
       height: 0.2rem;
@@ -39,7 +38,6 @@
       font-weight: 300;
       max-width: 60%;
       font-size: 1.2rem;
-      text-align: center;
       opacity: 0;
       transform: translateY(30px);
       color: var(--color-light);
@@ -50,6 +48,12 @@
         color: var(--color-accent);
         opacity: 1;
       }
+    }
+
+    .introBtnGroup {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
   }
 
@@ -70,7 +74,44 @@
       filter: brightness(100%) contrast(120%);
     }
   }
+  .introScrollButton {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+  
+    & button {
+      border-radius: 50%;
+      animation: introScrollButtonAnimation 3.5s infinite ease-in-out;
+      transition: transform 0.3s ease-in-out;  // Добавляем только для transform, чтобы избежать конфликтов
+    }
+  
+    @keyframes introScrollButtonAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      70% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  
+    & button:active {
+      transform: scale(1.3);
+    }
+  }
+  
 
+  /* Стиль для экранов до 1200px */
   @media (max-width: 1200px) {
     .introContent {
       .introHeading {
@@ -84,10 +125,12 @@
     }
   }
 
+  /* Стиль для экранов до 768px (средние устройства, планшеты) */
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-
     .introContent {
+      align-items: center;
+      text-align: center;
       .introHeading {
         font-size: 3rem;
         max-width: 80%;
@@ -106,9 +149,10 @@
     }
   }
 
+  /* Стиль для экранов до 576px (мобильные устройства) */
   @media (max-width: 576px) {
     .introContent {
-      gap: 1rem;
+      gap: 2rem;
 
       .introHeading {
         font-size: 2.5rem;
@@ -122,8 +166,8 @@
     }
 
     .introImage {
-      max-height: 20rem;
-      max-width: 15rem;
+      max-height: 23rem;
+      max-width: 80%;
       border-radius: 3rem;
       padding: 0.7rem;
 
@@ -133,9 +177,10 @@
     }
   }
 
+  /* Стиль для экранов до 400px (очень маленькие экраны) */
   @media (max-width: 400px) {
     .introContent {
-      gap: 0.5rem;
+      gap: 1.5rem;
 
       .introHeading {
         font-size: 2rem;
@@ -150,7 +195,7 @@
 
     .introImage {
       max-height: 15rem;
-      max-width: 12rem;
+      max-width: 70%;
       border-radius: 2.5rem;
       padding: 0.5rem;
 
@@ -159,4 +204,6 @@
       }
     }
   }
+
+  /* TODO: Стиль для ландшафтной ориентации, начиная с ширины 576px и выше */
 }

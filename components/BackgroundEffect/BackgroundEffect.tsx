@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import styles from "./styles.module.scss";
+import styles from "./BackgroundEffect.module.scss"
 import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

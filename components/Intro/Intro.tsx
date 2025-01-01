@@ -2,24 +2,21 @@
 
 import { EButtonSizes, EButtonVariants } from "@/types/ui";
 import Button from "../ui/Button/Button";
-import styles from "./styles.module.scss";
-import { useRef, useEffect } from "react";
+import styles from "./Intro.module.scss";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
 import Image from "next/image";
+import { ArrowDownToDot } from "lucide-react";
 
 export default function Intro() {
   const headingLine = useRef<HTMLDivElement>(null);
   const headingRef = useRef(null);
   const textRef = useRef(null);
   const buttonRef = useRef(null);
-  const creator = useRef(null);
   const container = useRef(null);
   const introImageRef = useRef(null);
-  const introImageCircleBefore = useRef(null);
-  const introImageCircleAfter = useRef(null);
-  
 
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -28,11 +25,7 @@ export default function Intro() {
       if (prefersReducedMotion) {
         gsap.set(container.current, { opacity: 1 });
         gsap.set(headingLine.current, { width: "7rem" });
-        gsap.set(headingRef.current?.children, {
-          opacity: 1,
-          y: 0,
-          color: "#18aaff",
-        });
+        gsap.set(headingRef.current, { opacity: 0, y: 30 });
         gsap.set(textRef.current, { opacity: 1, y: 0 });
         gsap.set(buttonRef.current, { opacity: 1, y: 0 });
         gsap.set(introImageRef.current, { opacity: 1 });
@@ -40,48 +33,55 @@ export default function Intro() {
       }
 
       gsap.set(headingLine.current, { opacity: 0, width: 0 });
-      gsap.set(headingRef.current?.children, { opacity: 0, y: 50 });
+      gsap.set(headingRef.current, { opacity: 0, y: 50 });
       gsap.set(textRef.current, { opacity: 0, y: 30 });
       gsap.set(buttonRef.current, { opacity: 0, y: 20 });
+      gsap.set(introImageRef.current, { opacity: 0, y: 20 });
       gsap.set(container.current, { opacity: 1 });
-      gsap.set(creator.current, { color: "#fff" });
 
       const tl = gsap.timeline();
 
-      
-      tl.to(headingRef.current?.children, {
+    
+      tl.to(headingRef.current, {
         opacity: 1,
         y: 0,
-        color: "#18aaff",
-        duration: 0.8,
+        duration: 1,
+        ease: "power4.out",
       });
 
       tl.to(textRef.current, {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 1,
+        ease: "power4.out",
       });
 
       tl.to(buttonRef.current, {
         opacity: 1,
         y: 0,
-        duration: 0.4,
+        duration: 1,
+        ease: "power4.out",
       });
 
       tl.to(headingLine.current, {
         opacity: 1,
         width: "7rem",
-        duration: 1,
+        duration: 0.8,
+        ease: "power4.out",
+      });
+      tl.to(introImageRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power4.out",
       });
 
-     
     },
     { scope: container }
   );
 
   return (
     <div className={styles.intro} ref={container}>
-      
       <div className={styles.introContent}>
         <div ref={headingLine} className={styles.introHeadingLine} />
         <h1 className={styles.introHeading} ref={headingRef}>
@@ -89,19 +89,29 @@ export default function Intro() {
           <span>Artyom</span>
         </h1>
         <p className={styles.introText} ref={textRef}>
-          A prolific developer focused on creating advanced, user-driven
-          web-applications that merge creativity with functionality.
+          A developer focused on creating advanced, user-driven web-applications
+          that merge creativity with functionality.
         </p>
-        <Button
-          text="View Resumee"
-          size={EButtonSizes.DEFAULT}
-          ref={buttonRef}
-          variant={EButtonVariants.OUTLINE}
-        />
+        <div className={styles.introBtnGroup} ref={buttonRef}>
+          <Button>Contact Me</Button>
+          <Button variant={EButtonVariants.OUTLINE}>View CV</Button>
+        </div>
       </div>
       <div className={styles.introImage} ref={introImageRef}>
-        <Image quality={100} width={2000} height={2000} alt="Artyom Galay" src={"/assets/Intro/m2.jpg"} />
+        <Image
+          quality={100}
+          width={2000}
+          height={2000}
+          alt="Artyom Galay"
+          src={"/assets/Intro/m2.jpg"}
+        />
       </div>
+
+      <nav className={styles.introScrollButton}>
+        <Button variant={EButtonVariants.OUTLINE}>
+          <ArrowDownToDot />
+        </Button>
+      </nav>
     </div>
   );
 }

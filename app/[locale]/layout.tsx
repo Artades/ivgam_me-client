@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import {Codystar, DM_Sans, Montserrat, Noto_Sans, Poppins} from "next/font/google";
-import "../styles/globals.scss"
+import {
+  Montserrat
+} from "next/font/google";
+import "../styles/globals.scss";
 import Container from "@/components/Layout/Container/Container";
-import BackgroundShape from "@/components/BackgroundEffect";
+import BackgroundEffect from "@/components/BackgroundEffect/BackgroundEffect";
 
 const notoSans = Montserrat({
-  subsets: [ "latin"],
-  weight: [ "400","500", "600", "700", "800"]
- 
-})
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Ivgam | Artyom Galay",
@@ -17,18 +18,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  locale
+  locale,
 }: Readonly<{
   children: React.ReactNode;
   locale: never;
-}>) { 
+}>) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={notoSans.className}>
-      <BackgroundShape />
-      <Container>
-        {children}
-      </Container>
+        <BackgroundEffect />
+        <Container>{children}</Container>
       </body>
     </html>
   );
