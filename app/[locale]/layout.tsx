@@ -5,6 +5,8 @@ import {
 import "../styles/globals.scss";
 import Container from "@/components/Layout/Container/Container";
 import BackgroundEffect from "@/components/BackgroundEffect/BackgroundEffect";
+import Header from "@/components/Layout/Header/Header";
+import MobileMenu from "@/components/Layout/MobileMenu/MobileMenu";
 
 const notoSans = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -24,11 +26,15 @@ export default function RootLayout({
   locale: never;
 }>) {
   return (
-    <html lang={locale}>
-      <body className={notoSans.className}>
-        <BackgroundEffect />
-        <Container>{children}</Container>
-      </body>
-    </html>
-  );
+		<html lang={locale}>
+			<body className={notoSans.className}>
+				<Container>
+					<Header />
+					<BackgroundEffect />
+          <MobileMenu />
+					{children}
+				</Container>
+			</body>
+		</html>
+	);
 }

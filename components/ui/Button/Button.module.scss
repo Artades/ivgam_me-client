@@ -1,40 +1,31 @@
 .button {
     display: inline-flex;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
     appearance: none;
     border: none;
     align-items: center;
     justify-content: center;
     border-radius: var(--rad-medium);
-    transition: background-color .3s ease-in-out;
-    padding: 1rem;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 1rem 2rem;
     user-select: none;
-    outline: 0.1rem solid var(--color-accent);
-    
+    outline: none;
 
     &.small {
-        font-size: var(--fz-small);
-        height: var(--field-small);
-    }
-
-    &.smaller {
-        font-size: var(--fz-smaller);
-        height: var(--field-smaller);
+        font-size: var(--fz-sm);
+        padding: 0.5rem 1rem;
     }
 
     &.default {
-        font-size: var(--fz-regular);
-        height: var(--field);
-    }
-
-    &.larger {
-        font-size: var(--fz-larger);
-        height: var(--field-larger);
+        font-size: var(--fz-md);
+        padding: 1rem 2rem;
     }
 
     &.large {
-        font-size: var(--fz-large);
-        height: var(--field-large);
+        font-size: var(--fz-lg);
+        padding: 1.5rem 2.5rem;
     }
 
     &.primary {
@@ -50,23 +41,66 @@
 
     &.ghost {
         background-color: transparent;
-        color: var(--color-secondary);
-    }
-
-
-    &.withIcon {
-        gap: 0.5rem;
+        color: var(--color-dark-blue);
     }
 
     &:hover {
-        background-color: rgba(24, 170, 255, 0.5);
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px); 
+        background-color: var(--color-dark-accent);
+        color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
+
     &:active {
-        outline: 0.1rem solid var(--color-accent);
         transform: scale(0.95);
-    }  
-     
-   
+    }
+
+    &:focus {
+        outline: 0.2rem solid var(--color-dark-accent);
+        outline-offset: 0.2rem;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--color-light-darken);
+        color: var(--color-light);
+        opacity: 0.6;
+    }
+
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .sparkle {
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: var(--color-accent);
+        border-radius: 50%;
+        animation: sparkle-animation 1s ease-out forwards;
+    }
+
+    @keyframes ripple-animation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+
+    @keyframes sparkle-animation {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(calc(var(--x) * 1rem), calc(var(--y) * 1rem)) scale(0);
+            opacity: 0;
+        }
+    }
 }
