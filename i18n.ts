@@ -1,13 +1,6 @@
-// i18n.ts
-import { notFound } from "next/navigation";
-import { getRequestConfig } from 'next-intl/server';
+export const i18n = {
+	defaultLocale: "en",
+	locales: ["en", "ru", "es"],
+} as const;
 
-const locales: string[] = ['en', 'es', 'ru'];
-
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as any)) notFound();
-
-  return {
-    messages: (await import(`./content/${locale}.json`)).default
-  };
-});
+export type Locale = (typeof i18n)["locales"][number];

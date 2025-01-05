@@ -1,6 +1,6 @@
 "use client";
 
-import { EButtonSizes, EButtonVariants } from "@/types/ui";
+import { EButtonVariants } from "@/types/ui";
 import Button from "../ui/Button/Button";
 import styles from "./Intro.module.scss";
 import { useRef } from "react";
@@ -8,9 +8,12 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
 import Image from "next/image";
-import { ArrowDownToDot } from "lucide-react";
+import { getContent } from "@/utils/getContent";
 
-export default function Intro() {
+interface IntroProps {
+	content: Awaited<ReturnType<typeof getContent>>["home"];
+}
+export default function Intro({ content }: IntroProps) {
 	const headingLine = useRef<HTMLDivElement>(null);
 	const headingRef = useRef(null);
 	const textRef = useRef(null);
@@ -83,16 +86,15 @@ export default function Intro() {
 			<div className={styles.introContent}>
 				<div ref={headingLine} className={styles.introHeadingLine} />
 				<h1 className={styles.introHeading} ref={headingRef}>
-					Hello, i&#39;m <br />
-					<span>Artyom</span>
+					{content.title.hello} <br />
+					<span>{content.title.artyom}</span>
 				</h1>
 				<p className={styles.introText} ref={textRef}>
-					A developer focused on creating advanced, user-driven web-applications
-					that merge creativity with functionality.
+					{content.desc}
 				</p>
 				<div className={styles.introBtnGroup} ref={buttonRef}>
-					<Button>Contact Me</Button>
-					<Button variant={EButtonVariants.OUTLINE}>View CV</Button>
+					<Button>{content.buttons.contact}</Button>
+					<Button variant={EButtonVariants.OUTLINE}>{content.buttons.cv}</Button>
 				</div>
 			</div>
 			<div className={styles.introImage} ref={introImageRef}>

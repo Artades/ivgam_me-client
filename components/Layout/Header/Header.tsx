@@ -6,15 +6,18 @@ import { navigation as nav } from "@/config/navigation";
 import { useRouter } from "next/navigation";
 import { SquareDashedBottomCode, Text } from "lucide-react";
 import { useMenuFacade } from "@/facades/useMenuFacade";
+import { getContent } from "@/utils/getContent";
 
-
-const Header = () => {
+interface HeaderProps {
+	content: Awaited<ReturnType<typeof getContent>>["navigation"];
+}
+const Header = ({ content }: HeaderProps) => {
 	const router = useRouter();
 	const handleLink = (link: string): void => {
 		router.push(link);
 	};
 
-	const {toggleMenu} = useMenuFacade();
+	const { toggleMenu } = useMenuFacade();
 
 	return (
 		<header className={styles.header}>
@@ -32,7 +35,7 @@ const Header = () => {
 							key={item.id}
 							className={styles.navItem}
 						>
-							{item.name}
+							{content[item.key]}
 						</li>
 					))}
 				</ul>

@@ -1,25 +1,25 @@
 export const navigation = [
 	{
 		id: 1,
-		name: "About me",
+		key: "about",
 		link: "",
 		isActice: false,
 	},
 	{
 		id: 2,
-		name: "Projects",
+		key: "projects",
 		link: "",
 		isActice: false,
 	},
 	{
 		id: 3,
-		name: "Testimonials",
+		key: "testimonials",
 		link: "",
 		isActice: false,
 	},
 	{
 		id: 4,
-		name: "Contact me",
+		key: "contact",
 		link: "",
 		isActice: false,
 	},
