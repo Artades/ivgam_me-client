@@ -1,97 +1,61 @@
 .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
 }
 
-.heading {
-    margin-bottom: 2rem;
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 50%;
+
+    z-index: 10;
+  }
+
+  button:first-of-type {
+    left: 1rem;
+  }
+
+  button:last-of-type {
+    right: 1rem;
+  }
 }
 
-/* 💻 Десктопная версия с анимацией */
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
 .projectContainer {
-    display: flex;
-    width: 100%;
-    height: min(50rem, 50dvh);
-    gap: 2rem;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: none; 
+  will-change: transform;
 }
 
 .project {
-    flex: 1;
-    transition: flex 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    position: relative;
-    border-radius: var(--rad-large);
-    overflow: hidden;
-}
-
-.project.active {
-    flex: 5;
-    outline: 1px solid var(--color-dark-accent);
-    outline-offset: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 25rem;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(var(--color-dark-blue), 0.5);
-    opacity: 1;
-}
-
-.projectInfo {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 2rem;
-    background: rgba(var(--color-dark-blue), 0.5);
-    backdrop-filter: blur(1rem);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20%);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
-
-.project.active .projectInfo {
-    visibility: visible;
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.projectTitle {
-    border-bottom: 0.2rem solid var(--color-dark-accent);
-}
-
-.projectDescription {
-    opacity: 0.7;
-}
-
-/* 📱 Мобильная версия с горизонтальным скроллом */
-@media (max-width: 768px) {
-    .projectContainer {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 1rem;
-        padding-bottom: 1rem;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .project {
-        flex: 0 0 80%;
-        scroll-snap-align: start;
-        min-width: 80%;
-        height: min(50rem, 50dvh);
-    }
-
-    .project.active {
-        flex: 0 0 80%;
-    }
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: inherit;
 }

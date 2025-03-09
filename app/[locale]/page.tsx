@@ -11,7 +11,7 @@ export default async function Page(props: {
 	const content = await getContent(locale);
 	return (
 		<>
-			<Intro content={content["intro"]} />
+			{/* <Intro content={content["intro"]} /> */}
 			<Projects content={content["projects"]} />
 			
 		</>

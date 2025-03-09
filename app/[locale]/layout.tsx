@@ -40,7 +40,7 @@ export default async function RootLayout({
 			<body className={notoSans.className}>
 				<Container>
 					<Header content={content["navigation"]}  />
-					<BackgroundEffect />
+					{/* <BackgroundEffect /> */}
 					<MobileMenu content={content["navigation"]} />
 					{children}
 				</Container>
