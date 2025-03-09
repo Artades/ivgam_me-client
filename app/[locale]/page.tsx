@@ -1,6 +1,7 @@
-import Intro from "@/components/Intro/Intro";
+import Intro from "@/app/components/Intro/Intro";
 import { Locale } from "@/i18n";
 import { getContent } from "@/utils/getContent";
+import Projects from "../components/Projects/Projects";
 
 export default async function Page(props: {
 	params: Promise<{ locale: Locale }>;
@@ -10,7 +11,9 @@ export default async function Page(props: {
 	const content = await getContent(locale);
 	return (
 		<>
-			<Intro content={content["home"]} />
+			<Intro content={content["intro"]} />
+			<Projects content={content["projects"]} />
+			
 		</>
 	);
 }

@@ -1,0 +1,17 @@
+.backgroundContainer {
+  position: absolute;  
+  inset: 0;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transform: translateZ(0);
+  overflow: hidden;
+  filter: blur(5rem);
+}
+
+.polygonBackground {
+  position: absolute;
+  background: linear-gradient(to top right, var(--color-dark), var(--color-accent));
+  opacity: 0.5;
+  aspect-ratio: 1/2; 
+}

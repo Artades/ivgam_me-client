@@ -3,10 +3,10 @@ import {
   Montserrat
 } from "next/font/google";
 import "../styles/globals.scss";
-import Container from "@/components/Layout/Container/Container";
-import BackgroundEffect from "@/components/BackgroundEffect/BackgroundEffect";
-import Header from "@/components/Layout/Header/Header";
-import MobileMenu from "@/components/Layout/MobileMenu/MobileMenu";
+import Container from "@/app/components/Layout/Container/Container";
+import BackgroundEffect from "@/app/components/BackgroundEffect/BackgroundEffect";
+import Header from "@/app/components/Layout/Header/Header";
+import MobileMenu from "@/app/components/Layout/MobileMenu/MobileMenu";
 import { i18n, type Locale } from "../../i18n";
 import { getContent } from "@/utils/getContent";
 
@@ -41,7 +41,7 @@ export default async function RootLayout({
 				<Container>
 					<Header content={content["navigation"]}  />
 					<BackgroundEffect />
-					<MobileMenu />
+					<MobileMenu content={content["navigation"]} />
 					{children}
 				</Container>
 			</body>

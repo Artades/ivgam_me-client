@@ -1,0 +1,114 @@
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(var(--color-dark), 0.7); // Прозрачный фон
+    backdrop-filter: blur(4rem);
+    -webkit-backdrop-filter: blur(3rem);
+    z-index: 100;
+    transition: right 0.4s ease, backdrop-filter 0.4s ease;
+
+    &.menuOpen {
+        right: 0;
+    }
+}
+
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent; // Темный полупрозрачный оверлей
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    .menuOpen & {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.menuInner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+   
+
+    .menuLogo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            display: inline-flex;
+            gap: var(--spacing-sm);
+            font-size: var(--fz-xl);
+            font-weight: bold;
+            color: var(--color-light);
+
+            span {
+                color: var(--color-accent);
+            }
+
+            svg {
+                color: var(--color-accent);
+            }
+        }
+
+        .menuCloseBtn {
+            cursor: pointer;
+
+            svg {
+                font-size: var(--fz-xl);
+                color: var(--color-light);
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--color-accent);
+                }
+            }
+        }
+    }
+
+    .menuNav {
+        padding: 5rem 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+
+        .navItem {
+            font-size: var(--fz-xl);
+            color: var(--color-light);
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+
+            &:hover {
+                color: var(--color-accent);
+                text-shadow: 0 0 5px var(--color-accent);
+            }
+
+            &:active {
+                color: var(--color-accent);
+            }
+
+            &::before {
+                content: "[ ";
+                color: var(--color-accent);
+            }
+
+            &::after {
+                content: " ]";
+                color: var(--color-accent);
+            }
+        }
+    }
+}

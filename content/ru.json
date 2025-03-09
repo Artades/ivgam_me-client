@@ -1,5 +1,5 @@
 {
-	"home": {
+	"intro": {
 		"title": {
 			"hello": "Привет, я ",
 			"artyom": "Артём"
@@ -16,5 +16,70 @@
 		"projects": "Проекты",
 		"testimonials": "Отзывы",
 		"contact": "Связаться"
+	},
+	"projects": {
+		"heading": "My projects",
+		"items": {
+			"st": {
+				"name": "Swiss Time",
+				"description": "Web application selling Switzerland Watches",
+				"button": "View project",
+				"image": "/images/swisstime.webp",
+				"role": {
+					"title": "Responsibilities",
+					"values": "Front-end development, CMS Integration, SEO"
+				}
+			},
+			"vv": {
+				"name": "Veter Vremeni",
+				"description": "Web application selling Fashion Watches",
+				"button": "View project",
+				"image": "/images/albrokso.jpg",
+				"role": {
+					"title": "Responsibilities",
+					"values": "Front-end development, CMS Integration, SEO"
+				}
+			},
+			"gf": {
+				"name": "Swiss Time",
+				"description": "Web application selling Switzerland Watches",
+				"button": "View project",
+				"image": "/images/albrokso.jpg",
+				"role": {
+					"title": "Responsibilities",
+					"values": "Front-end development, CMS Integration, SEO"
+				}
+			},
+			"wo": {
+				"name": "Swiss Time",
+				"description": "Web application selling Switzerland Watches",
+				"button": "View project",
+				"image": "/images/albrokso.jpg",
+				"role": {
+					"title": "Responsibilities",
+					"values": "Front-end development, CMS Integration, SEO"
+				}
+			},
+			"albrokso": {
+				"name": "Albrokso",
+				"description": "English courses enrollment web application",
+				"button": "View project",
+				"image": "/images/albrokso.jpg",
+				"role": {
+					"title": "Responsibilities",
+					"values": "Frontend development,Backend development, Admin development, SEO, UX/UI"
+				}
+			},
+			"ivgam-blog": {
+				"name": "Ivgam Blog",
+				"description": "My personal blog",
+				"button": "View project",
+				"image": "/images/albrokso.jpg",
+				"role": {
+					"title": "Responsibilities",
+					"values": "Fullstack development, CMS Integration, SEO, UX/UI"
+				}
+			}
+		}
 	}
 }

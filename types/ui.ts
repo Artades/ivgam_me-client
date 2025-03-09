@@ -10,4 +10,5 @@ export enum EButtonVariants {
 	PRIMARY = "primary",
 	OUTLINE = "outline",
 	GHOST = "ghost",
+	CIRCLED = "circled",
 }
