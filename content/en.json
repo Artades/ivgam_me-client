@@ -18,68 +18,81 @@
 	},
 
 	"projects": {
-		"heading": "My Projects",
-		"items": {
-			"st": {
-				"name": "Swiss Time",
-				"description": "A premium e-commerce platform for Swiss watches, featuring an elegant UI, fast performance, and SEO optimization.",
-				"button": "View project",
-				"image": "/images/swisstime.webp",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+	"heading": "My Projects",
+	"items": {
+		"st": {
+			"name": "Swiss Time",
+			"description": "E-commerce for Swiss watches with an elegant UI and SEO optimization.",
+			"button": "View project",
+			"image": "/images/swisstime.webp",
+			"role": {
+				"title": "Responsibilities",
+				"values": "Front-end, CMS, SEO"
 			},
-			"vv": {
-				"name": "Veter Vremeni",
-				"description": "An online store for fashion watch brands with a modern UI, mobile-first approach, and smooth user experience.",
-				"button": "View project",
-				"image": "/images/vv.png",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+			"link": "https://swisstime.kz",
+			"inProduction": true
+		},
+		"vv": {
+			"name": "Veter Vremeni",
+			"description": "Online store for fashion watches with a mobile-first design.",
+			"button": "View project",
+			"image": "/images/vv.png",
+			"role": {
+				"title": "Responsibilities",
+				"values": "Front-end, CMS, SEO"
 			},
-			"gf": {
-				"name": "G-Factory",
-				"description": "A digital showcase for high-end watch collections with an immersive browsing experience and custom animations.",
-				"button": "View project",
-				"image": "/images/gf.avif",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+			"link": "https://vetervremeni.kz",
+			"inProduction": true
+		},
+		"gf": {
+			"name": "G-Factory",
+			"description": "Luxury watch showcase with immersive browsing and animations.",
+			"button": "View project",
+			"image": "/images/gf.avif",
+			"role": {
+				"title": "Responsibilities",
+				"values": "Front-end, CMS, SEO"
 			},
-			"wo": {
-				"name": "Watches Outlet",
-				"description": "A discount hub for Swiss Time Network, integrating real-time stock updates and a streamlined checkout process.",
-				"button": "View project",
-				"image": "/images/wo.webp",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+			"link": "",
+			"inProduction": false
+		},
+		"wo": {
+			"name": "Watches Outlet",
+			"description": "Discount hub for Swiss Time with real-time stock updates.",
+			"button": "View project",
+			"image": "/images/wo.webp",
+			"role": {
+				"title": "Responsibilities",
+				"values": "Front-end, CMS, SEO"
 			},
-			"albrokso": {
-				"name": "Albrokso",
-				"description": "A comprehensive English course enrollment system with student tracking, scheduling, and payment integration.",
-				"button": "View project",
-				"image": "/images/albrokso.png",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Frontend development, Backend development, Admin development, SEO, UX/UI"
-				}
+			"link": "",
+			"inProduction": true
+		},
+		"albrokso": {
+			"name": "Albrokso",
+			"description": "English course platform with student tracking and payments.",
+			"button": "View project",
+			"image": "/images/albrokso.png",
+			"role": {
+				"title": "Responsibilities",
+				"values": "Fullstack, Admin, SEO, UX/UI"
 			},
-			"ivgam-blog": {
-				"name": "Ivgam Blog",
-				"description": "A personal blog platform featuring Markdown support, authentication, and a robust content management system.",
-				"button": "View project",
-				"image": "/images/ivgamblog.jpg",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Fullstack development, CMS Integration, SEO, UX/UI"
-				}
-			}
+			"link": "",
+			"inProduction": false
+		},
+		"ivgam-blog": {
+			"name": "Ivgam Blog",
+			"description": "Personal blog with Markdown, authentication, and CMS.",
+			"button": "View project",
+			"image": "/images/ivgamblog.jpg",
+			"role": {
+				"title": "Responsibilities",
+				"values": "Fullstack, CMS, SEO, UX/UI"
+			},
+			"link": "https://ivgam.blog",
+			"inProduction": true
 		}
 	}
+}
+
 }

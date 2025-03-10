@@ -15,18 +15,18 @@
   width: 100%;
   position: relative;
 
-  button {
+  & > button {
     position: absolute;
     top: 50%;
 
     z-index: 10;
   }
 
-  button:first-of-type {
+  & > button:first-of-type {
     left: 1rem;
   }
 
-  button:last-of-type {
+  & > button:last-of-type {
     right: 1rem;
   }
 }
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  transition: none; 
+  transition: none;
   will-change: transform;
 }
 
@@ -50,12 +50,41 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 25rem;
+  height: min(30rem, 30vh);
 }
 
-.overlay {
+.projectInfo {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: inherit;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-light);
+  padding: 1rem;
+  background: rgba(var(--color-dark-blue), 0.5);
+  backdrop-filter: blur(0.2rem);
+  opacity: 1;
+
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+
+  h3 {
+    width: max-content;
+    position: relative;
+  }
+
+  h3::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Отступ вниз */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-accent);
+  }
+
+
 }

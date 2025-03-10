@@ -6,7 +6,7 @@ import gsap from "gsap";
 import styles from "./Projects.module.scss";
 import { getContent } from "@/utils/getContent";
 import Button from "../ui/Button/Button";
-import { EButtonVariants } from "@/types/ui";
+import { EButtonSizes, EButtonVariants } from "@/types/ui";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 gsap.registerPlugin(useGSAP);
@@ -101,14 +101,25 @@ const Projects = ({ content }: ProjectsProps) => {
                 }}
               >
                 <div className={styles.overlay}></div>
+                <div className={styles.projectInfo}>
+                  <h3 className={styles.projectTitle}>{project.name}</h3>
+                  <p className={styles.projectDescription}>
+                    {project.description}
+                  </p>
+                  <div className={styles.projectRole}>
+                    <h5>{project.roleTitle}</h5>
+                    <p>{project.roleValues}</p>
+                  </div>
+                  <Button size={EButtonSizes.SMALL}>{project.button}</Button>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        
         <Button
           variant={EButtonVariants.CIRCLED}
+          size={EButtonSizes.SMALLER}
           onClick={() => scrollToIndex(currentIndex + 1)}
           disabled={currentIndex >= maxIndex}
         >
