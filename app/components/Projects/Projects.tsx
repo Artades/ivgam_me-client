@@ -110,7 +110,7 @@ const Projects = ({ content }: ProjectsProps) => {
                     <h5>{project.roleTitle}</h5>
                     <p>{project.roleValues}</p>
                   </div>
-                  <Button size={EButtonSizes.SMALL}>{project.button}</Button>
+                  <Button size={EButtonSizes.DEFAULT}>{project.button}</Button>
                 </div>
               </div>
             ))}

@@ -14,14 +14,13 @@
     outline: none;
 
     & svg {
-        color: var(--color-light);
         
-        user-select: none;
+        color: var(--color-light)
     }
 
     &.small {
         font-size: var(--fz-sm);
-        padding: 1rem 1rem;
+        padding: 0.5rem 0.8rem;
     }
 
     &.default {

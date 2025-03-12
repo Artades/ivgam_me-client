@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import { SquareDashedBottomCode, Text } from "lucide-react";
 import { useMenuFacade } from "@/facades/useMenuFacade";
 import { getContent } from "@/utils/getContent";
+import LanguageSelect from "./LanguageSelect/LanguageSelect";
+import MobileMenuButton from "./MobileMenuButton/MobileMenuButton";
 
 interface HeaderProps {
 	content: Awaited<ReturnType<typeof getContent>>["navigation"];
@@ -17,7 +19,7 @@ const Header = ({ content }: HeaderProps) => {
 		router.push(link);
 	};
 
-	const { toggleMenu } = useMenuFacade();
+	
 
 	return (
 		<header className={styles.header}>
@@ -39,9 +41,9 @@ const Header = ({ content }: HeaderProps) => {
 						</li>
 					))}
 				</ul>
-				<div className={styles.headerMobileMenuBtn} onClick={toggleMenu}>
-					<Text />
-				</div>
+
+				<LanguageSelect />
+				<MobileMenuButton  />
 			</div>
 		</header>
 	);

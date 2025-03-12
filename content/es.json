@@ -16,68 +16,81 @@
 		"testimonials": "Testimonios",
 		"contact": "Contáctame"
 	},
+
 	"projects": {
-		"heading": "My projects",
+		"heading": "Mis Proyectos",
 		"items": {
 			"st": {
 				"name": "Swiss Time",
-				"description": "Web application selling Switzerland Watches",
-				"button": "View project",
+				"description": "Comercio electrónico de relojes suizos con una interfaz elegante y optimización SEO.",
+				"button": "Ver proyecto",
 				"image": "/images/swisstime.webp",
 				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+					"title": "Responsabilidades",
+					"values": "Front-end, CMS, SEO"
+				},
+				"link": "https://swisstime.kz",
+				"inProduction": true
 			},
 			"vv": {
 				"name": "Veter Vremeni",
-				"description": "Web application selling Fashion Watches",
-				"button": "View project",
-				"image": "/images/albrokso.jpg",
+				"description": "Tienda online de relojes de moda con diseño centrado en móviles.",
+				"button": "Ver proyecto",
+				"image": "/images/vv.png",
 				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+					"title": "Responsabilidades",
+					"values": "Front-end, CMS, SEO"
+				},
+				"link": "https://vetervremeni.kz",
+				"inProduction": true
 			},
 			"gf": {
-				"name": "Swiss Time",
-				"description": "Web application selling Switzerland Watches",
-				"button": "View project",
-				"image": "/images/albrokso.jpg",
+				"name": "G-Factory",
+				"description": "Exposición de relojes de lujo con navegación inmersiva y animaciones.",
+				"button": "Ver proyecto",
+				"image": "/images/gf.avif",
 				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+					"title": "Responsabilidades",
+					"values": "Front-end, CMS, SEO"
+				},
+				"link": "",
+				"inProduction": false
 			},
 			"wo": {
-				"name": "Swiss Time",
-				"description": "Web application selling Switzerland Watches",
-				"button": "View project",
-				"image": "/images/albrokso.jpg",
+				"name": "Watches Outlet",
+				"description": "Centro de descuentos de Swiss Time con actualizaciones de stock en tiempo real.",
+				"button": "Ver proyecto",
+				"image": "/images/wo.webp",
 				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end development, CMS Integration, SEO"
-				}
+					"title": "Responsabilidades",
+					"values": "Front-end, CMS, SEO"
+				},
+				"link": "",
+				"inProduction": true
 			},
 			"albrokso": {
 				"name": "Albrokso",
-				"description": "English courses enrollment web application",
-				"button": "View project",
-				"image": "/images/albrokso.jpg",
+				"description": "Plataforma de cursos de inglés con seguimiento de estudiantes y pagos.",
+				"button": "Ver proyecto",
+				"image": "/images/albrokso.png",
 				"role": {
-					"title": "Responsibilities",
-					"values": "Frontend development,Backend development, Admin development, SEO, UX/UI"
-				}
+					"title": "Responsabilidades",
+					"values": "Fullstack, Admin, SEO, UX/UI"
+				},
+				"link": "",
+				"inProduction": false
 			},
 			"ivgam-blog": {
 				"name": "Ivgam Blog",
-				"description": "My personal blog",
-				"button": "View project",
-				"image": "/images/albrokso.jpg",
+				"description": "Blog personal con Markdown, autenticación y CMS.",
+				"button": "Ver proyecto",
+				"image": "/images/ivgamblog.jpg",
 				"role": {
-					"title": "Responsibilities",
-					"values": "Fullstack development, CMS Integration, SEO, UX/UI"
-				}
+					"title": "Responsabilidades",
+					"values": "Fullstack, CMS, SEO, UX/UI"
+				},
+				"link": "https://ivgam.blog",
+				"inProduction": true
 			}
 		}
 	}

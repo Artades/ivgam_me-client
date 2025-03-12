@@ -71,7 +71,8 @@
         }
     }
 
-    .headerMobileMenuBtn {
+    & button[aria-controls="mobile-menu-btn"] {
+
         display: none;
     }
 
@@ -103,19 +104,8 @@
             display: none;
         }
 
-        .headerMobileMenuBtn {
+        & button[aria-controls="mobile-menu-btn"] {
             display: block;
-            border: 2px solid var(--color-accent);
-            border-radius: 0.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0.5rem;
-
-            svg{
-                font-size: var(--fz-md);
-                color: var(--color-light)
-            }
         }
     }
 }
