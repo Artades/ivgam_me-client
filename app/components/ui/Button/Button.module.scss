@@ -14,7 +14,8 @@
     outline: none;
 
     & svg {
-        
+        width: var(--fz-xl);
+        height: var(--fz-xl);
         color: var(--color-light)
     }
 

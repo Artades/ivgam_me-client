@@ -30,7 +30,8 @@
 					"values": "Front-end, CMS, SEO"
 				},
 				"link": "https://swisstime.kz",
-				"inProduction": true
+				"inProduction": true,
+				"icon": "Watch"
 			},
 			"vv": {
 				"name": "Veter Vremeni",
@@ -42,7 +43,8 @@
 					"values": "Front-end, CMS, SEO"
 				},
 				"link": "https://vetervremeni.kz",
-				"inProduction": true
+				"inProduction": true,
+				"icon": "PocketKnife"
 			},
 			"gf": {
 				"name": "G-Factory",
@@ -54,7 +56,8 @@
 					"values": "Front-end, CMS, SEO"
 				},
 				"link": "",
-				"inProduction": false
+				"inProduction": false,
+				"icon": "Watch"
 			},
 			"wo": {
 				"name": "Watches Outlet",
@@ -66,7 +69,8 @@
 					"values": "Front-end, CMS, SEO"
 				},
 				"link": "",
-				"inProduction": true
+				"inProduction": true,
+				"icon": "Cog"
 			},
 			"albrokso": {
 				"name": "Albrokso",
@@ -78,7 +82,8 @@
 					"values": "Fullstack, Admin, SEO, UX/UI"
 				},
 				"link": "",
-				"inProduction": false
+				"inProduction": false,
+				"icon": "School"
 			},
 			"ivgam-blog": {
 				"name": "Ivgam Blog",
@@ -90,7 +95,8 @@
 					"values": "Fullstack, CMS, SEO, UX/UI"
 				},
 				"link": "https://ivgam.blog",
-				"inProduction": true
+				"inProduction": true,
+				"icon": "PencilLine"
 			}
 		}
 	}

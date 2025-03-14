@@ -71,10 +71,18 @@
         }
     }
 
-    & button[aria-controls="mobile-menu-btn"] {
+    .headerActions {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
 
-        display: none;
+        & button:nth-child(2) {
+
+            display: none;
+        }
     }
+
+
 
 
     @media(max-width: 1200px) {
@@ -104,8 +112,13 @@
             display: none;
         }
 
-        & button[aria-controls="mobile-menu-btn"] {
-            display: block;
+        .headerActions {
+
+
+            & button:nth-child(2) {
+
+                display: block;
+            }
         }
     }
 }

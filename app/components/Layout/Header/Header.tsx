@@ -5,7 +5,6 @@ import styles from "./Header.module.scss";
 import { navigation as nav } from "@/config/navigation";
 import { useRouter } from "next/navigation";
 import { SquareDashedBottomCode, Text } from "lucide-react";
-import { useMenuFacade } from "@/facades/useMenuFacade";
 import { getContent } from "@/utils/getContent";
 import LanguageSelect from "./LanguageSelect/LanguageSelect";
 import MobileMenuButton from "./MobileMenuButton/MobileMenuButton";
@@ -42,8 +41,10 @@ const Header = ({ content }: HeaderProps) => {
 					))}
 				</ul>
 
-				<LanguageSelect />
-				<MobileMenuButton  />
+				<div className={styles.headerActions}>
+					<LanguageSelect />
+					<MobileMenuButton />
+				</div>
 			</div>
 		</header>
 	);

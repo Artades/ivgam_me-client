@@ -39,33 +39,33 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 			button.appendChild(ripple);
 			setTimeout(() => ripple.remove(), 600);
 
-			createSparkles(e, button);
+			// createSparkles(e, button);
 		};
 
-		const createSparkles = (
-			e: React.MouseEvent<HTMLButtonElement>,
-			button: HTMLButtonElement
-		) => {
-			const sparklesCount = 5;
-			for (let i = 0; i < sparklesCount; i++) {
-				const sparkle = document.createElement("span");
-				sparkle.className = styles.sparkle;
-				const x = Math.random() * 10 - 1;
-				const y = Math.random() * 10 - 1;
+		// const createSparkles = (
+		// 	e: React.MouseEvent<HTMLButtonElement>,
+		// 	button: HTMLButtonElement
+		// ) => {
+		// 	const sparklesCount = 5;
+		// 	for (let i = 0; i < sparklesCount; i++) {
+		// 		const sparkle = document.createElement("span");
+		// 		sparkle.className = styles.sparkle;
+		// 		const x = Math.random() * 10 - 1;
+		// 		const y = Math.random() * 10 - 1;
 
-				sparkle.style.setProperty("--x", `${x}`);
-				sparkle.style.setProperty("--y", `${y}`);
-				sparkle.style.left = `${
-					e.clientX - button.getBoundingClientRect().left
-				}px`;
-				sparkle.style.top = `${
-					e.clientY - button.getBoundingClientRect().top
-				}px`;
+		// 		sparkle.style.setProperty("--x", `${x}`);
+		// 		sparkle.style.setProperty("--y", `${y}`);
+		// 		sparkle.style.left = `${
+		// 			e.clientX - button.getBoundingClientRect().left
+		// 		}px`;
+		// 		sparkle.style.top = `${
+		// 			e.clientY - button.getBoundingClientRect().top
+		// 		}px`;
 
-				button.appendChild(sparkle);
-				setTimeout(() => sparkle.remove(), 1000);
-			}
-		};
+		// 		button.appendChild(sparkle);
+		// 		setTimeout(() => sparkle.remove(), 1000);
+		// 	}
+		// };
 
 		return (
 			<button

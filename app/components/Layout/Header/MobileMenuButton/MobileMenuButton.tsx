@@ -11,7 +11,7 @@ const MobileMenuButton = () => {
 			size={EButtonSizes.SMALL}
 			variant={EButtonVariants.OUTLINE}
 			onClick={toggleMenu}
-			aria-controls="mobile-menu-btn"
+			
 		>
 			<Text />
 		</Button>
