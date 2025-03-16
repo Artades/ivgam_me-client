@@ -15,18 +15,18 @@
   width: 100%;
   position: relative;
 
-  &>button {
+  & > button {
     position: absolute;
     top: 50%;
 
     z-index: 10;
   }
 
-  &>button:first-of-type {
+  & > button:first-of-type {
     left: 1rem;
   }
 
-  &>button:last-of-type {
+  & > button:last-of-type {
     right: 1rem;
   }
 }
@@ -34,7 +34,6 @@
 .slider {
   overflow: hidden;
   width: 100%;
- 
 }
 
 .projectContainer {
@@ -43,7 +42,6 @@
   gap: var(--spacing-lg);
   transition: none;
   will-change: transform;
-
 }
 
 .project {
@@ -51,7 +49,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  height: min(40rem, 40vh);
+  height: min(35rem, 35vh);
   border: 1px solid var(--color-accent);
   border-radius: var(--rad-medium);
 }
@@ -74,9 +72,7 @@
   gap: var(--spacing-md);
   border-radius: var(--rad-medium);
 
-
   .projectHeader {
-
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
@@ -88,6 +84,7 @@
     }
 
     h3 {
+     
       width: max-content;
       position: relative;
     }
@@ -102,7 +99,6 @@
       background: var(--color-accent);
     }
   }
-
 
 
 }

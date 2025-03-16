@@ -2,7 +2,7 @@
 $dark: #020c1c;
 $dark-blue: #081c3c; // Теперь это валидный цвет
 $accent: #18aaff;
-$light: #C1E8FF;
+$light: #c1e8ff;
 
 // Border radius
 $border-radius: 0.5em;
@@ -24,12 +24,16 @@ $spacing-xl: 2em;
 $spacing-xxl: 3em;
 
 // Font sizes (адаптивные величины)
-$fz-xs: 0.75em; // ~12px
-$fz-sm: 0.875em; // ~14px
-$fz-md: 1em; // 16px (базовый размер)
-$fz-lg: 1.25em; // ~20px
-$fz-xl: 1.5em; // ~24px
-$fz-xxl: 2em; // ~32px
+
+$fz-md: 1.125em; // ~18px вместо 16px
+
+// Адаптивные величины
+$fz-xs: 0.75 * $fz-md; // ~13.5px
+$fz-sm: 0.875 * $fz-md; // ~15.75px
+$fz-lg: 1.25 * $fz-md; // ~22.5px
+$fz-xl: 1.5 * $fz-md; // ~27px
+$fz-xxl: 2 * $fz-md; // ~36px
+$fz-3xl: 3 * $fz-md;
 
 // Transition
 $transition-default: all 0.3s ease-in-out;
