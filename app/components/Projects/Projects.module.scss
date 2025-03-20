@@ -1,3 +1,7 @@
+@mixin responsiveCard($minHeight, $maxHeight) {
+  height: clamp($minHeight, 30vh, $maxHeight);
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -7,98 +11,147 @@
   overflow: hidden;
   position: relative;
 }
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.projectsCardGrid {
   width: 100%;
-  position: relative;
-
-  & > button {
-    position: absolute;
-    top: 50%;
-
-    z-index: 10;
-  }
-
-  & > button:first-of-type {
-    left: 1rem;
-  }
-
-  & > button:last-of-type {
-    right: 1rem;
-  }
-}
-
-.slider {
-  overflow: hidden;
-  width: 100%;
-}
-
-.projectContainer {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
-  transition: none;
-  will-change: transform;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; 
+  }
 }
 
-.project {
-  flex-shrink: 0;
-  background-size: cover;
-  background-position: center;
+.card {
   position: relative;
-  height: min(35rem, 35vh);
-  border: 1px solid var(--color-accent);
+  background: rgba(var(--color-dark-blue), 0.4);
   border-radius: var(--rad-medium);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+  @include responsiveCard(20rem, 35rem);
+
+  &:hover {
+    background: rgba(var(--color-dark-blue), 0.1);
+    border: 2px solid var(--color-accent);
+    transform: translateZ(10px);
+  }
 }
 
-.projectInfo {
+.cardBody {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
   color: var(--color-light);
-  padding: 1rem;
-  background: rgba(var(--color-dark-blue), 0.5);
-  backdrop-filter: blur(1rem);
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: var(--spacing-md);
   border-radius: var(--rad-medium);
+}
 
-  .projectHeader {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
 
-    svg {
-      width: 2rem;
-      height: 2rem;
-      color: var(--color-accent);
-    }
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-accent);
+  }
 
-    h3 {
-     
-      width: max-content;
-      position: relative;
-    }
+  h3 {
+    width: max-content;
+    position: relative;
 
-    h3::after {
+    &::after {
       content: "";
       position: absolute;
       bottom: calc(-1 * var(--spacing-xs));
       left: 0;
       width: 100%;
-      height: 3px;
+      height: 2px;
       background: var(--color-accent);
     }
   }
-
-
 }
+
+.cardRole {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+
+  &::before,
+  &::after {
+    font-size: var(--fz-lg);
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    content: "[ ";
+    transform: translateX(-0.3rem);
+  }
+
+  &::after {
+    content: " ]";
+    transform: translateX(0.3rem);
+  }
+}
+
+.projectsShowMore {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.projectsShowMoreCount {
+  font-size: var(--fz-md);
+  color: var(--text-muted);
+}
+
+.projectsBarPercentage {
+  flex: 1;
+  height: 3px;
+  border-radius: 3px;
+  background: gray;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectsBarFill {
+  height: 100%;
+  background: var(--color-accent);
+  transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .projectsShowMore {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .projectsBarPercentage {
+    width: 80%; 
+    height: 5px; 
+  }
+
+  .projectsBarFill {
+    border-radius: 4px;
+  }
+}
+
+

@@ -41,7 +41,7 @@ const BackgroundEffect = () => {
 
   const renderShapes = () => {
     const shapes = [];
-    const rows = 1;
+    const rows = 2;
     const cols = 3;
     const totalShapes = rows * cols;
 
