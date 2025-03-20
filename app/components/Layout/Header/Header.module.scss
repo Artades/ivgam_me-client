@@ -48,6 +48,8 @@
         &:hover {
           color: var(--color-accent);
           box-shadow: var(--box-shadow-light);
+          transform: scale(0.97);
+          
         }
       
         &:active {
