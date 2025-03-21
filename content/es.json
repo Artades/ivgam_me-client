@@ -99,5 +99,55 @@
 				"icon": "PencilLine"
 			}
 		}
+	},
+
+	"about": {
+		"heading": "About Me",
+		"description": "",
+		"text": "",
+		"facts": {
+			"experince": {
+				"value": "1.5+",
+				"name": "Years of experience"
+			},
+			"projects": {
+				"value": "55+",
+				"name": "Projects in GitHub"
+			},
+			"directions": {
+				"value": "5+",
+				"name": "Directions occupied"
+			}
+		},
+		"interests": {
+			"hiking" : {
+				"value": "Bla bla bla",
+				"name": "Hiking",
+				"icon": "MountainSnow"
+			},
+			"cycling" : {
+				"value": "Bla bla bla",
+				"name": "Cycling",
+				"icon": "Bike"
+			},
+			"gaming" : {
+				"value": "Bla bla bla",
+				"name": "Gaming",
+				"icon": "Gamepad2"
+			},
+			"astronomy" : {
+				"value": "Bla bla bla",
+				"name": "Astrononmy",
+				"icon": "Telescope"
+			},
+			"sports": {
+				"value": "Bla bla bla",
+				"name": "Sports",
+				"icon": "Dumbbell"
+			}
+			
+
+		}
+		
 	}
 }

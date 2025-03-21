@@ -1,100 +1,100 @@
 // Импортируем переменные
-@import './variables.scss';
+@import "./variables.scss";
 
 // Общие стили
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-accent: #{$accent};
-    --color-dark-accent: #{darken($accent, 15%)};
-    --color-light: #{$light};
-    --color-light-darken: #{darken($light, 25%)};
-    --color-dark-blue: #{$dark-blue}; 
-    --color-dark: #{$dark};
+  --color-accent: #{$accent};
+  --color-dark-accent: #{darken($accent, 15%)};
+  --color-light: #{$light};
+  --color-light-darken: #{darken($light, 25%)};
+  --color-dark-blue: #{$dark-blue};
+  --color-dark: #{$dark};
 
-    --border-radius: #{$border-radius}; 
-    --rad-small: #{$rad-small};
-    --rad-medium: #{$rad-medium};
-    --rad-large: #{$rad-large};
-    --rad-circle: #{$rad-circle};
+  --border-radius: #{$border-radius};
+  --rad-small: #{$rad-small};
+  --rad-medium: #{$rad-medium};
+  --rad-large: #{$rad-large};
+  --rad-circle: #{$rad-circle};
 
-    --spacing-xs: #{$spacing-xs};
-    --spacing-sm: #{$spacing-sm};
-    --spacing-md: #{$spacing-md};
-    --spacing-lg: #{$spacing-lg};
-    --spacing-xl: #{$spacing-xl};
-    --spacing-xxl: #{$spacing-xxl};
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-xxl: #{$spacing-xxl};
 
-    --fz-xs: #{$fz-xs};
-    --fz-sm: #{$fz-sm};
-    --fz-md: #{$fz-md};
-    --fz-lg: #{$fz-lg};
-    --fz-xl: #{$fz-xl};
-    --fz-xxl: #{$fz-xxl};
-    --fz-3xl: #{$fz-3xl};
+  --fz-xs: #{$fz-xs};
+  --fz-sm: #{$fz-sm};
+  --fz-md: #{$fz-md};
+  --fz-lg: #{$fz-lg};
+  --fz-xl: #{$fz-xl};
+  --fz-xxl: #{$fz-xxl};
+  --fz-3xl: #{$fz-3xl};
 
-    --box-shadow-light: 0em 0.25em 0.375em rgba(0, 0, 0, 0.1); // Исправлено
-    --box-shadow-dark: 0em 0.25em 0.375em rgba(255, 255, 255, 0.1);
+  --box-shadow-light: 0em 0.25em 0.375em rgba(0, 0, 0, 0.1); // Исправлено
+  --box-shadow-dark: 0em 0.25em 0.375em rgba(255, 255, 255, 0.1);
 
-    --transition-default: #{$transition-default};
+  --transition-default: #{$transition-default};
 }
 
 html {
-    transition: var(--transition-default);
-    scroll-behavior: smooth;
+  transition: var(--transition-default);
+  scroll-behavior: smooth;
 }
 
 body {
-    color: var(--color-light);
-    background-color:  var(--color-dark)
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 a {
-    color: lighten($accent, 50%); 
-    transition: 0.3s ease-in-out;
+  color: lighten($accent, 50%);
+  transition: 0.3s ease-in-out;
 
-    &:hover {
-        color: lighten($accent, 70%);
-        text-decoration: underline;
-        transition: 0.3s ease-in-out;
-    }
+  &:hover {
+    color: lighten($accent, 70%);
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
+  }
 }
 
 input,
 textarea,
 select {
-    transition: var(--transition-default);
-    background-color: lighten($dark, 50%); 
-    color: var(--color-light);
-    outline: 1px solid lighten($accent, 10%);
-    padding: var(--spacing-sm);
-    border-radius: var(--rad-large);
-    font-size: 1rem;
+  transition: var(--transition-default);
+  background-color: lighten($dark, 50%);
+  color: var(--color-light);
+  outline: 1px solid lighten($accent, 10%);
+  padding: var(--spacing-sm);
+  border-radius: var(--rad-large);
+  font-size: 1rem;
 }
 
-
 h1 {
-    font-size: var(--fz-3xl);
+  font-size: var(--fz-3xl);
 }
 
 h2 {
-    font-size: var(--fz-xxl);
+  font-size: var(--fz-xxl);
 }
 
 h3 {
-    font-size: var(--fz-xl);
+  font-size: var(--fz-xl);
 }
 
-h4{
-    font-size: var(--fz-lg);
+h4 {
+  font-size: var(--fz-lg);
 }
 
 p {
-    font-size: var(--fz-md);
+  font-size: var(--fz-md);
 }
+

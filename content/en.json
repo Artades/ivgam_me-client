@@ -19,6 +19,7 @@
 
 	"projects": {
 		"heading": "My Projects",
+		"icon": "FolderCode",
 		"items": {
 			"st": {
 				"name": "Swiss Time",
@@ -99,5 +100,54 @@
 				"icon": "PencilLine"
 			}
 		}
-	}
+	},
+
+	"about": {
+  "heading": "About Me",
+  "description": "Curious developer with a passion for clean code and meaningful products.",
+  "icon": "Pin",
+  "text": "Hey! I'm a self-taught full-stack developer with over a year of experience building real-world applications using modern web technologies. I love exploring how things work, diving into code architecture, and bringing ideas to life with clean, maintainable solutions. Whether it's a side project, open-source contribution, or a deep dive into a new framework — I'm always learning and building. When I’m not coding, you’ll find me somewhere under the stars or racing the wind on my bike.",
+  "facts": {
+    "experince": {
+      "value": "1.5+",
+      "name": "Years of experience"
+    },
+    "projects": {
+      "value": "55+",
+      "name": "Projects in GitHub"
+    },
+    "directions": {
+      "value": "5+",
+      "name": "Directions occupied"
+    }
+  },
+  "interests": {
+    "hiking": {
+      "value": "Love getting into nature and clearing my mind.",
+      "name": "Hiking",
+      "icon": "MountainSnow"
+    },
+    "cycling": {
+      "value": "Fast rides and freedom on two wheels.",
+      "name": "Cycling",
+      "icon": "Bike"
+    },
+    "gaming": {
+      "value": "Relaxing and sharpening thinking through games.",
+      "name": "Gaming",
+      "icon": "Gamepad2"
+    },
+    "astronomy": {
+      "value": "Always amazed by the stars and space.",
+      "name": "Astronomy",
+      "icon": "Telescope"
+    },
+    "sports": {
+      "value": "Helps me stay focused and feel alive.",
+      "name": "Sports",
+      "icon": "Dumbbell"
+    }
+  }
+}
+
 }

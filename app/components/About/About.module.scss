@@ -1,0 +1,114 @@
+@import "../../../app/styles/mixins.scss";
+
+.about {
+  @include sectionStyle();
+
+  &Header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+
+    &Heading {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+
+      svg {
+        color: var(--color-accent);
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+
+    &Description {
+      font-size: var(--fz-lg);
+      color: var(--color-light-darken);
+    }
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &Text {
+    font-size: var(--fz-md);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-light);
+  }
+
+  &Facts {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+
+    &Item {
+      background-color: var(--color-dark-blue);
+      border-radius: var(--rad-medium);
+      padding: var(--spacing-md);
+      min-width: 150px;
+      text-align: center;
+
+      &Value {
+        font-size: var(--fz-xl);
+        font-weight: bold;
+        color: var(--color-accent);
+        display: block;
+      }
+
+      &Name {
+        font-size: var(--fz-md);
+        color: var(--color-light);
+      }
+    }
+  }
+
+  &Interests {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  &Interest {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    @include cardStyle();
+    padding: var(--spacing-md);
+    border-radius: var(--rad-medium);
+    box-shadow: var(--box-shadow-light);
+    transition: background-color var(--transition-default);
+
+    &:hover {
+      background-color: var(--color-dark-accent);
+    }
+
+    &IconWrapper {
+      border-radius: var(--rad-circle);
+      padding: var(--spacing-xs);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &Icon {
+        color: var(--color-light);
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &Name {
+      font-size: var(--fz-md);
+      font-weight: 600;
+      color: var(--color-light);
+    }
+
+    &Value {
+      font-size: var(--fz-sm);
+      color: var(--color-light-darken);
+    }
+  }
+}

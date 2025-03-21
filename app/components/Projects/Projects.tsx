@@ -4,16 +4,15 @@ import React, { useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import styles from "./Projects.module.scss";
-import { getContent } from "@/utils/getContent";
 import Button from "../ui/Button/Button";
 import { EButtonSizes } from "@/types/ui";
 import { Cog, PencilLine, PocketKnife, School, Watch } from "lucide-react";
+import { TContent } from "@/types/content";
 
 gsap.registerPlugin(useGSAP);
 
-interface ProjectsProps {
-  content: Awaited<ReturnType<typeof getContent>>["projects"];
-}
+type ProjectsProps = TContent<"projects">;
+
 
 const icons: Record<string, React.ElementType> = {
   Watch,

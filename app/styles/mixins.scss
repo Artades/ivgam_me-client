@@ -1,0 +1,17 @@
+@mixin cardStyle {
+  background: rgba(var(--color-dark-blue), 0.4);
+  border-radius: var(--rad-medium);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+@mixin sectionStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: var(--color-light);
+}
