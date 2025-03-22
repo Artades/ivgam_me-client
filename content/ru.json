@@ -8,7 +8,7 @@
 
 		"buttons": {
 			"cv": "Резюме",
-			"contact": "Связаться со мной"
+			"contact": "Связаться"
 		}
 	},
 	"navigation": {
@@ -20,6 +20,7 @@
 
 	"projects": {
 		"heading": "Мои проекты",
+		"description": "Проекты, в которых я участвовал — от идей до продакшена.",
 		"items": {
 			"st": {
 				"name": "Swiss Time",
@@ -99,56 +100,64 @@
 				"inProduction": true,
 				"icon": "PencilLine"
 			}
+		},
+		"buttons": {
+			"showMore": "Показать ещё",
+			"hide": "Убрать"
 		}
 	},
 
-	"about": {
-		"heading": "About Me",
-		"description": "",
-		"text": "",
-		"facts": {
+	
+		"about": {
+		  "heading": "Обо мне",
+		  "description": "Разрабатываю, учусь и стараюсь делать чуть лучше с каждым проектом.",
+		  "text": "Привет! Я full-stack разработчик с более чем годом опыта в создании реальных веб-приложений с использованием современных технологий. Обожаю разбираться, как всё устроено, продумывать архитектуру и воплощать идеи в жизнь через чистые и поддерживаемые решения. Будь то сайд-проект, open-source или изучение нового фреймворка — я всегда в процессе изучения и создания. Когда не за компьютером — меня можно найти под звёздами или в дороге на велосипеде.",
+		  "factsHeading": "Цифры обо мне",
+		  "interestsHeading": "Что мне по душе",
+		  "facts": {
 			"experince": {
-				"value": "1.5+",
-				"name": "Years of experience"
+			  "value": "1.5+",
+			  "name": "Лет опыта"
 			},
 			"projects": {
-				"value": "55+",
-				"name": "Projects in GitHub"
+			  "value": "55+",
+			  "name": "Проектов на GitHub"
 			},
 			"directions": {
-				"value": "5+",
-				"name": "Directions occupied"
+			  "value": "5+",
+			  "name": "Направлений в разработке"
 			}
-		},
-		"interests": {
-			"hiking" : {
-				"value": "Bla bla bla",
-				"name": "Hiking",
-				"icon": "MountainSnow"
+		  },
+		  "interests": {
+			"hiking": {
+			  "value": "Обожаю выбираться на природу и перезагружаться.",
+			  "name": "Хайкинг",
+			  "icon": "MountainSnow"
 			},
-			"cycling" : {
-				"value": "Bla bla bla",
-				"name": "Cycling",
-				"icon": "Bike"
+			"cycling": {
+			  "value": "Скорость и свобода на двух колёсах.",
+			  "name": "Велосипед",
+			  "icon": "Bike"
 			},
-			"gaming" : {
-				"value": "Bla bla bla",
-				"name": "Gaming",
-				"icon": "Gamepad2"
+			"gaming": {
+			  "value": "Игры помогают расслабиться и держать ум в тонусе.",
+			  "name": "Игры",
+			  "icon": "Gamepad2"
 			},
-			"astronomy" : {
-				"value": "Bla bla bla",
-				"name": "Astrononmy",
-				"icon": "Telescope"
+			"astronomy": {
+			  "value": "Вселенная и звёзды — это магия.",
+			  "name": "Астрономия",
+			  "icon": "Telescope"
 			},
 			"sports": {
-				"value": "Bla bla bla",
-				"name": "Sports",
-				"icon": "Dumbbell"
+			  "value": "Движение помогает сосредоточиться и жить ярко.",
+			  "name": "Спорт",
+			  "icon": "Dumbbell"
 			}
-			
-
+		  }
 		}
-		
-	}
+	  
+	  
+	  
+	  
 }

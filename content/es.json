@@ -19,6 +19,7 @@
 
 	"projects": {
 		"heading": "Mis Proyectos",
+		"description": "Proyectos en los que he trabajado — de ideas a productos reales.",
 		"items": {
 			"st": {
 				"name": "Swiss Time",
@@ -98,56 +99,65 @@
 				"inProduction": true,
 				"icon": "PencilLine"
 			}
+		},
+		"buttons": {
+		"showMore": "Show More",
+		"hide": "Hide"
 		}
 	},
 
-	"about": {
-		"heading": "About Me",
-		"description": "",
-		"text": "",
-		"facts": {
+	
+		"about": {
+		  "heading": "Sobre mí",
+		  "description": "Soy desarrollador, aprendo y escribo código en el camino.",
+		  "text": "¡Hola! Soy un desarrollador full-stack autodidacta con más de un año de experiencia creando aplicaciones reales con tecnologías modernas. Me gusta entender cómo funcionan las cosas, trabajar con estructuras limpias y dar vida a las ideas con soluciones simples y mantenibles. Siempre estoy probando algo nuevo — ya sea un proyecto personal, una contribución open-source o simplemente aprendiendo otra herramienta. Cuando no estoy frente al código, probablemente estoy bajo las estrellas o rodando en bicicleta.",
+
+		  "factsHeading": "Un poco sobre mí",
+		  "interestsHeading": "Lo que me apasiona",
+		  "facts": {
 			"experince": {
-				"value": "1.5+",
-				"name": "Years of experience"
+			  "value": "1.5+",
+			  "name": "Años de experiencia"
 			},
 			"projects": {
-				"value": "55+",
-				"name": "Projects in GitHub"
+			  "value": "55+",
+			  "name": "Proyectos en GitHub"
 			},
 			"directions": {
-				"value": "5+",
-				"name": "Directions occupied"
+			  "value": "5+",
+			  "name": "Áreas en las que he trabajado"
 			}
-		},
-		"interests": {
-			"hiking" : {
-				"value": "Bla bla bla",
-				"name": "Hiking",
-				"icon": "MountainSnow"
+		  },
+		  "interests": {
+			"hiking": {
+			  "value": "Me encanta conectar con la naturaleza y despejar la mente.",
+			  "name": "Senderismo",
+			  "icon": "MountainSnow"
 			},
-			"cycling" : {
-				"value": "Bla bla bla",
-				"name": "Cycling",
-				"icon": "Bike"
+			"cycling": {
+			  "value": "Velocidad y libertad sobre dos ruedas.",
+			  "name": "Ciclismo",
+			  "icon": "Bike"
 			},
-			"gaming" : {
-				"value": "Bla bla bla",
-				"name": "Gaming",
-				"icon": "Gamepad2"
+			"gaming": {
+			  "value": "Relajación y agilidad mental a través de los juegos.",
+			  "name": "Videojuegos",
+			  "icon": "Gamepad2"
 			},
-			"astronomy" : {
-				"value": "Bla bla bla",
-				"name": "Astrononmy",
-				"icon": "Telescope"
+			"astronomy": {
+			  "value": "El universo siempre me deja maravillado.",
+			  "name": "Astronomía",
+			  "icon": "Telescope"
 			},
 			"sports": {
-				"value": "Bla bla bla",
-				"name": "Sports",
-				"icon": "Dumbbell"
+			  "value": "Me ayuda a mantenerme enfocado y sentirme vivo.",
+			  "name": "Deporte",
+			  "icon": "Dumbbell"
 			}
-			
-
+		  }
 		}
-		
-	}
+	  
+	  
+	  
+	  
 }

@@ -6,13 +6,19 @@ import gsap from "gsap";
 import styles from "./Projects.module.scss";
 import Button from "../ui/Button/Button";
 import { EButtonSizes } from "@/types/ui";
-import { Cog, PencilLine, PocketKnife, School, Watch } from "lucide-react";
+import {
+  Cog,
+  FolderCodeIcon,
+  PencilLine,
+  PocketKnife,
+  School,
+  Watch,
+} from "lucide-react";
 import { TContent } from "@/types/content";
 
 gsap.registerPlugin(useGSAP);
 
 type ProjectsProps = TContent<"projects">;
-
 
 const icons: Record<string, React.ElementType> = {
   Watch,
@@ -23,7 +29,7 @@ const icons: Record<string, React.ElementType> = {
 } as const;
 
 const getDefaultVisibleProjects = () => {
-  if (typeof window === "undefined") return 2; 
+  if (typeof window === "undefined") return 2;
   if (window.innerWidth >= 1024) return 3;
   if (window.innerWidth >= 768) return 4;
   return 2;
@@ -58,7 +64,7 @@ const Projects = ({ content }: ProjectsProps) => {
   useEffect(() => {
     const updateProjectsCount = () => {
       setVisibleProjects((prev) => {
-        if (prev > 6) return prev; 
+        if (prev > 6) return prev;
         if (window.innerWidth < 768) return 2;
         if (window.innerWidth < 1200) return 4;
         return 6;
@@ -73,8 +79,13 @@ const Projects = ({ content }: ProjectsProps) => {
 
   return (
     <section className={styles.projects}>
-      <h2 className={styles.projectsHeading}>{content.heading}</h2>
-
+      <div className={styles.projectsHeader}>
+        <div className={styles.projectsHeaderHeading}>
+          <FolderCodeIcon />
+          <h2>{content.heading}</h2>
+        </div>
+        <p className={styles.projectsHeaderDescription}>{content.description}</p>
+      </div>
       <div className={styles.projectsCardGrid}>
         {cards.slice(0, visibleProjects).map((card) => (
           <div key={card.key} className={styles.card}>
@@ -107,14 +118,14 @@ const Projects = ({ content }: ProjectsProps) => {
             size={EButtonSizes.DEFAULT}
             onClick={() => setVisibleProjects(getDefaultVisibleProjects())}
           >
-            Hide
+            {content.buttons.hide}
           </Button>
         ) : (
           <Button
             size={EButtonSizes.DEFAULT}
             onClick={() => setVisibleProjects(cards.length)}
           >
-            Show More
+            {content.buttons.showMore}
           </Button>
         )}
       </div>
