@@ -2,7 +2,27 @@
 
 .container {
     width: 100%;
-    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px; 
+    padding: 0 20px;
+
+    // Large screens (Desktop ≥ 1280px)
+    @media (min-width: 1280px) {
+        max-width: 1200px;
+    }
+
+    // Medium screens (Small laptops / Tablets in landscape)
+    @media (max-width: 1279px) and (min-width: 1024px) {
+        max-width: 960px;
+    }
+
+    // Small screens (Tablets / Large phones)
+    @media (max-width: 1023px) and (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    // Extra small screens (Phones)
+    @media (max-width: 767px) {
+        max-width: 100%;
+        padding: 0 16px;
+    }
 }
