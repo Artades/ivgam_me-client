@@ -3,6 +3,7 @@ import { Locale } from "@/i18n";
 import { getContent } from "@/utils/getContent";
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
+import Technologies from "../components/Technologies/Technologies";
 
 export default async function Page(props: {
   params: Promise<{ locale: Locale }>;
@@ -15,6 +16,7 @@ export default async function Page(props: {
       <Intro content={content["intro"]} />
       <Projects content={content["projects"]} />
       <About content={content["about"]} />
+      <Technologies content={content["technologies"]} />
     </>
   );
 }

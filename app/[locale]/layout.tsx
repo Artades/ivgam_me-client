@@ -4,7 +4,7 @@ import {
 } from "next/font/google";
 import "../styles/globals.scss";
 import Container from "@/app/components/Layout/Container/Container";
-import BackgroundEffect from "@/app/components/BackgroundEffect/BackgroundEffect";
+import BackgroundEffect from "@/app/components/Layout/BackgroundEffect/BackgroundEffect";
 import Header from "@/app/components/Layout/Header/Header";
 import MobileMenu from "@/app/components/Layout/MobileMenu/MobileMenu";
 import { i18n, type Locale } from "../../i18n";
