@@ -134,7 +134,7 @@
   justify-content: center;
   gap: var(--spacing-lg);
   padding-top: var(--spacing-lg);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-sm);
 }
 
 .projectsShowMoreCount {
@@ -158,11 +158,7 @@
 }
 
 @media (max-width: 768px) {
-  .projectsShowMore {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
+ 
 
   .projectsBarPercentage {
     width: 80%;

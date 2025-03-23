@@ -50,30 +50,21 @@ const Projects = ({ content }: ProjectsProps) => {
     };
   });
 
-  const getInitialProjectsCount = () => {
-    if (typeof window === "undefined") return 6; // SSR fallback
-    if (window.innerWidth < 768) return 2;
-    if (window.innerWidth < 1200) return 4;
-    return 3;
-  };
+   const getProjectsCountByWidth = () => {
+			if (window.innerWidth < 768) return 2;
+			if (window.innerWidth < 1200) return 4;
+			return 3;
+		};
 
-  const [visibleProjects, setVisibleProjects] = useState(
-    getInitialProjectsCount
-  );
+		const [visibleProjects, setVisibleProjects] = useState(0); // ← начальное значение 0
 
-  useEffect(() => {
-    const updateProjectsCount = () => {
-      setVisibleProjects((prev) => {
-        if (prev > 6) return prev;
-        if (window.innerWidth < 768) return 2;
-        if (window.innerWidth < 1200) return 4;
-        return 6;
-      });
-    };
+		useEffect(() => {
+			const updateCount = () => setVisibleProjects(getProjectsCountByWidth());
 
-    window.addEventListener("resize", updateProjectsCount);
-    return () => window.removeEventListener("resize", updateProjectsCount);
-  }, []);
+			updateCount(); // ← установить при монтировании
+			window.addEventListener("resize", updateCount);
+			return () => window.removeEventListener("resize", updateCount);
+		}, []);
 
   const barPercentage = (visibleProjects / cards.length) * 100;
 
