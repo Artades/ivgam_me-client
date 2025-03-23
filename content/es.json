@@ -158,6 +158,24 @@
 
 	"technologies": {
 		"heading": "Technologies",
-		"description": ""
+		"description": "",
+		"items": {
+			"react": {
+				"name": "React",
+				"icon": "Atom"
+			},
+			"nextjs": {
+				"name": "Next.js",
+				"icon": "SquareStack"
+			},
+			"typescript": {
+				"name": "TypeScript",
+				"icon": "Code2"
+			},
+			"gsap": {
+				"name": "GSAP",
+				"icon": "Sparkles"
+			}
+		}
 	}
 }
