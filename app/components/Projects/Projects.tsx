@@ -56,12 +56,12 @@ const Projects = ({ content }: ProjectsProps) => {
 			return 3;
 		};
 
-		const [visibleProjects, setVisibleProjects] = useState(0); // ← начальное значение 0
+		const [visibleProjects, setVisibleProjects] = useState(0); 
 
 		useEffect(() => {
 			const updateCount = () => setVisibleProjects(getProjectsCountByWidth());
 
-			updateCount(); // ← установить при монтировании
+			updateCount(); 
 			window.addEventListener("resize", updateCount);
 			return () => window.removeEventListener("resize", updateCount);
 		}, []);
@@ -69,7 +69,7 @@ const Projects = ({ content }: ProjectsProps) => {
   const barPercentage = (visibleProjects / cards.length) * 100;
 
   return (
-    <section className={styles.projects}>
+    <section id="projects" className={styles.projects}>
       <div className={styles.projectsHeader}>
         <div className={styles.projectsHeaderHeading}>
           <FolderCodeIcon />

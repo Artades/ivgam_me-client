@@ -13,6 +13,7 @@
 	"navigation": {
 		"about": "Sobre mí",
 		"projects": "Proyectos",
+		"technologies": "Technologies",
 		"testimonials": "Testimonios",
 		"contact": "Contáctame"
 	},
@@ -158,7 +159,7 @@
 
 	"technologies": {
 		"heading": "Technologies",
-		"description": "",
+		"description": "Tools and frameworks I use regularly.",
 		"items": {
 			"react": {
 				"name": "React",
@@ -177,5 +178,9 @@
 				"icon": "Sparkles"
 			}
 		}
+	},
+	"contact": {
+		"heading": "Contact me",
+		"description": "Let’s connect and build something great."
 	}
 }

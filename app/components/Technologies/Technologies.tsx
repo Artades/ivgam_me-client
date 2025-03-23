@@ -28,7 +28,7 @@ const techs = [
   
 const Technologies = ({ content }: TechnologiesProps) => {
   return (
-    <section className={styles.technologies}>
+    <section id="technologies" className={styles.technologies}>
       <div className={styles.technologiesHeader}>
         <div className={styles.technologiesHeaderHeading}>
           <Laptop2 />

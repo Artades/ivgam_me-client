@@ -4,6 +4,7 @@ import { getContent } from "@/utils/getContent";
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import Technologies from "../components/Technologies/Technologies";
+import Contact from "../components/Contact/Contact";
 
 export default async function Page(props: {
   params: Promise<{ locale: Locale }>;
@@ -17,6 +18,7 @@ export default async function Page(props: {
       <Projects content={content["projects"]} />
       <About content={content["about"]} />
       <Technologies content={content["technologies"]} />
+      <Contact content={content["contact"]} />
     </>
   );
 }

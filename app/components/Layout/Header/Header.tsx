@@ -3,22 +3,16 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import { navigation as nav } from "@/config/navigation";
-import { useRouter } from "next/navigation";
-import { SquareDashedBottomCode, Text } from "lucide-react";
+import { SquareDashedBottomCode } from "lucide-react";
 import { getContent } from "@/utils/getContent";
 import LanguageSelect from "./LanguageSelect/LanguageSelect";
 import MobileMenuButton from "./MobileMenuButton/MobileMenuButton";
+import { scrollToSection } from "@/helpers/scroll";
 
 interface HeaderProps {
 	content: Awaited<ReturnType<typeof getContent>>["navigation"];
 }
 const Header = ({ content }: HeaderProps) => {
-	const router = useRouter();
-	const handleLink = (link: string): void => {
-		router.push(link);
-	};
-
-	
 
 	return (
 		<header className={styles.header}>
@@ -32,7 +26,7 @@ const Header = ({ content }: HeaderProps) => {
 				<ul className={styles.headerNav}>
 					{nav.map((item) => (
 						<li
-							onClick={() => handleLink(item.link)}
+							onClick={() => scrollToSection(item.key)}
 							key={item.id}
 							className={styles.navItem}
 						>

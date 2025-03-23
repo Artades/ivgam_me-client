@@ -25,7 +25,7 @@ const icons: Record<string, React.ElementType> = {
 
 const About = ({ content }: AboutProps) => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.aboutHeader}>
         <div className={styles.aboutHeaderHeading}>
           <Pin />

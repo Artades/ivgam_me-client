@@ -1,28 +1,32 @@
-// Container.module.scss
-
 .container {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-
-    // Large screens (Desktop ≥ 1280px)
-    @media (min-width: 1280px) {
-        max-width: 1200px;
-    }
-
-    // Medium screens (Small laptops / Tablets in landscape)
-    @media (max-width: 1279px) and (min-width: 1024px) {
-        max-width: 960px;
-    }
-
-    // Small screens (Tablets / Large phones)
-    // @media (max-width: 1023px) and (min-width: 768px) {
-    //     max-width: 720px;
-    // }
-
-    // Extra small screens (Phones)
+  
+    // Мобильные устройства
     @media (max-width: 767px) {
-        max-width: 100%;
-        padding: 0 16px;
+      max-width: 100%;
+      padding: 0 16px;
     }
-}
+  
+    // Планшеты и маленькие ноутбуки
+    @media (min-width: 768px) and (max-width: 1023px) {
+      max-width: 768px;
+    }
+  
+    // Ноутбуки (например, Zenbook 14)
+    @media (min-width: 1024px) and (max-width: 1365px) {
+      max-width: 1152px;
+    }
+  
+    // Десктопы и 2K-мониторы
+    @media (min-width: 1366px) and (max-width: 1919px) {
+      max-width: 1240px;
+    }
+  
+    // 2K+ экраны (например, 2560x1440)
+    @media (min-width: 1920px) {
+      max-width: 1440px;
+    }
+  }
+  

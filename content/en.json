@@ -11,10 +11,12 @@
 		}
 	},
 	"navigation": {
-		"about": "About Me",
+		
 		"projects": "Projects",
-		"testimonials": "Testimonials",
-		"contact": "Contact Me"
+		"about": "About Me",
+		"technologies": "Technologies",
+		"contact": "Contact Me",
+		"testimonials": "Testimonials"
 	},
 
 	"projects": {
@@ -174,5 +176,9 @@
 				"icon": "Sparkles"
 			}
 		}
+	},
+	"contact": {
+		"heading": "Contact me",
+		"description": "Let’s connect and build something great."
 	}
 }
