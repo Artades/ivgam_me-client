@@ -1,0 +1,79 @@
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+
+  svg {
+    margin-right: var(--spacing-md);
+    position: absolute;
+    top: 50%;
+    left: var(--spacing-md);
+    transform: translateY(-50%);
+
+    color: var(--color-dark-blue);
+    font-size: var(--fz-md);
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+}
+
+.floatingLabel {
+  position: absolute;
+  top: 50%;
+  left: calc( var(--spacing-md) * 3);
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: var(--color-dark-blue);
+  font-size: var(--fz-md);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.floatingLabelActive {
+  top: -0px;
+
+  font-size: var(--fz-sm);
+
+}
+
+.input {
+  padding: var(--spacing-md);
+  padding-left: calc( var(--spacing-md) * 3);
+  width: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  border-bottom: 2px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-light);
+  font-size: var(--fz-md);
+  transition: var(--transition-default);
+
+  &:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color-light);
+  }
+
+  &::placeholder {
+    color: transparent; // скрываем
+  }
+}
+
+.error {
+  border-color: rgb(142, 35, 35);
+}
+
+.errorText {
+  color: rgb(142, 35, 35);
+  font-size: var(--fz-md);
+}

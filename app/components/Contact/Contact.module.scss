@@ -26,6 +26,45 @@
       color: var(--color-accent);
     }
   }
+  &Inner {
+    @include cardStyle();
 
-  
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &ImageWrapper {
+    position: relative;
+    border-radius: var(--rad-medium);
+    overflow: hidden;
+    min-height: 600px;
+
+    img {
+      object-fit: cover;
+    }
+ 
+  }
+
+  &FormWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+
+    h3 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+  }
 }
