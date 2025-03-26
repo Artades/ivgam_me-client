@@ -47,8 +47,8 @@
 
     img {
       object-fit: cover;
+      filter: sepia(1) saturate(5) hue-rotate(160deg);
     }
- 
   }
 
   &FormWrapper {

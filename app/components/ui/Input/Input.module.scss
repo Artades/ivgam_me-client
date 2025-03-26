@@ -1,76 +1,70 @@
-
 .wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
   width: 100%;
 }
 
+.label {
+  font-size: var(--fz-md);
+  color: var(--color-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
 .inputWrapper {
   position: relative;
-
-  svg {
-    margin-right: var(--spacing-md);
-    position: absolute;
-    top: 50%;
-    left: var(--spacing-md);
-    transform: translateY(-50%);
-
-    color: var(--color-dark-blue);
-    font-size: var(--fz-md);
-    pointer-events: none;
-    transition: all 0.2s ease;
-  }
-}
-
-.floatingLabel {
-  position: absolute;
-  top: 50%;
-  left: calc( var(--spacing-md) * 3);
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  color: var(--color-dark-blue);
-  font-size: var(--fz-md);
-  pointer-events: none;
-  transition: all 0.2s ease;
-}
+  background: rgba(255, 255, 255, 0.05);
+  border: 0;
+  outline: 0;
+  border-radius: var(--rad-medium);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
-.floatingLabelActive {
-  top: -0px;
+  &:focus-within {
+    outline: 0.115rem solid var(--color-accent);
 
-  font-size: var(--fz-sm);
-
+    .icon {
+      color: var(--color-accent);
+    }
+  }
 }
 
 .input {
-  padding: var(--spacing-md);
-  padding-left: calc( var(--spacing-md) * 3);
   width: 100%;
-  appearance: none;
+  padding: var(--spacing-md);
+  padding-left: 3rem;
   border: none;
   outline: none;
-  border-radius: 0;
-  border-bottom: 2px solid var(--color-accent);
   background: transparent;
   color: var(--color-light);
+  border-radius: var(--rad-medium);
   font-size: var(--fz-md);
-  transition: var(--transition-default);
-
-  &:focus {
-    outline: none;
-    border: none;
-    border-bottom: 2px solid var(--color-light);
-  }
+  appearance: none;
 
   &::placeholder {
-    color: transparent; // скрываем
+    color: rgb(97, 108, 134);
   }
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light);
+  pointer-events: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 .error {
   border-color: rgb(142, 35, 35);
+
+  .icon {
+    color: rgb(142, 35, 35);
+  }
 }
 
 .errorText {

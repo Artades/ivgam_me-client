@@ -1,0 +1,55 @@
+@use 'sass:color';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--fz-md);
+  color: var(--color-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0;
+  outline: 0;
+  border-radius: var(--rad-medium);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus-within {
+    outline: 0.115rem solid var(--color-accent);
+  }
+}
+
+.textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-light);
+  border-radius: var(--rad-medium);
+  font-size: var(--fz-md);
+  resize: vertical;
+  min-height: 6rem;
+  resize: none;
+
+  &::placeholder {
+    color: rgb(97, 108, 134);
+  }
+}
+
+.error {
+  outline: 0.115rem solid rgb(142, 35, 35);
+}
+
+.errorText {
+  color: rgb(142, 35, 35);
+  font-size: var(--fz-md);
+}

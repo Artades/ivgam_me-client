@@ -8,6 +8,7 @@ import Input from "../ui/Input/Input";
 import Image from "next/image";
 import Button from "../ui/Button/Button";
 import { EButtonSizes, EButtonVariants } from "@/types/ui";
+import TextArea from "../ui/TextArea/TextArea";
 
 type ContactProps = TContent<"contact">;
 
@@ -24,7 +25,7 @@ const Contact = ({ content }: ContactProps) => {
 
       <div className={styles.contactInner}>
         <div className={styles.contactImageWrapper}>
-          <Image src="/images/aurora.jpeg" alt="Contact" fill />
+          <Image src="/images/contact.jpg" alt="Contact" fill />
         </div>
 
         <div className={styles.contactFormWrapper}>
@@ -35,7 +36,7 @@ const Contact = ({ content }: ContactProps) => {
             <Input label="Email" placeholder="you@example.com" type="email" icon={<Mail/>} required />
 
             <Input label="Company" placeholder="Wallmart" type="email" required icon={<Building2/>}/>
-            <Input label="Email" placeholder="you@example.com" type="email" icon={<Mail/>} required />
+            <TextArea label="Message" placeholder="I came up with an idea..." required />
             {/* <TextArea /> */}
 
             <Button

@@ -2,7 +2,7 @@ import React, { ComponentPropsWithRef, forwardRef } from 'react';
 import styles from './TextArea.module.scss';
 import clsx from 'clsx';
 
-interface TextAreaProps extends ComponentPropsWithRef<"textarea"> {
+interface TextAreaProps extends ComponentPropsWithRef<'textarea'> {
   label?: string;
   error?: string;
 }
@@ -12,11 +12,13 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <div className={clsx(styles.wrapper, className)}>
         {label && <label className={styles.label}>{label}</label>}
-        <TextArea
-          ref={ref}
-          className={clsx(styles.TextArea, { [styles.error]: !!error })}
-          {...props}
-        />
+        <div className={clsx(styles.inputWrapper, { [styles.error]: !!error })}>
+          <textarea
+            ref={ref}
+            className={styles.textarea}
+            {...props}
+          />
+        </div>
         {error && <span className={styles.errorText}>{error}</span>}
       </div>
     );
@@ -26,4 +28,3 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 TextArea.displayName = 'TextArea';
 
 export default TextArea;
-
