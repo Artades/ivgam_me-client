@@ -179,8 +179,41 @@
 			}
 		}
 	},
-	"contact": {
-		"heading": "Contact me",
-		"description": "Let’s connect and build something great."
-	}
+"contact": {
+  "heading": "Contáctame",
+  "description": "Conectemos y creemos algo grandioso.",
+  "form": {
+    "title": "Rellena el formulario",
+    "fields": {
+      "fullName": {
+        "label": "Nombre completo",
+        "placeholder": "Juan Pérez",
+        "error": "El nombre completo es obligatorio"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "you@example.com",
+        "error": "Por favor, introduce un correo electrónico válido"
+      },
+      "company": {
+        "label": "Empresa",
+        "placeholder": "Walmart",
+        "error": "El nombre de la empresa es obligatorio"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Se me ocurrió una idea...",
+        "error": "El mensaje no puede estar vacío"
+      }
+    },
+    "button": {
+      "submit": "Enviar"
+    }
+  },
+  "messages": {
+    "success": "¡Gracias por contactarme! Me pondré en contacto pronto.",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo más tarde."
+  }
+}
+
 }
