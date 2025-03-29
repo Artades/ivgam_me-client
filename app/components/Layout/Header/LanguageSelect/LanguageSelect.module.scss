@@ -1,41 +1,37 @@
 .languageSelect {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
-
-
 .dropdown {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--color-accent);
-    border-radius: var(--rad-medium);
-    box-shadow: var(--box-shadow-dark);
-    padding: var(--spacing-sm);
-    min-width: 120px;
-    z-index: 10;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  border-radius: var(--rad-medium);
+  box-shadow: var(--box-shadow-dark);
+  padding: var(--spacing-sm);
+  min-width: 120px;
+  z-index: 10;
 }
 
 .option {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs);
-    cursor: pointer;
-    transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs);
+  cursor: pointer;
+  transition: all 0.1s;
 
-    &:hover {
-        background: var(--color-dark-accent);
-    }
+  &:hover {
+    background: var(--color-dark-accent);
+  }
 }
 
-.icon {
-    font-size: 1.2rem;
-}
+
 
 .label {
-    color: var(--color-light);
-    font-size: var(--fz-md);
+  color: var(--color-light);
+  font-size: var(--fz-md);
 }

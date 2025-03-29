@@ -38,51 +38,49 @@
     gap: var(--spacing-lg);
 
     .navItem {
-        font-size: var(--fz-lg);
-        color: var(--color-light);
-        cursor: pointer;
-        user-select: none;
-        position: relative;
-        transition: color 0.3s ease;
-      
-        &:hover {
-          color: var(--color-accent);
-          box-shadow: var(--box-shadow-light);
-          transform: scale(0.97);
-          
-        }
-      
-        &:active {
-          text-shadow: 0 0 1rem var(--color-accent);
-        }
-      
-        &::before {
-          content: "[ ";
-      
-          color: var(--color-accent);
-          display: inline-block; // Добавляем это
-          transition: transform 0.3s ease;
-          transform: translateX(-0.3rem);
-        }
-      
-        &::after {
-          content: " ]";
-      
-          color: var(--color-accent);
-          display: inline-block; // Добавляем это
-          transition: transform 0.3s ease;
-          transform: translateX(0.3rem);
-        }
-      
-        &:hover::before {
-          transform: translateX(-0.5rem);
-        }
-      
-        &:hover::after {
-          transform: translateX(0.5rem);
-        }
+      font-size: var(--fz-lg);
+      color: var(--color-light);
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--color-accent);
+        box-shadow: var(--box-shadow-light);
+        transform: scale(0.97);
       }
-      
+
+      &:active {
+        text-shadow: 0 0 1rem var(--color-accent);
+      }
+
+      &::before {
+        content: "[ ";
+
+        color: var(--color-accent);
+        display: inline-block;
+        transition: transform 0.3s ease;
+        transform: translateX(-0.3rem);
+      }
+
+      &::after {
+        content: " ]";
+
+        color: var(--color-accent);
+        display: inline-block;
+        transition: transform 0.3s ease;
+        transform: translateX(0.3rem);
+      }
+
+      &:hover::before {
+        transform: translateX(-0.5rem);
+      }
+
+      &:hover::after {
+        transform: translateX(0.5rem);
+      }
+    }
   }
 
   .headerActions {
@@ -111,6 +109,7 @@
       }
     }
   }
+  
 
   @media (max-width: 768px) {
     .headerNav {
@@ -118,6 +117,7 @@
     }
 
     .headerActions {
+      gap: var(--spacing-sm);
       & button:nth-child(2) {
         display: block;
       }

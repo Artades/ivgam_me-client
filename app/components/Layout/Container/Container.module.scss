@@ -9,10 +9,10 @@
       padding: 0 16px;
     }
   
-    // Планшеты и маленькие ноутбуки
-    @media (min-width: 768px) and (max-width: 1023px) {
-      max-width: 768px;
-    }
+    // // Планшеты и маленькие ноутбуки
+    // @media (min-width: 768px) and (max-width: 1023px) {
+    //   max-width: 768px;
+    // }
   
     // Ноутбуки (например, Zenbook 14)
     @media (min-width: 1024px) and (max-width: 1365px) {

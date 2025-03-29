@@ -17,6 +17,16 @@
     width: var(--fz-xl);
     height: var(--fz-xl);
     color: var(--color-light);
+
+    @media (max-width: 768px) {
+      width: var(--fz-lg);
+      height: var(--fz-lg);
+    }
+
+    @media (max-width: 375px) {
+      width: var(--fz-sm);
+      height: var(--fz-sm);
+    }
   }
 
   &.small {

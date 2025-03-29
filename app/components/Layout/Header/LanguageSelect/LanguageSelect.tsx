@@ -24,7 +24,7 @@ const LanguageSelect = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
-	// Обновляем язык, если меняется `locale`
+	
 	useEffect(() => {
 		if (locale) {
 			setSelectedLanguage(
@@ -33,7 +33,6 @@ const LanguageSelect = () => {
 		}
 	}, [locale]);
 
-	// Закрываем дропдаун при клике вне него
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			if (
@@ -79,7 +78,7 @@ const LanguageSelect = () => {
 						<div
 							key={lang.code}
 							className={styles.option}
-							onClick={() => handleChangeLanguage(lang)} // ✅ Передаем `lang`
+							onClick={() => handleChangeLanguage(lang)} 
 						>
 							<span className={styles.label}>{lang.label}</span>
 						</div>
