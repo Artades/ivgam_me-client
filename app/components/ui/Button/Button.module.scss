@@ -7,13 +7,14 @@
   border: none;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-sm);
   border-radius: var(--rad-medium);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 1rem 2rem;
   user-select: none;
   outline: none;
 
-  & svg {
+  svg {
     width: var(--fz-xl);
     height: var(--fz-xl);
     color: var(--color-light);

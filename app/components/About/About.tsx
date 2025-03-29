@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import styles from "./About.module.scss";
 import { TContent } from "@/types/content";
 import {
+  BadgeInfo,
   Bike,
+  ChevronRight,
   Dumbbell,
   FolderCodeIcon,
   Gamepad2,
@@ -10,6 +14,8 @@ import {
   Pin,
   Telescope,
 } from "lucide-react";
+import Button from "../ui/Button/Button";
+import { EButtonVariants } from "@/types/ui";
 
 type AboutProps = TContent<"about">;
 
@@ -64,7 +70,7 @@ const About = ({ content }: AboutProps) => {
             })}
           </div>
         </div>
-
+        {/* 
         <div className={styles.aboutFactsWrapper}>
           <h3 className={styles.sectionTitle}>{content.factsHeading}</h3>
           <div className={styles.aboutFacts}>
@@ -75,6 +81,15 @@ const About = ({ content }: AboutProps) => {
               </div>
             ))}
           </div>
+        </div> */}
+
+        <div className={styles.aboutButtons}>
+          <Button>
+            <BadgeInfo />
+            <span>Learn More</span>
+          </Button>
+
+       
         </div>
       </div>
     </section>

@@ -34,11 +34,12 @@
   }
 
   &TextBlock {
+    
     p {
       font-size: var(--fz-md);
       line-height: 1.6;
       color: var(--color-light);
-      text-align: justify; 
+      text-align: justify;
     }
   }
 
@@ -49,38 +50,40 @@
     gap: var(--spacing-md);
   }
 
-  &Facts {
-    display: flex;
-    gap: var(--spacing-lg);
-    flex-wrap: wrap;
-    justify-content: center; // выравнивание по центру
+  // &Facts {
+  //   display: flex;
+  //   gap: var(--spacing-lg);
+  //   flex-wrap: wrap;
 
-    &Item {
-      background-color: var(--color-dark-blue);
-      border-radius: var(--rad-medium);
-      padding: var(--spacing-md);
-      min-width: 150px;
-      text-align: center;
+  //   width: 100%;
 
-      &Value {
-        font-size: var(--fz-xl);
-        font-weight: bold;
-        color: var(--color-accent);
-        display: block;
-      }
+  //   &Item {
 
-      &Name {
-        font-size: var(--fz-md);
-        color: var(--color-light);
-      }
-    }
+  //     @include cardStyle();
+  //     border-radius: var(--rad-medium);
+  //     padding: var(--spacing-md);
+  //     min-width: 150px;
+  //     text-align: center;
 
-    // адаптив для маленьких экранов
-    @media (max-width: 600px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  //     &Value {
+  //       font-size: var(--fz-xl);
+  //       font-weight: bold;
+  //       color: var(--color-accent);
+  //       display: block;
+  //     }
+
+  //     &Name {
+  //       font-size: var(--fz-sm);
+  //       color: var(--color-light);
+  //     }
+  //   }
+
+  //   // адаптив для маленьких экранов
+  //   @media (max-width: 600px) {
+  //     flex-direction: column;
+  //     align-items: center;
+  //   }
+  // }
 
   &Interests {
     display: grid;

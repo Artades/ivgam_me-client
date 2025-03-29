@@ -20,7 +20,7 @@
 	},
 
 	"projects": {
-		"heading": "My Projects",
+		"heading": "Experience",
 		"description": "Projects I’ve worked on — from small ideas to real apps.",
 		"items": {
 			"st": {
@@ -109,8 +109,8 @@
 	},
 	"about": {
 		"heading": "About Me",
-		"description": "I’m a developer figuring things out and writing code along the way.",
-		"text": "Hey! I'm a self-taught full-stack developer with over a year of experience building real-world applications using modern web technologies. I love exploring how things work, diving into code architecture, and bringing ideas to life with clean, maintainable solutions. Whether it's a side project, open-source contribution, or a deep dive into a new framework — I'm always learning and building. When I’m not coding, you’ll find me somewhere under the stars or racing the wind on my bike.",
+		"description": "A developer figuring things out and writing code along the way.",
+		"text": "I'm a full-stack developer with over a year of experience building real-world applications using modern web technologies. I love exploring how things work, diving into code architecture, and bringing ideas to life with clean, maintainable solutions. Whether it's a side project, open-source contribution, or a deep dive into a new framework — I'm always learning and building. ",
 		"factsHeading": "Quick facts",
 		"interestsHeading": "What I enjoy",
 		"facts": {
@@ -139,17 +139,17 @@
 				"icon": "Bike"
 			},
 			"gaming": {
-				"value": "Relaxing and sharpening thinking through games.",
+				"value": "Relaxing and hardcoring at the same time.",
 				"name": "Gaming",
 				"icon": "Gamepad2"
 			},
 			"astronomy": {
-				"value": "Always amazed by the stars and space.",
+				"value": "Amazed by the stars and space.",
 				"name": "Astronomy",
 				"icon": "Telescope"
 			},
 			"sports": {
-				"value": "Helps me stay focused and feel alive.",
+				"value": "Stay focused",
 				"name": "Sports",
 				"icon": "Dumbbell"
 			}

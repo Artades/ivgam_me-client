@@ -3,28 +3,22 @@
     margin: 0 auto;
     padding: 0 20px;
   
-    // Мобильные устройства
+  
     @media (max-width: 767px) {
       max-width: 100%;
       padding: 0 16px;
     }
   
-    // // Планшеты и маленькие ноутбуки
-    // @media (min-width: 768px) and (max-width: 1023px) {
-    //   max-width: 768px;
-    // }
-  
-    // Ноутбуки (например, Zenbook 14)
     @media (min-width: 1024px) and (max-width: 1365px) {
       max-width: 1152px;
     }
   
-    // Десктопы и 2K-мониторы
+    // 2K
     @media (min-width: 1366px) and (max-width: 1919px) {
       max-width: 1240px;
     }
   
-    // 2K+ экраны (например, 2560x1440)
+    // 2K+ 
     @media (min-width: 1920px) {
       max-width: 1440px;
     }
