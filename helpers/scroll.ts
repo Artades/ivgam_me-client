@@ -5,6 +5,7 @@ import { getContent } from "@/utils/getContent";
 type TContentKey = Omit<keyof Awaited<ReturnType<typeof getContent>>, "intro">;
 
 export const scrollToSection = (section: TContentKey): void => {
+  console.log("Скроллим в секцию: ", section);
   if (typeof document !== "undefined") {
     const element = document.getElementById(section.toLowerCase());
     if (element) {

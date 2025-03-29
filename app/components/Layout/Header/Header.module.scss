@@ -17,7 +17,7 @@
     h2 {
       display: inline-flex;
       gap: 0.5rem;
-      font-size: var(--fz-xl);
+      font-size: var(--fz-xxl);
       font-weight: bold;
       color: var(--color-light);
 
@@ -93,7 +93,7 @@
     }
   }
 
-  @media (max-width: 1200px) {
+  @media  (max-width: 1200px)  {
     .headerLogo {
       h2 {
         gap: var(--spacing-sm);
@@ -110,6 +110,17 @@
     }
   }
   
+  @media (max-width: 920px){
+    
+
+    .headerNav {
+      gap: var(--spacing-sm);
+
+      .navItem {
+        font-size: var(--fz-sm);
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     .headerNav {

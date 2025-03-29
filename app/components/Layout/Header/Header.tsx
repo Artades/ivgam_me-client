@@ -19,7 +19,7 @@ const Header = ({ content }: HeaderProps) => {
 			<div className={styles.headerInner}>
 				<div className={styles.headerLogo}>
 					<h2>
-						Artyom <span>Galay</span>
+						Ivgam <span>Me</span>
 						<SquareDashedBottomCode />
 					</h2>
 				</div>
