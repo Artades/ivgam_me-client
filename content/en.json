@@ -213,7 +213,8 @@
   "messages": {
     "success": "Thanks for reaching out! I’ll get back to you soon.",
     "error": "Something went wrong. Please try again later."
-  }
+  },
+  "subheading": "You also always can find me there."
 }
 
 }

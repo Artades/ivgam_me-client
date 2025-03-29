@@ -213,7 +213,8 @@
   "messages": {
     "success": "¡Gracias por contactarme! Me pondré en contacto pronto.",
     "error": "Algo salió mal. Por favor, inténtalo de nuevo más tarde."
-  }
+  },
+   "subheading": "You also always can find me there."
 }
 
 }
