@@ -215,6 +215,10 @@
     "error": "Algo salió mal. Por favor, inténtalo de nuevo más tarde."
   },
    "subheading": "You also always can find me there."
+},
+"testimonials": {
+	"heading": "Testimonials",
+    "description": "What people think of me ?"
 }
 
 }

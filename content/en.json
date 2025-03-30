@@ -215,6 +215,11 @@
     "error": "Something went wrong. Please try again later."
   },
   "subheading": "You also always can find me there."
+},
+
+"testimonials": {
+	"heading": "Testimonials",
+    "description": "What people think of me ?"
 }
 
 }

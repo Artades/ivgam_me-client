@@ -198,6 +198,11 @@
     "error": "Что-то пошло не так. Пожалуйста, попробуйте позже."
   },
    "subheading": "You also always can find me there."
+},
+
+"testimonials": {
+	"heading": "Testimonials",
+    "description": "What people think of me ?"
 }
 
 }
