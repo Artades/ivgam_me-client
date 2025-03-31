@@ -8,6 +8,7 @@ import Image from "next/image";
 type TechnologiesProps = TContent<"technologies">;
 
 const techs = [
+  { name: 'Java Script', icon: '/icons/js.svg'},
 	{ name: 'Docker', icon: '/icons/docker.svg'},
 	{ name: 'Express', icon: '/icons/express.svg' },
 	{ name: 'Figma', icon: '/icons/figma.svg' },
