@@ -6,7 +6,6 @@ import { TContent } from "@/types/content";
 import {
   BadgeInfo,
   Bike,
-  ChevronRight,
   Dumbbell,
   FolderCodeIcon,
   Gamepad2,
@@ -15,7 +14,7 @@ import {
   Telescope,
 } from "lucide-react";
 import Button from "../ui/Button/Button";
-import { EButtonVariants } from "@/types/ui";
+import { useInfoModalFacade } from "@/facades/useInfoModalFacade";
 
 type AboutProps = TContent<"about">;
 
@@ -30,6 +29,7 @@ const icons: Record<string, React.ElementType> = {
 };
 
 const About = ({ content }: AboutProps) => {
+  const { toggleModal } = useInfoModalFacade();
   return (
     <section id="about" className={styles.about}>
       <div className={styles.aboutHeader}>
@@ -84,12 +84,10 @@ const About = ({ content }: AboutProps) => {
         </div> */}
 
         <div className={styles.aboutButtons}>
-          <Button>
+          <Button onClick={toggleModal}>
             <BadgeInfo />
             <span>Learn More</span>
           </Button>
-
-       
         </div>
       </div>
     </section>

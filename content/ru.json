@@ -203,6 +203,53 @@
 "testimonials": {
 	"heading": "Testimonials",
     "description": "What people think of me ?"
+},
+
+"info": {
+  "heading": "Info",
+  "description": "Some basic info and stats about me",
+  "status": "Three lights are lit, but the fourth one's out",
+  "stats": {
+  
+    "experience": {
+      "name": "Experience",
+      "value": "2 years"
+    },
+    "workStatus": {
+      "name": "Employment",
+      "value": "Currently Employed"
+    },
+    "hometown": {
+      "name": "Hometown",
+      "value": "Almaty, Kazakhstan"
+    },
+    "university": {
+      "name": "University",
+      "value": "IITU"
+    },
+    "age": {
+      "name": "Age",
+      "value": "20"
+    },
+    "languages": {
+      "name": "Languages",
+      "value": "Kazakh, Russian, English"
+    },
+
+    "interests": {
+      "name": "Interests",
+      "value": "Web Development, UI/UX, Open Source, Photography, Astronomy"
+    },
+   
+    "availability": {
+      "name": "Availability",
+      "value": "Open to freelance opportunities"
+    }
+  },
+  "comment": {
+		"heading": "Comments",
+		"description": "Leave a comment"
+	}
 }
 
 }

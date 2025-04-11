@@ -15,7 +15,7 @@ export default async function Page(props: {
 
   const content = await getContent(locale);
 
-  const testimonials = await getTestimonials();
+  // const testimonials = await getTestimonials();
   return (
     <>
       <Intro content={content["intro"]} />
@@ -23,7 +23,7 @@ export default async function Page(props: {
       <About content={content["about"]} />
       <Technologies content={content["technologies"]} />
       <Contact content={content["contact"]} />
-      <Testimonials content={content["testimonials"]} testimonials={testimonials} />
+      {/* <Testimonials content={content["testimonials"]} testimonials={testimonials} /> */}
     </>
   );
 }

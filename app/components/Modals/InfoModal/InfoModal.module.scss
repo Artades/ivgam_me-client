@@ -1,0 +1,119 @@
+@import "../../../styles/mixins.scss";
+
+.infoModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0rem);
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 100;
+
+  pointer-events: none;
+}
+
+.infoModalOverlayActive {
+  pointer-events: auto;
+  backdrop-filter: blur(3rem);
+}
+
+.infoModal {
+  position: fixed;
+  left: 250%;
+  top: 250%;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  width: 100%;
+  max-width: 600px;
+  padding: var(--spacing-lg);
+  border-radius: var(--rad-large);
+  background-color: var(--color-dark-blue);
+  color: var(--color-light);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 101;
+  @include cardStyle();
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-md);
+  }
+
+  &.infoModalOpened {
+    opacity: 1;
+    pointer-events: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  &Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+
+  &Avatar {
+    border-radius: var(--rad-circle);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(90%) contrast(90%);
+  }
+
+  &Heading {
+    font-size: var(--fz-xl);
+  }
+
+  &Description {
+    font-size: var(--fz-sm);
+    color: var(--color-light-darken);
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  &Item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-light-darkend);
+    padding: var(--spacing-sm);
+    border-radius: var(--rad-medium);
+  }
+
+  &ItemName {
+    font-size: var(--fz-md);
+    color: var(--color-accent);
+  }
+  &ItemFiller {
+    flex-grow: 1;
+    position: relative;
+    height: 1px;
+    margin: 0 8px;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      border-bottom: 1px dashed var(--color-accent);
+      transform: translateY(-50%);
+    }
+  }
+  
+
+  &ItemValue {
+    font-size: var(--fz-sm);
+    color: var(--color-light);
+  }
+}

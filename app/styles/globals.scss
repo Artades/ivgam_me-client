@@ -98,3 +98,7 @@ p {
   font-size: var(--fz-md);
 }
 
+.disabled {
+  opacity: 70%;
+  filter: blur(1rem);
+}

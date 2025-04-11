@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Montserrat
-} from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "../styles/globals.scss";
 import Container from "@/app/components/Layout/Container/Container";
 import BackgroundEffect from "@/app/components/Layout/BackgroundEffect/BackgroundEffect";
@@ -9,7 +7,7 @@ import Header from "@/app/components/Layout/Header/Header";
 import MobileMenu from "@/app/components/Layout/MobileMenu/MobileMenu";
 import { i18n, type Locale } from "../../i18n";
 import { getContent } from "@/utils/getContent";
-
+import InfoModal from "../components/Modals/InfoModal/InfoModal";
 
 const notoSans = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -22,29 +20,30 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-	return i18n.locales.map((locale) => ({ lang: locale }));
+  return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
 export default async function RootLayout({
-	children,
-	params,
+  children,
+  params,
 }: {
-	children: React.ReactNode;
-	params: { locale: Promise<Locale> };
+  children: React.ReactNode;
+  params: { locale: Promise<Locale> };
 }) {
-	const locale = await params.locale;
+  const locale = await params.locale;
 
-	const content =  await getContent(locale);
-	return (
-		<html lang={locale}>
-			<body className={notoSans.className}>
-				<Container>
-					<Header content={content["navigation"]}  />
-					<BackgroundEffect />
-					<MobileMenu content={content["navigation"]} />
-					{children}
-				</Container>
-			</body>
-		</html>
-	);
+  const content = await getContent(locale);
+  return (
+    <html lang={locale}>
+      <body className={notoSans.className}>
+        <Container>
+          <Header content={content["navigation"]} />
+          <BackgroundEffect />
+          <MobileMenu content={content["navigation"]} />
+          <InfoModal content={content["info"]} />
+          {children}
+        </Container>
+      </body>
+    </html>
+  );
 }
