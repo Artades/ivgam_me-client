@@ -7,7 +7,6 @@
   backdrop-filter: blur(0rem);
   transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
   z-index: 100;
-
   pointer-events: none;
 }
 
@@ -18,12 +17,14 @@
 
 .infoModal {
   position: fixed;
-  left: 250%;
-  top: 250%;
+  top: 200%;
+  left: 200%;
   transform: translate(-50%, -50%) scale(0.95);
   opacity: 0;
   width: 100%;
   max-width: 600px;
+  max-height: 90vh; // ограничение по высоте
+ 
   padding: var(--spacing-lg);
   border-radius: var(--rad-large);
   background-color: var(--color-dark-blue);
@@ -32,17 +33,33 @@
   z-index: 101;
   @include cardStyle();
 
+  .infoModalClose{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+  }
+  &.infoModalOpened {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   @media (max-width: 768px) {
+    max-height: 95vh; 
     padding: var(--spacing-md);
   }
 
-  &.infoModalOpened {
-    opacity: 1;
-    pointer-events: auto;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+  @media (max-height: 700px) {
+    overflow-y: auto; // прокрутка если не помещается
+    top: 5%;
+    transform: translate(-50%, 0); 
+    max-height: 90vh;
   }
+
+
 
   &Inner {
     display: flex;
@@ -64,10 +81,19 @@
     height: 200px;
     object-fit: cover;
     filter: brightness(90%) contrast(90%);
+
+    @media (max-width: 480px) {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   &Heading {
     font-size: var(--fz-xl);
+
+    @media (max-width: 480px) {
+      font-size: var(--fz-lg);
+    }
   }
 
   &Description {
@@ -88,18 +114,24 @@
     background-color: var(--color-light-darkend);
     padding: var(--spacing-sm);
     border-radius: var(--rad-medium);
+    flex-wrap: wrap;
   }
 
   &ItemName {
     font-size: var(--fz-md);
     color: var(--color-accent);
+
+    @media (max-width: 480px) {
+      font-size: var(--fz-sm);
+    }
   }
+
   &ItemFiller {
     flex-grow: 1;
     position: relative;
     height: 1px;
     margin: 0 8px;
-  
+
     &::before {
       content: '';
       position: absolute;
@@ -110,10 +142,13 @@
       transform: translateY(-50%);
     }
   }
-  
 
   &ItemValue {
     font-size: var(--fz-sm);
     color: var(--color-light);
+
+    @media (max-width: 480px) {
+      font-size: var(--fz-xs);
+    }
   }
 }

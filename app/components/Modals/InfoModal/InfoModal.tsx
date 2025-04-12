@@ -5,29 +5,31 @@ import styles from "./InfoModal.module.scss";
 import { TContent } from "@/types/content";
 import Image from "next/image";
 import { useInfoModalFacade } from "@/facades/useInfoModalFacade";
-import { clsx } from "clsx"; // Убедитесь, что установлен clsx
-
+import { clsx } from "clsx"; 
+import Button from "../../ui/Button/Button";
+import {XIcon} from "lucide-react"
 type InfoModalProps = TContent<"info">;
 
 const InfoModal = ({ content }: InfoModalProps) => {
   const { stats } = content;
   const { isOpen, toggleModal } = useInfoModalFacade();
-
+  
   return (
     <>
       {isOpen && (
         <div
           className={clsx(styles.infoModalOverlay, {
-            [styles.infoModalOverlayActive]: isOpen, // добавляем активный класс
+            [styles.infoModalOverlayActive]: isOpen, 
           })}
-          onClick={toggleModal} // Закрытие модалки при клике на overlay
+          onClick={toggleModal} 
         />
       )}
       <div
         className={clsx(styles.infoModal, {
-          [styles.infoModalOpened]: isOpen, // открытие модалки
+          [styles.infoModalOpened]: isOpen, 
         })}
       >
+        <nav className={styles.infoModalClose} onClick={toggleModal}><XIcon /></nav>
         <div className={styles.infoModalInner}>
           <div className={styles.infoModalHeader}>
             <Image
@@ -55,6 +57,7 @@ const InfoModal = ({ content }: InfoModalProps) => {
               return null;
             })}
           </div>
+          <Button onClick={toggleModal}>Close</Button>
         </div>
       </div>
     </>
