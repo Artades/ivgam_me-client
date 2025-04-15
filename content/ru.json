@@ -159,8 +159,7 @@
 
 	"technologies": {
 		"heading": "Технологии",
-		"description": "Инструменты и технологии, которые я использую чаще всего"
-		
+		"description": "Инструменты и технологии, которые я использую чаще всего"	
 	},
 "contact": {
   "heading": "Свяжитесь со мной",
@@ -206,44 +205,36 @@
 },
 
 "info": {
-  "heading": "Info",
-  "description": "Some basic info and stats about me",
+  "heading": "Инфо",
+  "description": "Немного информации и статистики обо мне",
   "status": "Three lights are lit, but the fourth one's out",
   "stats": {
-  
     "experience": {
-      "name": "Experience",
-      "value": "2 years"
+      "name": "Опыт",
+      "value": "2 года"
     },
     "workStatus": {
-      "name": "Employment",
-      "value": "Currently Employed"
+      "name": "Занятость",
+      "value": "В настоящее время работаю"
     },
     "hometown": {
-      "name": "Hometown",
-      "value": "Almaty, Kazakhstan"
+      "name": "Родной город",
+      "value": "Алматы, Казахстан"
     },
     "university": {
-      "name": "University",
-      "value": "IITU"
+      "name": "Университет",
+      "value": "МУИТ"
     },
     "age": {
-      "name": "Age",
+      "name": "Возраст",
       "value": "20"
     },
     "languages": {
-      "name": "Languages",
-      "value": "Kazakh, Russian, English"
+      "name": "Языки",
+      "value": "Казахский, Русский, Английский"
     }
-
-  
-   
-   
-  },
-  "comment": {
-		"heading": "Comments",
-		"description": "Leave a comment"
-	}
+  }
 }
+
 
 }

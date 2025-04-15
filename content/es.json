@@ -223,39 +223,35 @@
 
 "info": {
   "heading": "Info",
-  "description": "Some basic info and stats about me",
+  "description": "Un poco de información básica y estadísticas sobre mí",
   "status": "Three lights are lit, but the fourth one's out",
   "stats": {
-  
     "experience": {
-      "name": "Experience",
-      "value": "2 years"
+      "name": "Experiencia",
+      "value": "2 años"
     },
     "workStatus": {
-      "name": "Employment",
-      "value": "Currently Employed"
+      "name": "Empleo",
+      "value": "Actualmente trabajando"
     },
     "hometown": {
-      "name": "Hometown",
-      "value": "Almaty, Kazakhstan"
+      "name": "Ciudad natal",
+      "value": "Almatý, Kazajistán"
     },
     "university": {
-      "name": "University",
+      "name": "Universidad",
       "value": "IITU"
     },
     "age": {
-      "name": "Age",
+      "name": "Edad",
       "value": "20"
     },
     "languages": {
-      "name": "Languages",
-      "value": "Kazakh, Russian, English"
+      "name": "Idiomas",
+      "value": "Kazajo, Ruso, Inglés"
     }
-  },
-  "comment": {
-		"heading": "Comments",
-		"description": "Leave a comment"
-	}
+  }
 }
+
 
 }

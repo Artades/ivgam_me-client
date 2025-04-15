@@ -107,76 +107,59 @@
 			"hide": "Hide"
 		}
 	},
-	"about": {
-		"heading": "About Me",
-		"description": "A developer figuring things out and writing code along the way.",
-		"text": "I'm a full-stack developer with over a year of experience building real-world applications using modern web technologies. I love exploring how things work, diving into code architecture, and bringing ideas to life with clean, maintainable solutions. Whether it's a side project, open-source contribution, or a deep dive into a new framework — I'm always learning and building. ",
-		"factsHeading": "Quick facts",
-		"interestsHeading": "What I enjoy",
-		"facts": {
-			"experince": {
-				"value": "1.5+",
-				"name": "Years of experience"
-			},
-			"projects": {
-				"value": "55+",
-				"name": "Projects in GitHub"
-			},
-			"directions": {
-				"value": "5+",
-				"name": "Directions occupied"
-			}
-		},
-		"interests": {
-			"hiking": {
-				"value": "Love getting into nature and clearing my mind.",
-				"name": "Hiking",
-				"icon": "MountainSnow"
-			},
-			"cycling": {
-				"value": "Fast rides and freedom on two wheels.",
-				"name": "Cycling",
-				"icon": "Bike"
-			},
-			"gaming": {
-				"value": "Relaxing and hardcoring at the same time.",
-				"name": "Gaming",
-				"icon": "Gamepad2"
-			},
-			"astronomy": {
-				"value": "Amazed by the stars and space.",
-				"name": "Astronomy",
-				"icon": "Telescope"
-			},
-			"sports": {
-				"value": "Stay focused",
-				"name": "Sports",
-				"icon": "Dumbbell"
-			}
-		}
-	},
-	"technologies": {
+"about": {
+  "heading": "About Me",
+  "description": "A developer with a passion for building and learning.",
+  "text": "I'm a full-stack developer with more than a year of experience creating real-world applications using modern web technologies. I'm interested in how systems are structured, enjoy working on code quality, and aim to bring ideas to life through clean and reliable solutions. I’m constantly improving my skills — whether through personal projects, open-source work, or exploring new tools and frameworks.",
+  "factsHeading": "Quick facts",
+  "interestsHeading": "What I enjoy",
+  "facts": {
+    "experince": {
+      "value": "1.5+",
+      "name": "Years of experience"
+    },
+    "projects": {
+      "value": "55+",
+      "name": "Projects on GitHub"
+    },
+    "directions": {
+      "value": "5+",
+      "name": "Tech areas explored"
+    }
+  },
+  "interests": {
+    "hiking": {
+      "value": "Nature helps me recharge and think clearly.",
+      "name": "Hiking",
+      "icon": "MountainSnow"
+    },
+    "cycling": {
+      "value": "I enjoy the speed, movement, and focus it brings.",
+      "name": "Cycling",
+      "icon": "Bike"
+    },
+    "gaming": {
+      "value": "A way to relax and stay sharp.",
+      "name": "Gaming",
+      "icon": "Gamepad2"
+    },
+    "astronomy": {
+      "value": "Space fascinates me with its scale and mystery.",
+      "name": "Astronomy",
+      "icon": "Telescope"
+    },
+    "sports": {
+      "value": "Helps me stay disciplined and balanced.",
+      "name": "Sports",
+      "icon": "Dumbbell"
+    }
+  }
+},
+
+"technologies": {
 		"heading": "Technologies",
-		"description": "Tools and frameworks I use regularly.",
-		"items": {
-			"react": {
-				"name": "React",
-				"icon": "Atom"
-			},
-			"nextjs": {
-				"name": "Next.js",
-				"icon": "SquareStack"
-			},
-			"typescript": {
-				"name": "TypeScript",
-				"icon": "Code2"
-			},
-			"gsap": {
-				"name": "GSAP",
-				"icon": "Sparkles"
-			}
-		}
-	},
+		"description": "Tools and frameworks I use regularly."
+},
 "contact": {
  
     "heading": "Contact me",
@@ -252,14 +235,7 @@
       "name": "Languages",
       "value": "Kazakh, Russian, English"
     }
-
-  
-  
-  },
-  "comment": {
-		"heading": "Comments",
-		"description": "Leave a comment"
-	}
+  }
 }
 
 }
