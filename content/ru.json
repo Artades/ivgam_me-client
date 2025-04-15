@@ -234,14 +234,11 @@
     "languages": {
       "name": "Languages",
       "value": "Kazakh, Russian, English"
-    },
+    }
 
   
    
-    "availability": {
-      "name": "Availability",
-      "value": "Open to freelance opportunities"
-    }
+   
   },
   "comment": {
 		"heading": "Comments",

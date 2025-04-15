@@ -7,13 +7,23 @@ import Image from "next/image";
 import { useInfoModalFacade } from "@/facades/useInfoModalFacade";
 import { clsx } from "clsx"; 
 import Button from "../../ui/Button/Button";
-import {XIcon} from "lucide-react"
+import {Binary, BriefcaseBusiness, FolderKanban, GraduationCap, House, Languages, XIcon} from "lucide-react"
 type InfoModalProps = TContent<"info">;
+
+
+const icons: Record<string, React.ElementType> = {
+  "workStatus":BriefcaseBusiness,
+  "languages":Languages,
+  "age": Binary,
+  "experience": FolderKanban,
+  "hometown": House,
+  "university": GraduationCap,
+};
 
 const InfoModal = ({ content }: InfoModalProps) => {
   const { stats } = content;
   const { isOpen, toggleModal } = useInfoModalFacade();
-  
+
   return (
     <>
       {isOpen && (
@@ -27,7 +37,7 @@ const InfoModal = ({ content }: InfoModalProps) => {
       <div
         className={clsx(styles.infoModal, {
           [styles.infoModalOpened]: isOpen, 
-        })}
+      })}
       >
         <nav className={styles.infoModalClose} onClick={toggleModal}><XIcon /></nav>
         <div className={styles.infoModalInner}>
@@ -45,9 +55,11 @@ const InfoModal = ({ content }: InfoModalProps) => {
 
           <div className={styles.infoModalContent}>
             {Object.entries(stats).map(([key, value]) => {
+              const Icon = icons[key];
               if (typeof value === "object" && value.name && value.value) {
                 return (
                   <div key={key} className={styles.infoModalItem}>
+                    <Icon />
                     <span className={styles.infoModalItemName}>{value.name}</span>
                     <div className={styles.infoModalItemFiller}/>
                     <span className={styles.infoModalItemValue}>{value.value}</span>

@@ -24,7 +24,7 @@
   width: 100%;
   max-width: 600px;
   max-height: 90vh; // ограничение по высоте
- 
+
   padding: var(--spacing-lg);
   border-radius: var(--rad-large);
   background-color: var(--color-dark-blue);
@@ -33,11 +33,15 @@
   z-index: 101;
   @include cardStyle();
 
-  .infoModalClose{
+  .infoModalClose {
     position: absolute;
     right: 1rem;
     top: 1rem;
-
+ 
+    &:hover {
+      color: var(--color-accent);
+    
+    }
   }
   &.infoModalOpened {
     top: 50%;
@@ -48,18 +52,16 @@
   }
 
   @media (max-width: 768px) {
-    max-height: 95vh; 
+    max-height: 95vh;
     padding: var(--spacing-md);
   }
 
   @media (max-height: 700px) {
     overflow-y: auto; // прокрутка если не помещается
     top: 5%;
-    transform: translate(-50%, 0); 
+    transform: translate(-50%, 0);
     max-height: 90vh;
   }
-
-
 
   &Inner {
     display: flex;
@@ -115,6 +117,10 @@
     padding: var(--spacing-sm);
     border-radius: var(--rad-medium);
     flex-wrap: wrap;
+
+    svg {
+      margin-right: var(--spacing-sm);
+    }
   }
 
   &ItemName {
@@ -133,7 +139,7 @@
     margin: 0 8px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 0;

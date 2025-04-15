@@ -99,7 +99,7 @@ export default function Intro({ content }: IntroProps) {
         <div className={styles.introBtnGroup} ref={buttonRef}>
           <Button onClick={() => scrollToSection("contact")}>{content.buttons.contact}</Button>
           <Button variant={EButtonVariants.OUTLINE} disabled>
-            {content.buttons.cv}
+           Git Hub
           </Button>
         </div>
       </div>
@@ -107,7 +107,7 @@ export default function Intro({ content }: IntroProps) {
         <Image
           priority
           src="/images/me.jpg"
-          alt="Artyom Galay"
+          alt="Artyom Galay Profile Photo"
           width={2000}
           height={2000}
           quality={100}
