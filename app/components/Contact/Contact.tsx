@@ -11,6 +11,8 @@ import { EButtonSizes, EButtonVariants } from "@/types/ui";
 import TextArea from "../ui/TextArea/TextArea";
 import { z } from "zod";
 import Socials from "./Socials/Socials";
+import { ISendEmailDTO } from "@/types/email";
+import { useToastFacade } from "@/facades/useToastFacade"; 
 
 type ContactProps = TContent<"contact">;
 
@@ -35,13 +37,19 @@ const Contact = ({ content }: ContactProps) => {
     {}
   );
 
+  const [loading, setLoading] = useState<boolean>(false);
+  const { showSuccess, showError, showLoading } = useToastFacade(); 
+
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    setLoading(true);
+    showLoading("Отправка...", "Пожалуйста, подождите.");
 
     const result = formDataSchema.safeParse(formData);
 
@@ -51,18 +59,46 @@ const Contact = ({ content }: ContactProps) => {
         const path = issue.path[0] as keyof FormData;
         fieldErrors[path] = content.form.fields[path].error;
       }
+
       setErrors(fieldErrors);
+      showError("Ошибка валидации", "Пожалуйста, проверьте правильность ввода.");
+      setLoading(false);
       return;
     }
 
-    console.log("Sending data:", formData);
+    const emailData: ISendEmailDTO = {
+      sender: formData.email,
+      subject: `Ivgam.Me - Новое сообщение от ${formData.fullName}`,
+      message: `
+        <p><strong>Имя:</strong> ${formData.fullName}</p>
+        <p><strong>Почта:</strong> ${formData.email}</p>
+        <p><strong>Компания:</strong> ${formData.company}</p>
+        <p><strong>Сообщение:</strong><br/>${formData.message}</p>
+      `,
+    };
 
-    setFormData({
-      fullName: "",
-      email: "",
-      company: "",
-      message: "",
-    });
+    try {
+      const response = await fetch("/api/emails", {
+        method: "POST",
+        body: JSON.stringify(emailData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Ошибка при отправке");
+      }
+
+      showSuccess("Сообщение отправлено", "Я свяжусь с вами в ближайшее время.");
+      setFormData({
+        fullName: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+    } catch (error) {
+      showError("Ошибка", "Что-то пошло не так. Попробуйте позже.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -122,16 +158,13 @@ const Contact = ({ content }: ContactProps) => {
               variant={EButtonVariants.PRIMARY}
               size={EButtonSizes.DEFAULT}
               type="submit"
+              disabled={loading}
             >
-              {content.form.button.submit}
+              {loading ? "Отправка..." : content.form.button.submit}
             </Button>
           </form>
         </div>
       </div>
-
-  
-      
-
     </section>
   );
 };

@@ -47,6 +47,7 @@
 }
 
 .card {
+  opacity: 1;
   position: relative;
   background: rgba(var(--color-dark-blue), 0.4);
   border-radius: var(--rad-medium);
@@ -60,6 +61,18 @@
     transform: translateZ(10px);
   }
 }
+
+.cardHidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
 
 .cardBody {
   position: absolute;

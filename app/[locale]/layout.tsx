@@ -8,6 +8,7 @@ import MobileMenu from "@/app/components/Layout/MobileMenu/MobileMenu";
 import { i18n, type Locale } from "../../i18n";
 import { getContent } from "@/utils/getContent";
 import InfoModal from "../components/Modals/InfoModal/InfoModal";
+import Toast from "../components/ui/Toast/Toast";
 
 const notoSans = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -41,6 +42,7 @@ export default async function RootLayout({
           <BackgroundEffect />
           <MobileMenu content={content["navigation"]} />
           <InfoModal content={content["info"]} />
+          <Toast />
           {children}
         </Container>
       </body>

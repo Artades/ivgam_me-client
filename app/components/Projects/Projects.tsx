@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import styles from "./Projects.module.scss";
@@ -26,45 +26,35 @@ const icons: Record<string, React.ElementType> = {
   Cog,
   School,
   PencilLine,
-} as const;
-
-const getDefaultVisibleProjects = () => {
-  if (typeof window === "undefined") return 2;
-  if (window.innerWidth >= 1024) return 3;
-  if (window.innerWidth >= 768) return 4;
-  return 2;
 };
 
 const Projects = ({ content }: ProjectsProps) => {
-  const cards = Object.keys(content.items).map((key) => {
-    const project = content.items[key as keyof typeof content.items];
-    return {
-      key,
-      backgroundImage: project.image,
-      name: project.name,
-      description: project.description,
-      button: project.button,
-      roleTitle: project.role.title,
-      roleValues: project.role.values,
-      icon: icons[project.icon],
-    };
-  });
+  const [visibleProjects, setVisibleProjects] = useState(0);
 
-   const getProjectsCountByWidth = () => {
-			if (window.innerWidth < 768) return 2;
-			if (window.innerWidth < 1200) return 4;
-			return 3;
-		};
+  const cards = Object.entries(content.items).map(([key, project]) => ({
+    key,
+    backgroundImage: project.image,
+    name: project.name,
+    description: project.description,
+    button: project.button,
+    roleTitle: project.role.title,
+    roleValues: project.role.values,
+    icon: icons[project.icon],
+  }));
 
-		const [visibleProjects, setVisibleProjects] = useState(0); 
+  const calculateVisible = useCallback(() => {
+    const width = window.innerWidth;
+    if (width < 768) return 2;
+    if (width < 1200) return Math.min(cards.length, 4);
+    return Math.min(cards.length, 3);
+  }, [cards.length]);
 
-		useEffect(() => {
-			const updateCount = () => setVisibleProjects(getProjectsCountByWidth());
-
-			updateCount(); 
-			window.addEventListener("resize", updateCount);
-			return () => window.removeEventListener("resize", updateCount);
-		}, []);
+  useEffect(() => {
+    const update = () => setVisibleProjects(calculateVisible());
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [calculateVisible, cards.length]);
 
   const barPercentage = (visibleProjects / cards.length) * 100;
 
@@ -75,11 +65,19 @@ const Projects = ({ content }: ProjectsProps) => {
           <FolderCodeIcon />
           <h2>{content.heading}</h2>
         </div>
-        <p className={styles.projectsHeaderDescription}>{content.description}</p>
+        <p className={styles.projectsHeaderDescription}>
+          {content.description}
+        </p>
       </div>
+
       <div className={styles.projectsCardGrid}>
-        {cards.slice(0, visibleProjects).map((card) => (
-          <div key={card.key} className={styles.card}>
+        {cards.map((card, i) => (
+          <div
+            key={card.key}
+            className={`${styles.card} ${
+              i < visibleProjects ? "" : styles.cardHidden
+            }`}
+          >
             <div className={styles.cardBody}>
               <div className={styles.cardHeader}>
                 <card.icon />
@@ -94,6 +92,7 @@ const Projects = ({ content }: ProjectsProps) => {
           </div>
         ))}
       </div>
+
       <div className={styles.projectsShowMore}>
         <p className={styles.projectsShowMoreCount}>
           {visibleProjects} / {cards.length}
@@ -107,7 +106,7 @@ const Projects = ({ content }: ProjectsProps) => {
         {visibleProjects === cards.length ? (
           <Button
             size={EButtonSizes.DEFAULT}
-            onClick={() => setVisibleProjects(getDefaultVisibleProjects())}
+            onClick={() => setVisibleProjects(calculateVisible())}
           >
             {content.buttons.hide}
           </Button>

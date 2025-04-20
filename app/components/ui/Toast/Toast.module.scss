@@ -1,0 +1,90 @@
+@import "../../../styles/mixins.scss";
+
+.toast {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(var(--color-dark-blue), 0.8);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+  max-width: 90%;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+
+  &.success {
+    border: 2px solid var(--color-accent);
+  }
+
+  &.error {
+    border: 2px solid #ef4a44;
+  }
+
+  &.loading {
+    border: 2px solid var(--color-accent);
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  svg {
+    width: var(--fz-xl);
+    height: var(--fz-xl);
+    
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.heading {
+  font-size: var(--fz-lg);
+  margin: 0;
+
+  &.success {
+    color: #58ef44af;;
+  }
+
+  &.error {
+    color:  #ef4a449a;
+  }
+
+  &.loading {
+    color: var(--color-accent);
+  }
+}
+
+.body {
+  margin: 0.25rem 0 0;
+  font-size: var(--fz-md);
+  color: var(--color-light);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.toast.loading .icon svg {
+  animation: spin 1.5s linear infinite;
+}

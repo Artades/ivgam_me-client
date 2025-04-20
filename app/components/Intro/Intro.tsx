@@ -10,6 +10,7 @@ import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
 import Image from "next/image";
 import { getContent } from "@/utils/getContent";
 import { scrollToSection } from "@/helpers/scroll";
+import { LucideGitGraph, LucideGithub } from "lucide-react";
 
 interface IntroProps {
   content: Awaited<ReturnType<typeof getContent>>["intro"];
@@ -98,7 +99,8 @@ export default function Intro({ content }: IntroProps) {
         </p>
         <div className={styles.introBtnGroup} ref={buttonRef}>
           <Button onClick={() => scrollToSection("contact")}>{content.buttons.contact}</Button>
-          <Button variant={EButtonVariants.OUTLINE} disabled>
+          <Button variant={EButtonVariants.OUTLINE}>
+            <LucideGithub/>
            Git Hub
           </Button>
         </div>
