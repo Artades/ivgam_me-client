@@ -10,7 +10,7 @@ import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
 import Image from "next/image";
 import { getContent } from "@/utils/getContent";
 import { scrollToSection } from "@/helpers/scroll";
-import { LucideGitGraph, LucideGithub } from "lucide-react";
+import { LucideGithub } from "lucide-react";
 
 interface IntroProps {
   content: Awaited<ReturnType<typeof getContent>>["intro"];
@@ -49,34 +49,34 @@ export default function Intro({ content }: IntroProps) {
       tl.to(headingRef.current, {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
       });
 
       tl.to(textRef.current, {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
       });
 
       tl.to(buttonRef.current, {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
       });
 
       tl.to(headingLine.current, {
         opacity: 1,
         width: "7rem",
-        duration: 0.8,
+        duration: 0.6,
         ease: "power4.out",
       });
       tl.to(introImageRef.current, {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power4.out",
       });
     },
