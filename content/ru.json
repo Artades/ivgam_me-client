@@ -5,7 +5,6 @@
 			"artyom": "Артём"
 		},
 		"desc": "Разрабатываю современные веб-приложения, которые сочетают креативный подход и удобство для пользователей.",
-
 		"buttons": {
 			"cv": "Резюме",
 			"contact": "Связаться"
@@ -18,7 +17,6 @@
 		"testimonials": "Отзывы",
 		"contact": "Связаться"
 	},
-
 	"projects": {
 		"heading": "Мои проекты",
 		"description": "Проекты, в которых я участвовал — от идей до продакшена.",
@@ -107,7 +105,6 @@
 			"hide": "Убрать"
 		}
 	},
-
 	"about": {
 		"heading": "Обо мне",
 		"description": "Разрабатываю, учусь и стараюсь делать чуть лучше с каждым проектом.",
@@ -154,87 +151,97 @@
 				"name": "Спорт",
 				"icon": "Dumbbell"
 			}
-		}
+		},
+		"learnMoreBtn": "Узнать Больше"
 	},
-
 	"technologies": {
 		"heading": "Технологии",
-		"description": "Инструменты и технологии, которые я использую чаще всего"	
+		"description": "Инструменты и технологии, которые я использую чаще всего"
 	},
-"contact": {
-  "heading": "Свяжитесь со мной",
-  "description": "Давайте свяжемся и создадим что-то потрясающее.",
-  "form": {
-    "title": "Заполните форму",
-    "fields": {
-      "fullName": {
-        "label": "Полное имя",
-        "placeholder": "Иван Иванов",
-        "error": "Пожалуйста, укажите ваше имя"
-      },
-      "email": {
-        "label": "Эл. почта",
-        "placeholder": "you@example.com",
-        "error": "Пожалуйста, введите корректный адрес эл. почты"
-      },
-      "company": {
-        "label": "Компания",
-        "placeholder": "Walmart",
-        "error": "Пожалуйста, укажите название компании"
-      },
-      "message": {
-        "label": "Сообщение",
-        "placeholder": "У меня появилась идея...",
-        "error": "Сообщение не может быть пустым"
-      }
-    },
-    "button": {
-      "submit": "Отправить"
-    }
-  },
-  "messages": {
-    "success": "Спасибо за обращение! Я свяжусь с вами в ближайшее время.",
-    "error": "Что-то пошло не так. Пожалуйста, попробуйте позже."
-  },
-   "subheading": "You also always can find me there."
-},
-
-"testimonials": {
-	"heading": "Testimonials",
-    "description": "What people think of me ?"
-},
-
-"info": {
-  "heading": "Инфо",
-  "description": "Немного информации и статистики обо мне",
-  "status": "Three lights are lit, but the fourth one's out",
-  "stats": {
-    "experience": {
-      "name": "Опыт",
-      "value": "2 года"
-    },
-    "workStatus": {
-      "name": "Занятость",
-      "value": "В настоящее время работаю"
-    },
-    "hometown": {
-      "name": "Родной город",
-      "value": "Алматы, Казахстан"
-    },
-    "university": {
-      "name": "Университет",
-      "value": "МУИТ"
-    },
-    "age": {
-      "name": "Возраст",
-      "value": "20"
-    },
-    "languages": {
-      "name": "Языки",
-      "value": "Казахский, Русский, Английский"
-    }
-  }
-}
-
-
+	"contact": {
+		"heading": "Свяжитесь со мной",
+		"description": "Давайте свяжемся и создадим что-то потрясающее.",
+		"form": {
+			"title": "Заполните форму",
+			"fields": {
+				"fullName": {
+					"label": "Полное имя",
+					"placeholder": "Иван Иванов",
+					"error": "Пожалуйста, укажите ваше имя"
+				},
+				"email": {
+					"label": "Эл. почта",
+					"placeholder": "you@example.com",
+					"error": "Пожалуйста, введите корректный адрес эл. почты"
+				},
+				"company": {
+					"label": "Компания",
+					"placeholder": "Walmart",
+					"error": "Пожалуйста, укажите название компании"
+				},
+				"message": {
+					"label": "Сообщение",
+					"placeholder": "У меня появилась идея...",
+					"error": "Сообщение не может быть пустым"
+				}
+			},
+			"button": {
+				"submit": "Отправить"
+			}
+		},
+		"toast": {
+			"sending": {
+				"title": "Отправка...",
+				"description": "Пожалуйста, подождите."
+			},
+			"validationError": {
+				"title": "Ошибка валидации",
+				"description": "Пожалуйста, проверьте правильность ввода."
+			},
+			"error": {
+				"title": "Ошибка",
+				"description": "Что-то пошло не так. Попробуйте позже."
+			},
+			"success": {
+				"title": "Сообщение отправлено",
+				"description": "Я свяжусь с вами в ближайшее время."
+			}
+		}
+	},
+	"testimonials": {
+		"heading": "Testimonials",
+		"description": "What people think of me ?"
+	},
+	"info": {
+		"heading": "Инфо",
+		"description": "Немного информации и статистики обо мне",
+		"status": "Three lights are lit, but the fourth one's out",
+		"stats": {
+			"experience": {
+				"name": "Опыт",
+				"value": "2 года"
+			},
+			"workStatus": {
+				"name": "Занятость",
+				"value": "В настоящее время работаю"
+			},
+			"hometown": {
+				"name": "Родной город",
+				"value": "Алматы, Казахстан"
+			},
+			"university": {
+				"name": "Университет",
+				"value": "МУИТ"
+			},
+			"age": {
+				"name": "Возраст",
+				"value": "20"
+			},
+			"languages": {
+				"name": "Языки",
+				"value": "Казахский, Русский, Английский"
+			}
+		},
+		"closeBtn": "Закрыть"
+	}
 }

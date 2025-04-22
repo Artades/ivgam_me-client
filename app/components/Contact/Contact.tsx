@@ -49,7 +49,7 @@ const Contact = ({ content }: ContactProps) => {
     e.preventDefault();
 
     setLoading(true);
-    showLoading("Отправка...", "Пожалуйста, подождите.");
+    showLoading(content.toast.sending.title, content.toast.sending.description);
 
     const result = formDataSchema.safeParse(formData);
 
@@ -61,7 +61,11 @@ const Contact = ({ content }: ContactProps) => {
       }
 
       setErrors(fieldErrors);
-      showError("Ошибка валидации", "Пожалуйста, проверьте правильность ввода.");
+      showError(
+        content.toast.validationError.title,
+        content.toast.validationError.description
+      );
+      
       setLoading(false);
       return;
     }
@@ -87,7 +91,11 @@ const Contact = ({ content }: ContactProps) => {
         throw new Error("Ошибка при отправке");
       }
 
-      showSuccess("Сообщение отправлено", "Я свяжусь с вами в ближайшее время.");
+      showSuccess(
+        content.toast.success.title,
+        content.toast.success.description
+      );
+      
       setFormData({
         fullName: "",
         email: "",
@@ -95,7 +103,11 @@ const Contact = ({ content }: ContactProps) => {
         message: "",
       });
     } catch (error) {
-      showError("Ошибка", "Что-то пошло не так. Попробуйте позже.");
+      showError(
+        content.toast.error.title,
+        content.toast.error.description
+      );
+      
     } finally {
       setLoading(false);
     }

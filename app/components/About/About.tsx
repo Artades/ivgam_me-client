@@ -86,7 +86,7 @@ const About = ({ content }: AboutProps) => {
         <div className={styles.aboutButtons}>
           <Button onClick={toggleModal}>
             <BadgeInfo />
-            <span>Learn More</span>
+            <span>{content["learnMoreBtn"]}</span>
           </Button>
         </div>
       </div>

@@ -21,7 +21,7 @@ const icons: Record<string, React.ElementType> = {
 };
 
 const InfoModal = ({ content }: InfoModalProps) => {
-  const { stats } = content;
+  const { stats} = content;
   const { isOpen, toggleModal } = useInfoModalFacade();
 
   return (
@@ -69,7 +69,7 @@ const InfoModal = ({ content }: InfoModalProps) => {
               return null;
             })}
           </div>
-          <Button onClick={toggleModal}>Close</Button>
+          <Button onClick={toggleModal}>{content["closeBtn"]}</Button>
         </div>
       </div>
     </>

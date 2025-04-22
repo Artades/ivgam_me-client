@@ -17,7 +17,6 @@
 		"testimonials": "Testimonios",
 		"contact": "Contáctame"
 	},
-
 	"projects": {
 		"heading": "Mis Proyectos",
 		"description": "Proyectos en los que he trabajado — de ideas a productos reales.",
@@ -106,12 +105,10 @@
 			"hide": "Hide"
 		}
 	},
-
 	"about": {
 		"heading": "Sobre mí",
 		"description": "Soy desarrollador, aprendo y escribo código en el camino.",
 		"text": "¡Hola! Soy un desarrollador full-stack autodidacta con más de un año de experiencia creando aplicaciones reales con tecnologías modernas. Me gusta entender cómo funcionan las cosas, trabajar con estructuras limpias y dar vida a las ideas con soluciones simples y mantenibles. Siempre estoy probando algo nuevo — ya sea un proyecto personal, una contribución open-source o simplemente aprendiendo otra herramienta. Cuando no estoy frente al código, probablemente estoy bajo las estrellas o rodando en bicicleta.",
-
 		"factsHeading": "Un poco sobre mí",
 		"interestsHeading": "Lo que me apasiona",
 		"facts": {
@@ -154,9 +151,9 @@
 				"name": "Deporte",
 				"icon": "Dumbbell"
 			}
-		}
+		},
+		"learnMoreBtn": "Saber más"
 	},
-
 	"technologies": {
 		"heading": "Technologies",
 		"description": "Tools and frameworks I use regularly.",
@@ -179,79 +176,90 @@
 			}
 		}
 	},
-"contact": {
-  "heading": "Contáctame",
-  "description": "Conectemos y creemos algo grandioso.",
-  "form": {
-    "title": "Rellena el formulario",
-    "fields": {
-      "fullName": {
-        "label": "Nombre completo",
-        "placeholder": "Juan Pérez",
-        "error": "El nombre completo es obligatorio"
-      },
-      "email": {
-        "label": "Correo electrónico",
-        "placeholder": "you@example.com",
-        "error": "Por favor, introduce un correo electrónico válido"
-      },
-      "company": {
-        "label": "Empresa",
-        "placeholder": "Walmart",
-        "error": "El nombre de la empresa es obligatorio"
-      },
-      "message": {
-        "label": "Mensaje",
-        "placeholder": "Se me ocurrió una idea...",
-        "error": "El mensaje no puede estar vacío"
-      }
-    },
-    "button": {
-      "submit": "Enviar"
-    }
-  },
-  "messages": {
-    "success": "¡Gracias por contactarme! Me pondré en contacto pronto.",
-    "error": "Algo salió mal. Por favor, inténtalo de nuevo más tarde."
-  },
-   "subheading": "You also always can find me there."
-},
-"testimonials": {
-	"heading": "Testimonials",
-    "description": "What people think of me ?"
-},
-
-"info": {
-  "heading": "Info",
-  "description": "Un poco de información básica y estadísticas sobre mí",
-  "status": "Three lights are lit, but the fourth one's out",
-  "stats": {
-    "experience": {
-      "name": "Experiencia",
-      "value": "2 años"
-    },
-    "workStatus": {
-      "name": "Empleo",
-      "value": "Actualmente trabajando"
-    },
-    "hometown": {
-      "name": "Ciudad natal",
-      "value": "Almatý, Kazajistán"
-    },
-    "university": {
-      "name": "Universidad",
-      "value": "IITU"
-    },
-    "age": {
-      "name": "Edad",
-      "value": "20"
-    },
-    "languages": {
-      "name": "Idiomas",
-      "value": "Kazajo, Ruso, Inglés"
-    }
-  }
-}
-
-
+	"contact": {
+		"heading": "Contáctame",
+		"description": "Conectemos y creemos algo grandioso.",
+		"form": {
+			"title": "Rellena el formulario",
+			"fields": {
+				"fullName": {
+					"label": "Nombre completo",
+					"placeholder": "Juan Pérez",
+					"error": "El nombre completo es obligatorio"
+				},
+				"email": {
+					"label": "Correo electrónico",
+					"placeholder": "you@example.com",
+					"error": "Por favor, introduce un correo electrónico válido"
+				},
+				"company": {
+					"label": "Empresa",
+					"placeholder": "Walmart",
+					"error": "El nombre de la empresa es obligatorio"
+				},
+				"message": {
+					"label": "Mensaje",
+					"placeholder": "Se me ocurrió una idea...",
+					"error": "El mensaje no puede estar vacío"
+				}
+			},
+			"button": {
+				"submit": "Enviar"
+			}
+		},
+		"toast": {
+			"sending": {
+				"title": "Enviando...",
+				"description": "Por favor, espera un momento."
+			},
+			"validationError": {
+				"title": "Error de validación",
+				"description": "Por favor, revisa los datos introducidos."
+			},
+			"error": {
+				"title": "Error",
+				"description": "Algo salió mal. Inténtalo de nuevo más tarde."
+			},
+			"success": {
+				"title": "Mensaje enviado",
+				"description": "Me pondré en contacto contigo pronto."
+			}
+		}
+	},
+	"testimonials": {
+		"heading": "Testimonials",
+		"description": "What people think of me ?"
+	},
+	"info": {
+		"heading": "Info",
+		"description": "Un poco de información básica y estadísticas sobre mí",
+		"status": "Three lights are lit, but the fourth one's out",
+		"stats": {
+			"experience": {
+				"name": "Experiencia",
+				"value": "2 años"
+			},
+			"workStatus": {
+				"name": "Empleo",
+				"value": "Actualmente trabajando"
+			},
+			"hometown": {
+				"name": "Ciudad natal",
+				"value": "Almatý, Kazajistán"
+			},
+			"university": {
+				"name": "Universidad",
+				"value": "IITU"
+			},
+			"age": {
+				"name": "Edad",
+				"value": "20"
+			},
+			"languages": {
+				"name": "Idiomas",
+				"value": "Kazajo, Ruso, Inglés"
+			}
+		},
+		"closeBtn": "Cerrar"
+	}
 }

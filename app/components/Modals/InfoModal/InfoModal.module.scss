@@ -23,8 +23,7 @@
   opacity: 0;
   width: 100%;
   max-width: 600px;
-  max-height: 90vh; // ограничение по высоте
-
+  max-height: 90vh; 
   padding: var(--spacing-lg);
   border-radius: var(--rad-large);
   background-color: var(--color-dark-blue);
@@ -37,10 +36,9 @@
     position: absolute;
     right: 1rem;
     top: 1rem;
- 
+
     &:hover {
       color: var(--color-accent);
-    
     }
   }
   &.infoModalOpened {

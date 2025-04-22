@@ -1,241 +1,247 @@
 {
-	"intro": {
-		"title": {
-			"hello": "Hello i'm",
-			"artyom": "Artyom"
-		},
-		"desc": "A developer focused on creating advanced, user-driven web-applications that merge creativity with functionality.",
-		"buttons": {
-			"cv": "View CV",
-			"contact": "Contact Me"
-		}
-	},
-	"navigation": {
-		
-		"projects": "Projects",
-		"about": "About Me",
-		"technologies": "Technologies",
-		"contact": "Contact Me",
-		"testimonials": "Testimonials"
-	},
-
-	"projects": {
-		"heading": "Experience",
-		"description": "Projects I’ve worked on — from small ideas to real apps.",
-		"items": {
-			"st": {
-				"name": "Swiss Time",
-				"description": "E-commerce for Swiss watches with an elegant UI and SEO optimization.",
-				"button": "View project",
-				"image": "/images/swisstime.webp",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end, CMS, SEO"
-				},
-				"link": "https://swisstime.kz",
-				"inProduction": true,
-				"icon": "Watch"
-			},
-			"vv": {
-				"name": "Veter Vremeni",
-				"description": "Online store for fashion watches with a mobile-first design.",
-				"button": "View project",
-				"image": "/images/vv.png",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end, CMS, SEO"
-				},
-				"link": "https://vetervremeni.kz",
-				"inProduction": true,
-				"icon": "PocketKnife"
-			},
-			"gf": {
-				"name": "G-Factory",
-				"description": "Luxury watch showcase with immersive browsing and animations.",
-				"button": "View project",
-				"image": "/images/gf.avif",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end, CMS, SEO"
-				},
-				"link": "",
-				"inProduction": false,
-				"icon": "Watch"
-			},
-			"wo": {
-				"name": "Watches Outlet",
-				"description": "Discount hub for Swiss Time with real-time stock updates.",
-				"button": "View project",
-				"image": "/images/wo.webp",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Front-end, CMS, SEO"
-				},
-				"link": "",
-				"inProduction": true,
-				"icon": "Cog"
-			},
-			"albrokso": {
-				"name": "Albrokso",
-				"description": "English course platform with student tracking and payments.",
-				"button": "View project",
-				"image": "/images/albrokso.png",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Fullstack, Admin, SEO, UX/UI"
-				},
-				"link": "",
-				"inProduction": false,
-				"icon": "School"
-			},
-			"ivgam-blog": {
-				"name": "Ivgam Blog",
-				"description": "Personal blog with Markdown, authentication, and CMS.",
-				"button": "View project",
-				"image": "/images/ivgamblog.jpg",
-				"role": {
-					"title": "Responsibilities",
-					"values": "Fullstack, CMS, SEO, UX/UI"
-				},
-				"link": "https://ivgam.blog",
-				"inProduction": true,
-				"icon": "PencilLine"
-			}
-		},
-		"buttons": {
-			"showMore": "Show More",
-			"hide": "Hide"
-		}
-	},
-"about": {
-  "heading": "About Me",
-  "description": "A developer with a passion for building and learning.",
-  "text": "I'm a full-stack developer with more than a year of experience creating real-world applications using modern web technologies. I'm interested in how systems are structured, enjoy working on code quality, and aim to bring ideas to life through clean and reliable solutions. I’m constantly improving my skills — whether through personal projects, open-source work, or exploring new tools and frameworks.",
-  "factsHeading": "Quick facts",
-  "interestsHeading": "What I enjoy",
-  "facts": {
-    "experince": {
-      "value": "1.5+",
-      "name": "Years of experience"
+  "intro": {
+    "title": {
+      "hello": "Hello i'm",
+      "artyom": "Artyom"
     },
-    "projects": {
-      "value": "55+",
-      "name": "Projects on GitHub"
-    },
-    "directions": {
-      "value": "5+",
-      "name": "Tech areas explored"
+    "desc": "A developer focused on creating advanced, user-driven web-applications that merge creativity with functionality.",
+    "buttons": {
+      "cv": "View CV",
+      "contact": "Contact Me"
     }
   },
-  "interests": {
-    "hiking": {
-      "value": "Nature helps me recharge and think clearly.",
-      "name": "Hiking",
-      "icon": "MountainSnow"
-    },
-    "cycling": {
-      "value": "I enjoy the speed, movement, and focus it brings.",
-      "name": "Cycling",
-      "icon": "Bike"
-    },
-    "gaming": {
-      "value": "A way to relax and stay sharp.",
-      "name": "Gaming",
-      "icon": "Gamepad2"
-    },
-    "astronomy": {
-      "value": "Space fascinates me with its scale and mystery.",
-      "name": "Astronomy",
-      "icon": "Telescope"
-    },
-    "sports": {
-      "value": "Helps me stay disciplined and balanced.",
-      "name": "Sports",
-      "icon": "Dumbbell"
-    }
-  }
-},
-
-"technologies": {
-		"heading": "Technologies",
-		"description": "Tools and frameworks I use regularly."
-},
-"contact": {
- 
-    "heading": "Contact me",
-    "description": "Let’s connect and build something great.",
-
-  "form": {
-    "title": "Fill the form",
-    "fields": {
-      "fullName": {
-        "label": "Full name",
-        "placeholder": "John Doe",
-        "error": "Full name is required"
+  "navigation": {
+    "projects": "Projects",
+    "about": "About Me",
+    "technologies": "Technologies",
+    "contact": "Contact Me",
+    "testimonials": "Testimonials"
+  },
+  "projects": {
+    "heading": "Experience",
+    "description": "Projects I’ve worked on — from small ideas to real apps.",
+    "items": {
+      "st": {
+        "name": "Swiss Time",
+        "description": "E-commerce for Swiss watches with an elegant UI and SEO optimization.",
+        "button": "View project",
+        "image": "/images/swisstime.webp",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Front-end, CMS, SEO"
+        },
+        "link": "https://swisstime.kz",
+        "inProduction": true,
+        "icon": "Watch"
       },
-      "email": {
-        "label": "Email",
-        "placeholder": "you@example.com",
-        "error": "Please enter a valid email address"
+      "vv": {
+        "name": "Veter Vremeni",
+        "description": "Online store for fashion watches with a mobile-first design.",
+        "button": "View project",
+        "image": "/images/vv.png",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Front-end, CMS, SEO"
+        },
+        "link": "https://vetervremeni.kz",
+        "inProduction": true,
+        "icon": "PocketKnife"
       },
-      "company": {
-        "label": "Company",
-        "placeholder": "Walmart",
-        "error": "Company name is required"
+      "gf": {
+        "name": "G-Factory",
+        "description": "Luxury watch showcase with immersive browsing and animations.",
+        "button": "View project",
+        "image": "/images/gf.avif",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Front-end, CMS, SEO"
+        },
+        "link": "",
+        "inProduction": false,
+        "icon": "Watch"
       },
-      "message": {
-        "label": "Message",
-        "placeholder": "I came up with an idea...",
-        "error": "Message cannot be empty"
+      "wo": {
+        "name": "Watches Outlet",
+        "description": "Discount hub for Swiss Time with real-time stock updates.",
+        "button": "View project",
+        "image": "/images/wo.webp",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Front-end, CMS, SEO"
+        },
+        "link": "",
+        "inProduction": true,
+        "icon": "Cog"
+      },
+      "albrokso": {
+        "name": "Albrokso",
+        "description": "English course platform with student tracking and payments.",
+        "button": "View project",
+        "image": "/images/albrokso.png",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Fullstack, Admin, SEO, UX/UI"
+        },
+        "link": "",
+        "inProduction": false,
+        "icon": "School"
+      },
+      "ivgam-blog": {
+        "name": "Ivgam Blog",
+        "description": "Personal blog with Markdown, authentication, and CMS.",
+        "button": "View project",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Fullstack, CMS, SEO, UX/UI"
+        },
+        "link": "https://ivgam.blog",
+        "inProduction": true,
+        "icon": "PencilLine"
       }
     },
-    "button": {
-      "submit": "Submit"
+    "buttons": {
+      "showMore": "Show More",
+      "hide": "Hide"
     }
   },
-  "messages": {
-    "success": "Thanks for reaching out! I’ll get back to you soon.",
-    "error": "Something went wrong. Please try again later."
+  "about": {
+    "heading": "About Me",
+    "description": "A developer with a passion for building and learning.",
+    "text": "I'm a full-stack developer with more than a year of experience creating real-world applications using modern web technologies. I'm interested in how systems are structured, enjoy working on code quality, and aim to bring ideas to life through clean and reliable solutions. I’m constantly improving my skills — whether through personal projects, open-source work, or exploring new tools and frameworks.",
+    "factsHeading": "Quick facts",
+    "interestsHeading": "What I enjoy",
+    "facts": {
+      "experince": {
+        "value": "1.5+",
+        "name": "Years of experience"
+      },
+      "projects": {
+        "value": "55+",
+        "name": "Projects on GitHub"
+      },
+      "directions": {
+        "value": "5+",
+        "name": "Tech areas explored"
+      }
+    },
+    "interests": {
+      "hiking": {
+        "value": "Nature helps me recharge and think clearly.",
+        "name": "Hiking",
+        "icon": "MountainSnow"
+      },
+      "cycling": {
+        "value": "I enjoy the speed, movement, and focus it brings.",
+        "name": "Cycling",
+        "icon": "Bike"
+      },
+      "gaming": {
+        "value": "A way to relax and stay sharp.",
+        "name": "Gaming",
+        "icon": "Gamepad2"
+      },
+      "astronomy": {
+        "value": "Space fascinates me with its scale and mystery.",
+        "name": "Astronomy",
+        "icon": "Telescope"
+      },
+      "sports": {
+        "value": "Helps me stay disciplined and balanced.",
+        "name": "Sports",
+        "icon": "Dumbbell"
+      }
+    },
+    "learnMoreBtn": "Learn More"
   },
-  "subheading": "You also always can find me there."
-},
-
-"testimonials": {
-	"heading": "Testimonials",
+  "technologies": {
+    "heading": "Technologies",
+    "description": "Tools and frameworks I use regularly."
+  },
+  "contact": {
+    "heading": "Contact me",
+    "description": "Let’s connect and build something great.",
+    "form": {
+      "title": "Fill the form",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "John Doe",
+          "error": "Full name is required"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@example.com",
+          "error": "Please enter a valid email address"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Walmart",
+          "error": "Company name is required"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "I came up with an idea...",
+          "error": "Message cannot be empty"
+        }
+      },
+      "button": {
+        "submit": "Submit"
+      }
+    },
+    "toast": {
+      "sending": {
+        "title": "Sending...",
+        "description": "Please wait while your message is being sent."
+      },
+      "validationError": {
+        "title": "Validation Error",
+        "description": "Please check the form inputs."
+      },
+      "success": {
+        "title": "Message Sent",
+        "description": "Thanks for reaching out! I’ll get back to you soon."
+      },
+      "error": {
+        "title": "Error",
+        "description": "Something went wrong. Please try again later."
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Testimonials",
     "description": "What people think of me ?"
-},
-
-"info": {
-  "heading": "Info",
-  "description": "Some basic info and stats about me",
-  "status": "Three lights are lit, but the fourth one's out",
-  "stats": {
-  
-    "experience": {
-      "name": "Experience",
-      "value": "2 years"
+  },
+  "info": {
+    "heading": "Info",
+    "description": "Some basic info and stats about me",
+    "status": "Three lights are lit, but the fourth one's out",
+    "stats": {
+      "experience": {
+        "name": "Experience",
+        "value": "2 years"
+      },
+      "workStatus": {
+        "name": "Employment",
+        "value": "Currently Employed"
+      },
+      "hometown": {
+        "name": "Hometown",
+        "value": "Almaty, Kazakhstan"
+      },
+      "university": {
+        "name": "University",
+        "value": "IITU"
+      },
+      "age": {
+        "name": "Age",
+        "value": "20"
+      },
+      "languages": {
+        "name": "Languages",
+        "value": "Kazakh, Russian, English"
+      }
     },
-    "workStatus": {
-      "name": "Employment",
-      "value": "Currently Employed"
-    },
-    "hometown": {
-      "name": "Hometown",
-      "value": "Almaty, Kazakhstan"
-    },
-    "university": {
-      "name": "University",
-      "value": "IITU"
-    },
-    "age": {
-      "name": "Age",
-      "value": "20"
-    },
-    "languages": {
-      "name": "Languages",
-      "value": "Kazakh, Russian, English"
-    }
+    "closeBtn": "Close"
   }
-}
-
 }
