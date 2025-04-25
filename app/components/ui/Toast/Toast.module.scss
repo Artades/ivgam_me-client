@@ -57,12 +57,20 @@
   &.loading {
     color: var(--color-accent);
   }
+
+  @media(max-width: 768px) {
+    font-size: var(--fz-md);
+  }
 }
 
 .body {
   margin: 0.25rem 0 0;
   font-size: var(--fz-md);
   color: var(--color-light);
+
+  @media(max-width: 768px) {
+    font-size: var(--fz-sm);
+  }
 }
 
 @keyframes fadeIn {
