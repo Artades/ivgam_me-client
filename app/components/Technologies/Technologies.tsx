@@ -1,8 +1,16 @@
-import { TContent } from "@/types/content";
-import styles from "./Technologies.module.scss";
-import React from "react";
+"use client";
+
+import { useRef } from "react";
 import { Laptop2 } from "lucide-react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import useDeviceType from "@/hooks/useDeviceType";
+import styles from "./Technologies.module.scss";
+import { TContent } from "@/types/content";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type TechnologiesProps = TContent<"technologies">;
 
@@ -27,8 +35,34 @@ const techs = [
 ] as const;
 
 const Technologies = ({ content }: TechnologiesProps) => {
+  const isMobile = useDeviceType();
+
+  const container = useRef<HTMLElement>(null);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
+
+  useGSAP(
+    () => {
+      gsap.set(cardsRef.current, { opacity: 0, y: 30, scale: 0.8 });
+
+      gsap.to(cardsRef.current, {
+        scrollTrigger: {
+          trigger: container.current,
+          start: isMobile ? "top 60%" : "bottom 60%",
+          toggleActions: "play none none none",
+        },
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.08,
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section id="technologies" className={styles.technologies}>
+    <section id="technologies" className={styles.technologies} ref={container}>
       <div className={styles.technologiesHeader}>
         <div className={styles.technologiesHeaderHeading}>
           <Laptop2 />
@@ -40,8 +74,14 @@ const Technologies = ({ content }: TechnologiesProps) => {
       </div>
 
       <div className={styles.technologiesGrid}>
-        {techs.map((tech) => (
-          <div key={tech.name} className={styles.technologiesGridCard}>
+        {techs.map((tech, i) => (
+          <div
+            key={tech.name}
+            className={styles.technologiesGridCard}
+            ref={(el) => {
+              if (el) cardsRef.current[i] = el;
+            }}
+          >
             <Image
               priority
               src={tech.icon}

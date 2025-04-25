@@ -47,7 +47,7 @@
 }
 
 .card {
-  opacity: 1;
+  display: block;
   position: relative;
   background: rgba(var(--color-dark-blue), 0.4);
   border-radius: var(--rad-medium);
@@ -57,20 +57,14 @@
 
   &:hover {
     background: rgba(var(--color-dark-blue), 0.1);
-    border: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-accent);
+    outline-offset: -2px; // немного внутрь
     transform: translateZ(10px);
   }
 }
 
 .cardHidden {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  pointer-events: none;
-  transition: all 0.3s ease-in-out;
+  display: none;
 }
 
 

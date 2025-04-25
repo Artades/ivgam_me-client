@@ -1,8 +1,16 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
-import { useGSAP } from "@gsap/react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  useMemo,
+} from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Projects.module.scss";
 import Button from "../ui/Button/Button";
 import { EButtonSizes } from "@/types/ui";
@@ -15,6 +23,7 @@ import {
   Watch,
 } from "lucide-react";
 import { TContent } from "@/types/content";
+import useDeviceType from "@/hooks/useDeviceType";
 
 gsap.registerPlugin(useGSAP);
 
@@ -29,37 +38,95 @@ const icons: Record<string, React.ElementType> = {
 };
 
 const Projects = ({ content }: ProjectsProps) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [visibleProjects, setVisibleProjects] = useState(0);
 
-  const cards = Object.entries(content.items).map(([key, project]) => ({
-    key,
-    backgroundImage: project.image,
-    name: project.name,
-    description: project.description,
-    button: project.button,
-    roleTitle: project.role.title,
-    roleValues: project.role.values,
-    icon: icons[project.icon],
-  }));
+  const cards = useMemo(() => {
+    return Object.entries(content.items).map(([key, project]) => ({
+      key,
+      backgroundImage: project.image,
+      name: project.name,
+      description: project.description,
+      button: project.button,
+      roleTitle: project.role.title,
+      roleValues: project.role.values,
+      icon: icons[project.icon],
+    }));
+  }, [content.items]);
+
+  const { isMobile, isTablet } = useDeviceType();
 
   const calculateVisible = useCallback(() => {
-    const width = window.innerWidth;
-    if (width < 768) return 2;
-    if (width < 1200) return Math.min(cards.length, 4);
+    if (isMobile) return 2;
+    if (isTablet) return Math.min(cards.length, 4);
     return Math.min(cards.length, 3);
-  }, [cards.length]);
+  }, [cards.length, isMobile, isTablet]);
 
   useEffect(() => {
-    const update = () => setVisibleProjects(calculateVisible());
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, [calculateVisible, cards.length]);
+    setVisibleProjects(calculateVisible());
+  }, [calculateVisible]);
 
   const barPercentage = (visibleProjects / cards.length) * 100;
 
+  //refs
+  const container = useRef<HTMLElement>(null);
+  const projectsRefs = useRef<HTMLDivElement[]>([]);
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion) {
+        gsap.set([container.current, ...projectsRefs.current], {
+          opacity: 1,
+          y: 0,
+        });
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      projectsRefs.current.forEach((el, i) => {
+        gsap.set(el, {
+          opacity: 0,
+          scale: 0.6,
+          rotateY: -25,
+          transformPerspective: 800,
+        });
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 60%",
+
+          toggleActions: "play none none none",
+          immediateRender: true,
+          once: true,
+        },
+      });
+
+      projectsRefs.current.forEach((el, i) => {
+        tl.to(
+          el,
+          {
+            opacity: 1,
+            scale: 1,
+            rotateY: 0,
+            duration: 0.5,
+            ease: "power3.in",
+          },
+          0.1
+        );
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
+    },
+    { scope: container }
+  );
+
   return (
-    <section id="projects" className={styles.projects}>
+    <section id="projects" className={styles.projects} ref={container}>
       <div className={styles.projectsHeader}>
         <div className={styles.projectsHeaderHeading}>
           <FolderCodeIcon />
@@ -77,6 +144,11 @@ const Projects = ({ content }: ProjectsProps) => {
             className={`${styles.card} ${
               i < visibleProjects ? "" : styles.cardHidden
             }`}
+            ref={(el) => {
+              if (el) {
+                projectsRefs.current[i] = el;
+              } else delete projectsRefs.current[i];
+            }}
           >
             <div className={styles.cardBody}>
               <div className={styles.cardHeader}>
@@ -106,7 +178,17 @@ const Projects = ({ content }: ProjectsProps) => {
         {visibleProjects === cards.length ? (
           <Button
             size={EButtonSizes.DEFAULT}
-            onClick={() => setVisibleProjects(calculateVisible())}
+            onClick={() => {
+              setVisibleProjects(calculateVisible());
+
+              // Прокрутка вверх к секции
+              if (container.current) {
+                window.scrollTo({
+                  top: container.current.offsetTop - 100, // можно подстроить отступ
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
             {content.buttons.hide}
           </Button>

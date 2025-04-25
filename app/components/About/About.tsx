@@ -33,11 +33,9 @@ const icons: Record<string, React.ElementType> = {
 };
 
 const About = ({ content }: AboutProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const prefersReducedMotion = usePrefersReducedMotion();
   const { toggleModal } = useInfoModalFacade();
 
-  //refs
   const container = useRef<HTMLElement>(null);
   const interestsRefs = useRef<HTMLDivElement[]>([]);
   const textRef = useRef<HTMLDivElement>(null);
@@ -45,37 +43,41 @@ const About = ({ content }: AboutProps) => {
   useGSAP(
     () => {
       if (prefersReducedMotion) {
-        gsap.set(container.current, { opacity: 1 });
+        gsap.set([container.current, textRef.current, ...interestsRefs.current], {
+          opacity: 1,
+          y: 0,
+        });
         return;
       }
-      gsap.set(textRef.current, { opacity: 0, y: 20 });
 
-      for (let i = 0; i < interestsRefs.current.length; i++) {
-        gsap.set(interestsRefs.current[i], {
-          opacity: 0,
-          y: i * 20,
-        });
-      }
+      gsap.registerPlugin(ScrollTrigger);
+
+
+      gsap.set(textRef.current, { opacity: 0, y: 20 });
+      interestsRefs.current.forEach((el, i) => {
+        gsap.set(el, { opacity: 0, y: i * 20 });
+      });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container.current,
-          start: "top 80%",
+          start: "top 60%",
           toggleActions: "play none none none",
         },
+        
       });
 
-      tl.to(textRef.current, { opacity: 1, y: 0 });
+      tl.to(textRef.current, { opacity: 1, y: 0, duration: 0.5 });
 
-      for (let i = 0; i < interestsRefs.current.length; i++) {
-        tl.to(interestsRefs.current[i], {
+      interestsRefs.current.forEach((el, i) => {
+        tl.to(el, {
           opacity: 1,
           y: 0,
           duration: 0.5,
           ease: "power4.out",
           stagger: 0.1,
         });
-      }
+      });
 
       return () => {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -83,6 +85,7 @@ const About = ({ content }: AboutProps) => {
     },
     { scope: container }
   );
+
   const renderInterests = (): ReactNode => {
     return Object.values(content.interests).map((interest, i) => {
       const Icon = icons[interest.icon];
