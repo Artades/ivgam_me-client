@@ -63,6 +63,7 @@
   }
 }
 
+
 .cardHidden {
   display: none;
 }
@@ -83,6 +84,15 @@
   border-radius: var(--rad-medium);
 }
 
+.indicator{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: var(--rad-circle);
+  border: 1px solid var(--color-accent);
+}
 .cardHeader {
   display: flex;
   align-items: center;

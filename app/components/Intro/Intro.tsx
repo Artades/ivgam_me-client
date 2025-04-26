@@ -11,6 +11,7 @@ import Image from "next/image";
 import { getContent } from "@/utils/getContent";
 import { scrollToSection } from "@/helpers/scroll";
 import { LucideGithub } from "lucide-react";
+import Link from "next/link";
 
 interface IntroProps {
   content: Awaited<ReturnType<typeof getContent>>["intro"];
@@ -83,9 +84,6 @@ export default function Intro({ content }: IntroProps) {
     { scope: container }
   );
 
-
-
-
   return (
     <div className={styles.intro} ref={container}>
       <div className={styles.introContent}>
@@ -98,11 +96,15 @@ export default function Intro({ content }: IntroProps) {
           {content.desc}
         </p>
         <div className={styles.introBtnGroup} ref={buttonRef}>
-          <Button onClick={() => scrollToSection("contact")}>{content.buttons.contact}</Button>
-          <Button variant={EButtonVariants.OUTLINE}>
-            <LucideGithub/>
-           Git Hub
+          <Button onClick={() => scrollToSection("contact")}>
+            {content.buttons.contact}
           </Button>
+          <Link href={content.buttons.git}>
+            <Button variant={EButtonVariants.OUTLINE}>
+              <LucideGithub />
+              Git Hub
+            </Button>
+          </Link>
         </div>
       </div>
       <div className={styles.introImage} ref={introImageRef}>

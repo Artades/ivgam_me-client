@@ -6,7 +6,7 @@
 		},
 		"desc": "Разрабатываю современные веб-приложения, которые сочетают креативный подход и удобство для пользователей.",
 		"buttons": {
-			"cv": "Резюме",
+			"git": "https://github.com/artades",
 			"contact": "Связаться"
 		}
 	},
@@ -14,12 +14,11 @@
 		"about": "Обо мне",
 		"projects": "Проекты",
 		"technologies": "Технологии",
-		"testimonials": "Отзывы",
 		"contact": "Связаться"
 	},
 	"projects": {
-		"heading": "Мои проекты",
-		"description": "Проекты, в которых я участвовал — от идей до продакшена.",
+		"heading": "Опыт",
+		"description": "Проекты, над которыми я работал — от маленьких идей до полноценных приложений.",
 		"items": {
 			"st": {
 				"name": "Swiss Time",
@@ -28,20 +27,20 @@
 				"image": "/images/swisstime.webp",
 				"role": {
 					"title": "Обязанности",
-					"values": "Front-end, CMS, SEO"
+					"values": "Front-end, SEO"
 				},
 				"link": "https://swisstime.kz",
 				"inProduction": true,
 				"icon": "Watch"
 			},
 			"vv": {
-				"name": "Veter Vremeni",
-				"description": "Онлайн-магазин модных часов с адаптивным мобильным дизайном.",
+				"name": "Ветер Времени",
+				"description": "Магазин fashion часов и аксессуаров с современным UI и SEO.",
 				"button": "Посмотреть проект",
 				"image": "/images/vv.png",
 				"role": {
 					"title": "Обязанности",
-					"values": "Front-end, CMS, SEO"
+					"values": "Fullstack, SEO"
 				},
 				"link": "https://vetervremeni.kz",
 				"inProduction": true,
@@ -49,60 +48,60 @@
 			},
 			"gf": {
 				"name": "G-Factory",
-				"description": "Каталог роскошных часов с эффектным просмотром и анимациями.",
+				"description": "Интернет-магазин японских часов с удобным и интуитивно понятным интерфейсом.",
 				"button": "Посмотреть проект",
 				"image": "/images/gf.avif",
 				"role": {
 					"title": "Обязанности",
-					"values": "Front-end, CMS, SEO"
+					"values": "Front-end, SEO"
 				},
-				"link": "",
-				"inProduction": false,
+				"link": "https://g-factory.kz",
+				"inProduction": true,
 				"icon": "Watch"
 			},
 			"wo": {
 				"name": "Watches Outlet",
-				"description": "Центр скидок Swiss Time с обновлениями наличия в реальном времени.",
+				"description": "Дисконт-магазин часов с SEO и возможностью продажи своих часов.",
 				"button": "Посмотреть проект",
 				"image": "/images/wo.webp",
 				"role": {
 					"title": "Обязанности",
-					"values": "Front-end, CMS, SEO"
+					"values": "Fullstack, SEO, UX/UI"
 				},
-				"link": "",
+				"link": "https://watchesoutlet.kz",
 				"inProduction": true,
 				"icon": "Cog"
 			},
 			"albrokso": {
 				"name": "Albrokso",
-				"description": "Платформа для изучения английского с отслеживанием прогресса студентов и оплатами.",
+				"description": "Лэндинг для записи на курсы английского языка с онлайн-формой и SEO.",
 				"button": "Посмотреть проект",
 				"image": "/images/albrokso.png",
 				"role": {
 					"title": "Обязанности",
-					"values": "Fullstack, Admin, SEO, UX/UI"
+					"values": "Fullstack, SEO, UX/UI"
 				},
-				"link": "",
-				"inProduction": false,
+				"link": "https://albrokso.com",
+				"inProduction": true,
 				"icon": "School"
 			},
 			"ivgam-blog": {
 				"name": "Ivgam Blog",
-				"description": "Персональный блог с Markdown, аутентификацией и CMS.",
-				"button": "Посмотреть проект",
+				"description": "Личный блог с поддержкой Markdown, авторизацией и CMS.",
+				"button": "Посмотреть репозиторий",
 				"image": "/images/ivgamblog.jpg",
 				"role": {
 					"title": "Обязанности",
-					"values": "Fullstack, CMS, SEO, UX/UI"
+					"values": "Fullstack, CMS, UX/UI"
 				},
-				"link": "https://ivgam.blog",
-				"inProduction": true,
+				"link": "https://github.com/Artades/ivgam-blog-client",
+				"inProduction": false,
 				"icon": "PencilLine"
 			}
 		},
 		"buttons": {
-			"showMore": "Показать ещё",
-			"hide": "Убрать"
+			"showMore": "Показать больше",
+			"hide": "Скрыть"
 		}
 	},
 	"about": {
@@ -219,7 +218,7 @@
 		"stats": {
 			"experience": {
 				"name": "Опыт",
-				"value": "2 года"
+				"value": "1.5 года"
 			},
 			"workStatus": {
 				"name": "Занятость",
@@ -239,9 +238,13 @@
 			},
 			"languages": {
 				"name": "Языки",
-				"value": "Казахский, Русский, Английский"
+				"value": "Русский, Английский, Казахский,"
 			}
 		},
 		"closeBtn": "Закрыть"
+	},
+	"seo": {
+		"title": "Ivgam | Артём Галай — Fullstack разработчик",
+		"description": "Добро пожаловать в моё портфолио, я Fullstack разработчик, увлечённый созданием функциональных, удобных и масштабируемых веб-решений."
 	}
 }

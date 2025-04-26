@@ -6,7 +6,7 @@
 		},
 		"desc": "Desarrollador enfocado en crear aplicaciones web avanzadas y orientadas al usuario que combinan creatividad y funcionalidad.",
 		"buttons": {
-			"cv": "Ver CV",
+			"git": "https://github.com/artades",
 			"contact": "Contáctame"
 		}
 	},
@@ -14,21 +14,20 @@
 		"about": "Sobre mí",
 		"projects": "Proyectos",
 		"technologies": "Technologies",
-		"testimonials": "Testimonios",
 		"contact": "Contáctame"
 	},
 	"projects": {
-		"heading": "Mis Proyectos",
-		"description": "Proyectos en los que he trabajado — de ideas a productos reales.",
+		"heading": "Experiencia",
+		"description": "Proyectos en los que he trabajado: desde pequeñas ideas hasta aplicaciones completas.",
 		"items": {
 			"st": {
 				"name": "Swiss Time",
-				"description": "Comercio electrónico de relojes suizos con una interfaz elegante y optimización SEO.",
+				"description": "Tienda online de relojes suizos con una interfaz elegante y optimización SEO.",
 				"button": "Ver proyecto",
 				"image": "/images/swisstime.webp",
 				"role": {
 					"title": "Responsabilidades",
-					"values": "Front-end, CMS, SEO"
+					"values": "Front-end, SEO"
 				},
 				"link": "https://swisstime.kz",
 				"inProduction": true,
@@ -36,12 +35,12 @@
 			},
 			"vv": {
 				"name": "Veter Vremeni",
-				"description": "Tienda online de relojes de moda con diseño centrado en móviles.",
+				"description": "Tienda de relojes de moda y accesorios con diseño moderno y SEO.",
 				"button": "Ver proyecto",
 				"image": "/images/vv.png",
 				"role": {
 					"title": "Responsabilidades",
-					"values": "Front-end, CMS, SEO"
+					"values": "Fullstack, SEO"
 				},
 				"link": "https://vetervremeni.kz",
 				"inProduction": true,
@@ -49,60 +48,60 @@
 			},
 			"gf": {
 				"name": "G-Factory",
-				"description": "Exposición de relojes de lujo con navegación inmersiva y animaciones.",
+				"description": "Tienda en línea de relojes japoneses con una interfaz de usuario fácil de usar.",
 				"button": "Ver proyecto",
 				"image": "/images/gf.avif",
 				"role": {
 					"title": "Responsabilidades",
-					"values": "Front-end, CMS, SEO"
+					"values": "Front-end, SEO"
 				},
-				"link": "",
-				"inProduction": false,
+				"link": "https://g-factory.kz",
+				"inProduction": true,
 				"icon": "Watch"
 			},
 			"wo": {
 				"name": "Watches Outlet",
-				"description": "Centro de descuentos de Swiss Time con actualizaciones de stock en tiempo real.",
+				"description": "Tienda de relojes con descuentos, SEO y opción de vender tus relojes.",
 				"button": "Ver proyecto",
 				"image": "/images/wo.webp",
 				"role": {
 					"title": "Responsabilidades",
-					"values": "Front-end, CMS, SEO"
+					"values": "Fullstack, SEO, UX/UI"
 				},
-				"link": "",
+				"link": "https://watchesoutlet.kz",
 				"inProduction": true,
 				"icon": "Cog"
 			},
 			"albrokso": {
 				"name": "Albrokso",
-				"description": "Plataforma de cursos de inglés con seguimiento de estudiantes y pagos.",
+				"description": "Landing page para cursos de inglés con inscripción online y SEO.",
 				"button": "Ver proyecto",
 				"image": "/images/albrokso.png",
 				"role": {
 					"title": "Responsabilidades",
-					"values": "Fullstack, Admin, SEO, UX/UI"
+					"values": "Fullstack, SEO, UX/UI"
 				},
-				"link": "",
-				"inProduction": false,
+				"link": "https://albrokso.com",
+				"inProduction": true,
 				"icon": "School"
 			},
 			"ivgam-blog": {
 				"name": "Ivgam Blog",
-				"description": "Blog personal con Markdown, autenticación y CMS.",
-				"button": "Ver proyecto",
+				"description": "Blog personal con soporte de Markdown, autenticación y CMS.",
+				"button": "Ver repo",
 				"image": "/images/ivgamblog.jpg",
 				"role": {
 					"title": "Responsabilidades",
-					"values": "Fullstack, CMS, SEO, UX/UI"
+					"values": "Fullstack, CMS, UX/UI"
 				},
-				"link": "https://ivgam.blog",
-				"inProduction": true,
+				"link": "https://github.com/Artades/ivgam-blog-client",
+				"inProduction": false,
 				"icon": "PencilLine"
 			}
 		},
 		"buttons": {
-			"showMore": "Show More",
-			"hide": "Hide"
+			"showMore": "Mostrar más",
+			"hide": "Ocultar"
 		}
 	},
 	"about": {
@@ -237,7 +236,7 @@
 		"stats": {
 			"experience": {
 				"name": "Experiencia",
-				"value": "2 años"
+				"value": "1.5 años"
 			},
 			"workStatus": {
 				"name": "Empleo",
@@ -257,9 +256,13 @@
 			},
 			"languages": {
 				"name": "Idiomas",
-				"value": "Kazajo, Ruso, Inglés"
+				"value": "Ruso, Inglés, Kazajo"
 			}
 		},
 		"closeBtn": "Cerrar"
+	},
+	"seo": {
+		"title": "Ivgam | Artyom Galay — Desarrollador Fullstack",
+		"description": "Bienvenido a mi portafolio, soy un desarrollador fullstack apasionado por crear soluciones web funcionales, amigables para el usuario y escalables."
 	}
 }

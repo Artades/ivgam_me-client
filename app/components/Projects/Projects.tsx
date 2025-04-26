@@ -17,6 +17,8 @@ import { EButtonSizes } from "@/types/ui";
 import {
   Cog,
   FolderCodeIcon,
+  LucideGithub,
+  LucideProjector,
   PencilLine,
   PocketKnife,
   School,
@@ -24,6 +26,7 @@ import {
 } from "lucide-react";
 import { TContent } from "@/types/content";
 import useDeviceType from "@/hooks/useDeviceType";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 
@@ -51,6 +54,8 @@ const Projects = ({ content }: ProjectsProps) => {
       roleTitle: project.role.title,
       roleValues: project.role.values,
       icon: icons[project.icon],
+      inProduction: project.inProduction,
+      link: project.link,
     }));
   }, [content.items]);
 
@@ -150,6 +155,14 @@ const Projects = ({ content }: ProjectsProps) => {
               } else delete projectsRefs.current[i];
             }}
           >
+            <div
+              title="Status | In Production"
+              className={styles.indicator}
+              style={{
+                borderColor: !card.inProduction ? "rgb(248, 73, 120)" : undefined,
+              }}
+              
+            ></div>
             <div className={styles.cardBody}>
               <div className={styles.cardHeader}>
                 <card.icon />
@@ -159,7 +172,12 @@ const Projects = ({ content }: ProjectsProps) => {
               <div className={styles.cardRole}>
                 <p>{card.roleValues}</p>
               </div>
-              <Button size={EButtonSizes.DEFAULT}>{card.button}</Button>
+              <Link href={card.link} target="_blank">
+                <Button size={EButtonSizes.DEFAULT}>
+                  {card.button}{" "}
+                  {card.inProduction ? <LucideProjector /> : <LucideGithub />}
+                </Button>
+              </Link>
             </div>
           </div>
         ))}

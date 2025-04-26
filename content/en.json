@@ -6,16 +6,15 @@
     },
     "desc": "A developer focused on creating advanced, user-driven web-applications that merge creativity with functionality.",
     "buttons": {
-      "cv": "View CV",
+      "git": "https://github.com/artades",
       "contact": "Contact Me"
     }
   },
   "navigation": {
-    "projects": "Projects",
+    "projects": "Experience",
     "about": "About Me",
     "technologies": "Technologies",
-    "contact": "Contact Me",
-    "testimonials": "Testimonials"
+    "contact": "Contact Me"
   },
   "projects": {
     "heading": "Experience",
@@ -28,7 +27,7 @@
         "image": "/images/swisstime.webp",
         "role": {
           "title": "Responsibilities",
-          "values": "Front-end, CMS, SEO"
+          "values": "Front-end, SEO"
         },
         "link": "https://swisstime.kz",
         "inProduction": true,
@@ -36,12 +35,12 @@
       },
       "vv": {
         "name": "Veter Vremeni",
-        "description": "Online store for fashion watches with a mobile-first design.",
+        "description": "Fashion watches and accessories store with modern UI and SEO.",
         "button": "View project",
         "image": "/images/vv.png",
         "role": {
           "title": "Responsibilities",
-          "values": "Front-end, CMS, SEO"
+          "values": "Fullstack, SEO"
         },
         "link": "https://vetervremeni.kz",
         "inProduction": true,
@@ -49,54 +48,54 @@
       },
       "gf": {
         "name": "G-Factory",
-        "description": "Luxury watch showcase with immersive browsing and animations.",
+        "description": "Online store for Japanese watches with a focus on smooth UX/UI.",
         "button": "View project",
         "image": "/images/gf.avif",
         "role": {
           "title": "Responsibilities",
-          "values": "Front-end, CMS, SEO"
+          "values": "Front-end, SEO"
         },
-        "link": "",
-        "inProduction": false,
+        "link": "https://g-factory.kz",
+        "inProduction": true,
         "icon": "Watch"
       },
       "wo": {
         "name": "Watches Outlet",
-        "description": "Discount hub for Swiss Time with real-time stock updates.",
+        "description": "Discount watch store with SEO and buyback options.",
         "button": "View project",
         "image": "/images/wo.webp",
         "role": {
           "title": "Responsibilities",
-          "values": "Front-end, CMS, SEO"
+          "values": "Fullstack, SEO, UX/UI"
         },
-        "link": "",
+        "link": "https://watchesoutlet.kz",
         "inProduction": true,
         "icon": "Cog"
       },
       "albrokso": {
         "name": "Albrokso",
-        "description": "English course platform with student tracking and payments.",
+        "description": "Landing page for English courses with online enrollment and SEO.",
         "button": "View project",
         "image": "/images/albrokso.png",
         "role": {
           "title": "Responsibilities",
-          "values": "Fullstack, Admin, SEO, UX/UI"
+          "values": "Fullstack, SEO, UX/UI"
         },
-        "link": "",
-        "inProduction": false,
+        "link": "https://albrokso.com",
+        "inProduction": true,
         "icon": "School"
       },
       "ivgam-blog": {
         "name": "Ivgam Blog",
-        "description": "Personal blog with Markdown, authentication, and CMS.",
-        "button": "View project",
+        "description": "Personal blog with Markdown support, authentication, and CMS.",
+        "button": "View Repo",
         "image": "/images/ivgamblog.jpg",
         "role": {
           "title": "Responsibilities",
-          "values": "Fullstack, CMS, SEO, UX/UI"
+          "values": "Fullstack, CMS, UX/UI"
         },
-        "link": "https://ivgam.blog",
-        "inProduction": true,
+        "link": "https://github.com/Artades/ivgam-blog-client",
+        "inProduction": false,
         "icon": "PencilLine"
       }
     },
@@ -108,7 +107,7 @@
   "about": {
     "heading": "About Me",
     "description": "A developer with a passion for building and learning.",
-    "text": "I'm a full-stack developer with more than a year of experience creating real-world applications using modern web technologies. I'm interested in how systems are structured, enjoy working on code quality, and aim to bring ideas to life through clean and reliable solutions. I’m constantly improving my skills — whether through personal projects, open-source work, or exploring new tools and frameworks.",
+    "text": "I'm a full-stack developer with more than 1.5 years of experience creating real-world web-applications using modern technologies. I'm interested in how systems are structured, enjoy working on code quality, and aim to bring ideas to life through clean and reliable solutions. I’m constantly improving my skills — whether through personal projects, open-source work, or exploring new tools and frameworks.",
     "factsHeading": "Quick facts",
     "interestsHeading": "What I enjoy",
     "facts": {
@@ -219,7 +218,7 @@
     "stats": {
       "experience": {
         "name": "Experience",
-        "value": "2 years"
+        "value": "1.5 years"
       },
       "workStatus": {
         "name": "Employment",
@@ -239,9 +238,13 @@
       },
       "languages": {
         "name": "Languages",
-        "value": "Kazakh, Russian, English"
+        "value": "Russian, English, Kazakh"
       }
     },
     "closeBtn": "Close"
+  },
+  "seo": {
+    "title": "Ivgam | Artyom Galay",
+    "description": "Welcome to my portfolio, I'm a fullstack developer with a passion for creating functional, user-friendly, and scalable web solutions."
   }
 }
