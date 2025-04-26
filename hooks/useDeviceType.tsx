@@ -1,23 +1,30 @@
+"use client";
+
 import { useState, useLayoutEffect } from "react";
-import  debounce  from "debounce"; 
+import debounce from "debounce";
 
 const useDeviceType = (breakpoints = { tablet: 700, desktop: 1200 }) => {
-  const [isMobile, setMobile] = useState(window.innerWidth < breakpoints.tablet);
-  const [isTablet, setTablet] = useState(
-    window.innerWidth >= breakpoints.tablet && window.innerWidth < breakpoints.desktop
-  );
-  const [isDesktop, setDesktop] = useState(window.innerWidth >= breakpoints.desktop);
+  const [isMobile, setMobile] = useState(false);
+  const [isTablet, setTablet] = useState(false);
+  const [isDesktop, setDesktop] = useState(false);
 
   useLayoutEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
     const handleResize = () => {
-      setMobile(window.innerWidth < breakpoints.tablet);
-      setTablet(window.innerWidth >= breakpoints.tablet && window.innerWidth < breakpoints.desktop);
-      setDesktop(window.innerWidth >= breakpoints.desktop);
+      const width = window.innerWidth;
+      setMobile(width < breakpoints.tablet);
+      setTablet(width >= breakpoints.tablet && width < breakpoints.desktop);
+      setDesktop(width >= breakpoints.desktop);
     };
+
+    // Вызовем сразу чтобы установить правильное состояние
+    handleResize();
 
     const debouncedResize = debounce(handleResize, 100);
 
-  
     window.addEventListener("resize", debouncedResize);
 
     return () => {
