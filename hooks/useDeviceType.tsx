@@ -19,8 +19,6 @@ const useDeviceType = (breakpoints = { tablet: 700, desktop: 1200 }) => {
       setTablet(width >= breakpoints.tablet && width < breakpoints.desktop);
       setDesktop(width >= breakpoints.desktop);
     };
-
-    // Вызовем сразу чтобы установить правильное состояние
     handleResize();
 
     const debouncedResize = debounce(handleResize, 100);

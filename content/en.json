@@ -23,7 +23,7 @@
       "st": {
         "name": "Swiss Time",
         "description": "E-commerce for Swiss watches with an elegant UI and SEO optimization.",
-        "button": "View project",
+        "button": "View",
         "image": "/images/swisstime.webp",
         "role": {
           "title": "Responsibilities",
@@ -33,10 +33,24 @@
         "inProduction": true,
         "icon": "Watch"
       },
+
+      "albrokso": {
+        "name": "Albrokso",
+        "description": "Landing page for English courses with online enrollment and SEO.",
+        "button": "View",
+        "image": "/images/albrokso.png",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Fullstack, SEO, UX/UI"
+        },
+        "link": "https://albrokso.com",
+        "inProduction": true,
+        "icon": "School"
+      },
       "vv": {
         "name": "Veter Vremeni",
         "description": "Fashion watches and accessories store with modern UI and SEO.",
-        "button": "View project",
+        "button": "View",
         "image": "/images/vv.png",
         "role": {
           "title": "Responsibilities",
@@ -49,7 +63,7 @@
       "gf": {
         "name": "G-Factory",
         "description": "Online store for Japanese watches with a focus on smooth UX/UI.",
-        "button": "View project",
+        "button": "View",
         "image": "/images/gf.avif",
         "role": {
           "title": "Responsibilities",
@@ -62,7 +76,7 @@
       "wo": {
         "name": "Watches Outlet",
         "description": "Discount watch store with SEO and buyback options.",
-        "button": "View project",
+        "button": "View",
         "image": "/images/wo.webp",
         "role": {
           "title": "Responsibilities",
@@ -72,19 +86,7 @@
         "inProduction": true,
         "icon": "Cog"
       },
-      "albrokso": {
-        "name": "Albrokso",
-        "description": "Landing page for English courses with online enrollment and SEO.",
-        "button": "View project",
-        "image": "/images/albrokso.png",
-        "role": {
-          "title": "Responsibilities",
-          "values": "Fullstack, SEO, UX/UI"
-        },
-        "link": "https://albrokso.com",
-        "inProduction": true,
-        "icon": "School"
-      },
+
       "ivgam-blog": {
         "name": "Ivgam Blog",
         "description": "Personal blog with Markdown support, authentication, and CMS.",
@@ -106,8 +108,8 @@
   },
   "about": {
     "heading": "About Me",
-    "description": "A developer with a passion for building and learning.",
-    "text": "I'm a full-stack developer with more than 1.5 years of experience creating real-world web-applications using modern technologies. I'm interested in how systems are structured, enjoy working on code quality, and aim to bring ideas to life through clean and reliable solutions. I’m constantly improving my skills — whether through personal projects, open-source work, or exploring new tools and frameworks.",
+    "description": "Developer driven by curiosity and creativity.",
+    "text": "I'm a full-stack developer with over 1.5 years of hands-on experience building real-world web applications. I’m passionate about how systems are designed, love working on clean and maintainable code, and enjoy turning ideas into reliable solutions. I'm always pushing myself to grow — through personal projects, open-source contributions, and exploring new technologies and tools.",
     "factsHeading": "Quick facts",
     "interestsHeading": "What I enjoy",
     "facts": {
@@ -126,27 +128,27 @@
     },
     "interests": {
       "hiking": {
-        "value": "Nature helps me recharge and think clearly.",
+        "value": "Spending time in nature helps me recharge and think clearer.",
         "name": "Hiking",
         "icon": "MountainSnow"
       },
       "cycling": {
-        "value": "I enjoy the speed, movement, and focus it brings.",
+        "value": "I love the sense of freedom and focus that cycling brings.",
         "name": "Cycling",
         "icon": "Bike"
       },
       "gaming": {
-        "value": "A way to relax and stay sharp.",
+        "value": "Games help me unwind and keep my mind sharp.",
         "name": "Gaming",
         "icon": "Gamepad2"
       },
       "astronomy": {
-        "value": "Space fascinates me with its scale and mystery.",
+        "value": "I'm fascinated by the vastness and mystery of space.",
         "name": "Astronomy",
         "icon": "Telescope"
       },
       "sports": {
-        "value": "Helps me stay disciplined and balanced.",
+        "value": "Sports keep me disciplined, energized, and balanced.",
         "name": "Sports",
         "icon": "Dumbbell"
       }
