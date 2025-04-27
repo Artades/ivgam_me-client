@@ -97,6 +97,19 @@
 				"link": "https://github.com/Artades/ivgam-blog-client",
 				"inProduction": false,
 				"icon": "PencilLine"
+			},
+			"green-yera": {
+				"name": "Green Yera",
+				"description": "Небольшая лендинг-страница для продвижения знаний о микрозелени и её пользе.",
+				"button": "Посмотреть",
+				"image": "/images/ivgamblog.jpg",
+				"role": {
+					"title": "Роли и задачи",
+					"values": "Frontend, UX/UI"
+				},
+				"link": "https://green-yera.vercel.app",
+				"inProduction": true,
+				"icon": "Salad"
 			}
 		},
 		"buttons": {
@@ -238,7 +251,7 @@
 			},
 			"languages": {
 				"name": "Языки",
-				"value": "Русский, Английский, Казахский,"
+				"value": "Русский, Английский, Казахский"
 			}
 		},
 		"closeBtn": "Закрыть"

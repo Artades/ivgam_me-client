@@ -97,6 +97,19 @@
 				"link": "https://github.com/Artades/ivgam-blog-client",
 				"inProduction": false,
 				"icon": "PencilLine"
+			},
+			"green-yera": {
+				"name": "Green Yera",
+				"description": "Una landing page compacta diseñada para promover el conocimiento sobre los microgreens y sus beneficios.",
+				"button": "Ver",
+				"image": "/images/ivgamblog.jpg",
+				"role": {
+					"title": "Responsabilidades",
+					"values": "Frontend, UX/UI"
+				},
+				"link": "https://green-yera.vercel.app",
+				"inProduction": true,
+				"icon": "Salad"
 			}
 		},
 		"buttons": {

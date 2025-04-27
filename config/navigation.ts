@@ -16,10 +16,5 @@ export const navigation = [
     id: 4,
     key: "contact",
   },
-  // {
-  //   id: 3,
-  //   key: "testimonials",
 
-  //   isActice: false,
-  // },
 ] as const;

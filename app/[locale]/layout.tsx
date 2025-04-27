@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Nunito} from "next/font/google";
 import "../styles/globals.scss";
 import Container from "@/app/components/Layout/Container/Container";
 import BackgroundEffect from "@/app/components/Layout/BackgroundEffect/BackgroundEffect";
@@ -10,9 +10,9 @@ import { getContent } from "@/utils/getContent";
 import InfoModal from "../components/Modals/InfoModal/InfoModal";
 import Toast from "../components/ui/Toast/Toast";
 
-const notoSans = Montserrat({
+const notoSans = Nunito({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export async function generateStaticParams() {

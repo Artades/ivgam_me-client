@@ -58,16 +58,20 @@
   &:hover {
     background: rgba(var(--color-dark-blue), 0.1);
     outline: 2px solid var(--color-accent);
-    outline-offset: -2px; // немного внутрь
+    outline-offset: -2px;
     transform: translateZ(10px);
   }
-}
 
+  @media (max-width: 768px) {
+    &:hover {
+      outline: none;
+    }
+  }
+}
 
 .cardHidden {
   display: none;
 }
-
 
 .cardBody {
   position: absolute;
@@ -84,7 +88,7 @@
   border-radius: var(--rad-medium);
 }
 
-.indicator{
+.indicator {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -175,8 +179,6 @@
 }
 
 @media (max-width: 768px) {
- 
-
   .projectsBarPercentage {
     width: 80%;
     height: 5px;

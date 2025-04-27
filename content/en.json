@@ -33,7 +33,6 @@
         "inProduction": true,
         "icon": "Watch"
       },
-
       "albrokso": {
         "name": "Albrokso",
         "description": "Landing page for English courses with online enrollment and SEO.",
@@ -86,7 +85,6 @@
         "inProduction": true,
         "icon": "Cog"
       },
-
       "ivgam-blog": {
         "name": "Ivgam Blog",
         "description": "Personal blog with Markdown support, authentication, and CMS.",
@@ -99,6 +97,19 @@
         "link": "https://github.com/Artades/ivgam-blog-client",
         "inProduction": false,
         "icon": "PencilLine"
+      },
+      "green-yera": {
+        "name": "Green Yera",
+        "description": "A compact landing page designed to promote awareness about microgreens and their benefits.",
+        "button": "View",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Responsibilities",
+          "values": "Frontend, UX/UI"
+        },
+        "link": "https://green-yera.vercel.app",
+        "inProduction": true,
+        "icon": "Salad"
       }
     },
     "buttons": {

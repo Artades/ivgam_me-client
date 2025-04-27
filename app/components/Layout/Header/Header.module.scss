@@ -93,7 +93,7 @@
     }
   }
 
-  @media  (max-width: 1200px)  {
+  @media (max-width: 1200px) {
     .headerLogo {
       h2 {
         gap: var(--spacing-sm);
@@ -109,10 +109,8 @@
       }
     }
   }
-  
-  @media (max-width: 920px){
-    
 
+  @media (max-width: 920px) {
     .headerNav {
       gap: var(--spacing-sm);
 
@@ -123,6 +121,9 @@
   }
 
   @media (max-width: 768px) {
+    .headerInner {
+      padding: 1.5rem 0;
+    }
     .headerNav {
       display: none;
     }

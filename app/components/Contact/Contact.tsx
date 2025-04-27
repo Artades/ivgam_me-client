@@ -125,7 +125,7 @@ const Contact = ({ content }: ContactProps) => {
 
       <div className={styles.contactInner}>
         <div className={styles.contactImageWrapper}>
-          <Image src="/images/contact.jpg" alt="Contact" fill />
+          <Image priority quality={100} src="/images/contact.jpg" alt="Contact" fill />
           <Socials />
         </div>
 

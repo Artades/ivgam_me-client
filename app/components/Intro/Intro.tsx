@@ -31,7 +31,7 @@ export default function Intro({ content }: IntroProps) {
       if (prefersReducedMotion) {
         gsap.set(container.current, { opacity: 1 });
         gsap.set(headingLine.current, { width: "7rem" });
-        gsap.set(headingRef.current, { opacity: 0, y: 30 });
+        gsap.set(headingRef.current, { opacity: 1, y: 30 });
         gsap.set(textRef.current, { opacity: 1, y: 0 });
         gsap.set(buttonRef.current, { opacity: 1, y: 0 });
         gsap.set(introImageRef.current, { opacity: 1 });

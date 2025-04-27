@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import styles from "./BackgroundEffect.module.scss";
 import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
 import { useGSAP } from "@gsap/react";
@@ -28,14 +28,14 @@ const BackgroundEffect = () => {
 		return clipPath.slice(0, -2) + ")";
 	};
 
-	const generateRandomStyle = () => {
+	const generateRandomStyle = useCallback(() => {
 		const size = Math.random() * 50 + 30;
 		return {
 			clipPath: generateRandomClipPath(),
 			width: `${size}rem`,
 			height: `${size}rem`,
 		};
-	};
+	}, []);
 
 	useEffect(() => {
 		const renderShapes = () => {
@@ -72,7 +72,7 @@ const BackgroundEffect = () => {
 		};
 
 		setShapes(renderShapes());
-	}, []);
+	}, [generateRandomStyle]);
 
 	useGSAP(() => {
 		if (!shapes) return;

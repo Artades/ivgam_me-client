@@ -21,6 +21,7 @@ import {
   LucideProjector,
   PencilLine,
   PocketKnife,
+  Salad,
   School,
   Watch,
 } from "lucide-react";
@@ -38,6 +39,7 @@ const icons: Record<string, React.ElementType> = {
   Cog,
   School,
   PencilLine,
+  Salad
 };
 
 const Projects = ({ content }: ProjectsProps) => {
