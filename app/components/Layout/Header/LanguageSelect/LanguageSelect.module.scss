@@ -23,6 +23,7 @@
   padding: var(--spacing-xs);
   cursor: pointer;
   transition: all 0.1s;
+  border-radius: var(--rad-medium);
 
   &:hover {
     background: var(--color-dark-accent);
