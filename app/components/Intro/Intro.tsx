@@ -110,7 +110,7 @@ export default function Intro({ content }: IntroProps) {
       <div className={styles.introImage} ref={introImageRef}>
         <Image
           priority
-          src="/images/me.jpg"
+          src="/images/me3.jpg"
           alt="Artyom Galay Profile Photo"
           width={2000}
           height={2000}

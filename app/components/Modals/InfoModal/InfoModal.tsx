@@ -44,7 +44,7 @@ const InfoModal = ({ content }: InfoModalProps) => {
           <div className={styles.infoModalHeader}>
             <Image
               className={styles.infoModalAvatar}
-              src="/images/me2.jpg"
+              src="/images/me3.jpg"
               alt="Avatar"
               width={1000}
               height={1000}

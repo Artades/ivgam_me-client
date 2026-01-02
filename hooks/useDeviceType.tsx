@@ -20,7 +20,7 @@ const useDeviceType = (breakpoints = { tablet: 700, desktop: 1200 }) => {
       setDesktop(width >= breakpoints.desktop);
     };
     handleResize();
-
+    
     const debouncedResize = debounce(handleResize, 100);
 
     window.addEventListener("resize", debouncedResize);
