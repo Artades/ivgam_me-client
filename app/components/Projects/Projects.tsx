@@ -200,11 +200,9 @@ const Projects = ({ content }: ProjectsProps) => {
             size={EButtonSizes.DEFAULT}
             onClick={() => {
               setVisibleProjects(calculateVisible());
-
-              // Прокрутка вверх к секции
               if (container.current) {
                 window.scrollTo({
-                  top: container.current.offsetTop - 100, // можно подстроить отступ
+                  top: container.current.offsetTop - 100, 
                   behavior: "smooth",
                 });
               }

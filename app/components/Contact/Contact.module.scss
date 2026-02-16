@@ -41,13 +41,13 @@
 
   &ImageWrapper {
     position: relative;
-    border-radius: var(--rad-medium) 0 0 var(--rad-medium) ;
+    border-radius: var(--rad-medium) 0 0 var(--rad-medium);
     overflow: hidden;
     min-height: 30rem;
 
     img {
       object-fit: cover;
-      filter: sepia(1) saturate(5) hue-rotate(160deg);
+      filter: grayscale(100%) contrast(100%) brightness(90%);
     }
 
     @media (max-width: 768px) {

@@ -1,3 +1,5 @@
+@use '../../../styles/variables.scss' as v;
+
 .button {
   display: inline-flex;
   position: relative;
@@ -10,16 +12,16 @@
   gap: var(--spacing-sm);
   border-radius: var(--rad-medium);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem); 
-  min-height: clamp(2.5rem, 6vw, 3rem); 
-  max-height: clamp(3rem, 7vw, 3.5rem); 
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+  min-height: clamp(2.5rem, 6vw, 3rem);
+  max-height: clamp(3rem, 7vw, 3.5rem);
   user-select: none;
   outline: none;
 
   svg {
     width: var(--fz-xl);
     height: var(--fz-xl);
-    color: var(--color-light);
+    color: var(--color-dark-blue);
   }
 
   &.small {
@@ -39,7 +41,7 @@
 
   &.primary {
     background-color: var(--color-accent);
-    color: white;
+    color: var(--color-light); 
   }
 
   &.outline {
@@ -122,8 +124,7 @@
     }
 
     100% {
-      transform: translate(calc(var(--x) * 1rem), calc(var(--y) * 1rem))
-        scale(0);
+      transform: translate(calc(var(--x) * 1rem), calc(var(--y) * 1rem)) scale(0);
       opacity: 0;
     }
   }
