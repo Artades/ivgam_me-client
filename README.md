@@ -3,7 +3,6 @@
 This is my personal portfolio website built with **Next.js 14**, **TypeScript**, **SCSS**, **GSAP**, and modern web technologies. Here I showcase my projects, skills, and story.
 
 ## 🚀 Tech Stack
-
 - **Next.js 14** (App Router)
 - **TypeScript**
 - **SCSS Modules** for styling
