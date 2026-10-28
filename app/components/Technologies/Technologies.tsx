@@ -14,28 +14,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 type TechnologiesProps = TContent<"technologies">;
 
-const techs = [
-  { name: "Java Script", icon: "/icons/js.svg" },
-  { name: "Docker", icon: "/icons/docker.svg" },
-  { name: "Express", icon: "/icons/express.svg" },
-  { name: "Figma", icon: "/icons/figma.svg" },
-  { name: "Git", icon: "/icons/git.svg" },
-  { name: "NestJS", icon: "/icons/nestjs.svg" },
-  { name: "Next.js", icon: "/icons/nextjs.svg" },
-  { name: "Node.js", icon: "/icons/nodejs.svg" },
-  { name: "PostgreSQL", icon: "/icons/postgres.svg" },
-  { name: "Prisma ORM", icon: "/icons/prisma-orm.svg" },
-  { name: "React", icon: "/icons/react.png" },
-  { name: "Redux", icon: "/icons/redux.svg" },
-  { name: "Sass", icon: "/icons/sass.svg" },
-  { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
-  { name: "TypeScript", icon: "/icons/typescript.svg" },
-  { name: "Ubuntu", icon: "/icons/ubuntu.png" },
-  { name: "Zustand", icon: "/icons/zustand.svg" },
-] as const;
+const techIcons: Record<string, string> = {
+  Docker: "/icons/docker.svg",
+  Express: "/icons/express.svg",
+  Figma: "/icons/figma.svg",
+  Git: "/icons/git.svg",
+  GitHub: "/icons/socials/git.svg",
+  JavaScript: "/icons/js.svg",
+  NestJS: "/icons/nestjs.svg",
+  "Next.js": "/icons/nextjs.svg",
+  "Node.js": "/icons/nodejs.svg",
+  PostgreSQL: "/icons/postgres.svg",
+  Prisma: "/icons/prisma-orm.svg",
+  React: "/icons/react.png",
+  Redux: "/icons/redux.svg",
+  Sass: "/icons/sass.svg",
+  "Tailwind CSS": "/icons/tailwind.svg",
+  TypeScript: "/icons/typescript.svg",
+  Ubuntu: "/icons/ubuntu.png",
+  Zustand: "/icons/zustand.svg",
+};
 
 const Technologies = ({ content }: TechnologiesProps) => {
-  const isMobile = useDeviceType();
+  const { isMobile } = useDeviceType();
 
   const container = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
@@ -74,22 +75,31 @@ const Technologies = ({ content }: TechnologiesProps) => {
       </div>
 
       <div className={styles.technologiesGrid}>
-        {techs.map((tech, i) => (
+        {Object.values(content.groups).map((group, i) => (
           <div
-            key={tech.name}
+            key={group.title}
             className={styles.technologiesGridCard}
             ref={(el) => {
               if (el) cardsRef.current[i] = el;
             }}
           >
-            <Image
-              priority
-              src={tech.icon}
-              width={100}
-              height={100}
-              alt={`Ivgam | ${tech.name}`}
-            />
-            <h4>{tech.name}</h4>
+            <h3>{group.title}</h3>
+            <div className={styles.technologiesList}>
+              {group.items.map((tech) => (
+                <div className={styles.technologiesItem} key={tech}>
+                  {techIcons[tech] && (
+                    <Image
+                      priority
+                      src={techIcons[tech]}
+                      width={36}
+                      height={36}
+                      alt={`Ivgam | ${tech}`}
+                    />
+                  )}
+                  <span>{tech}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

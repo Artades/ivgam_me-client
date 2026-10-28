@@ -1,263 +1,393 @@
 {
-	"intro": {
-		"title": {
-			"hello": "Привет, я ",
-			"artyom": "Артём"
-		},
-		"desc": "Разрабатываю современные веб-приложения, которые сочетают креативный подход и удобство для пользователей.",
-		"buttons": {
-			"git": "https://github.com/artades",
-			"contact": "Связаться"
-		}
-	},
-	"navigation": {
-		"about": "Обо мне",
-		"projects": "Проекты",
-		"technologies": "Технологии",
-		"contact": "Связаться"
-	},
-	"projects": {
-		"heading": "Опыт",
-		"description": "Проекты, над которыми я работал — от маленьких идей до полноценных приложений.",
-		"items": {
-			"st": {
-				"name": "Swiss Time",
-				"description": "Интернет-магазин швейцарских часов с элегантным интерфейсом и SEO-оптимизацией.",
-				"button": "Посмотреть",
-				"image": "/images/swisstime.webp",
-				"role": {
-					"title": "Обязанности",
-					"values": "Front-end, SEO"
-				},
-				"link": "https://swisstime.kz",
-				"inProduction": true,
-				"icon": "Watch"
-			},
-			"vv": {
-				"name": "Ветер Времени",
-				"description": "Магазин fashion часов и аксессуаров с современным UI и SEO.",
-				"button": "Посмотреть",
-				"image": "/images/vv.png",
-				"role": {
-					"title": "Обязанности",
-					"values": "Fullstack, SEO"
-				},
-				"link": "https://vetervremeni.kz",
-				"inProduction": true,
-				"icon": "PocketKnife"
-			},
-			"gf": {
-				"name": "G-Factory",
-				"description": "Интернет-магазин японских часов с удобным и интуитивно понятным интерфейсом.",
-				"button": "Посмотреть",
-				"image": "/images/gf.avif",
-				"role": {
-					"title": "Обязанности",
-					"values": "Front-end, SEO"
-				},
-				"link": "https://g-factory.kz",
-				"inProduction": true,
-				"icon": "Watch"
-			},
-			"wo": {
-				"name": "Watches Outlet",
-				"description": "Дисконт-магазин часов с SEO и возможностью продажи своих часов.",
-				"button": "Посмотреть",
-				"image": "/images/wo.webp",
-				"role": {
-					"title": "Обязанности",
-					"values": "Fullstack, SEO, UX/UI"
-				},
-				"link": "https://watchesoutlet.kz",
-				"inProduction": true,
-				"icon": "Cog"
-			},
-			"albrokso": {
-				"name": "Albrokso",
-				"description": "Лэндинг для записи на курсы английского языка с онлайн-формой и SEO.",
-				"button": "Посмотреть",
-				"image": "/images/albrokso.png",
-				"role": {
-					"title": "Обязанности",
-					"values": "Fullstack, SEO, UX/UI"
-				},
-				"link": "https://albrokso.com",
-				"inProduction": true,
-				"icon": "School"
-			},
-			"ivgam-blog": {
-				"name": "Ivgam Blog",
-				"description": "Личный блог с поддержкой Markdown, авторизацией и CMS.",
-				"button": "Посмотреть репозиторий",
-				"image": "/images/ivgamblog.jpg",
-				"role": {
-					"title": "Обязанности",
-					"values": "Fullstack, CMS, UX/UI"
-				},
-				"link": "https://github.com/Artades/ivgam-blog-client",
-				"inProduction": false,
-				"icon": "PencilLine"
-			},
-			"green-yera": {
-				"name": "Green Yera",
-				"description": "Небольшая лендинг-страница для продвижения знаний о микрозелени и её пользе.",
-				"button": "Посмотреть",
-				"image": "/images/ivgamblog.jpg",
-				"role": {
-					"title": "Роли и задачи",
-					"values": "Frontend, UX/UI"
-				},
-				"link": "https://green-yera.vercel.app",
-				"inProduction": true,
-				"icon": "Salad"
-			}
-		},
-		"buttons": {
-			"showMore": "Показать больше",
-			"hide": "Скрыть"
-		}
-	},
-	"about": {
-		"heading": "Обо мне",
-		"description": "Разработчик, движимый любопытством и стремлением к созданию нового.",
-		"text": "Я full-stack разработчик с опытом более 1,5 лет в создании реальных веб-приложений. Меня увлекает архитектура систем, я люблю писать чистый, поддерживаемый код и воплощать идеи в надёжные решения. Постоянно совершенствую навыки — через личные проекты, вклад в open-source и изучение новых технологий и инструментов.",
-		"factsHeading": "Факты обо мне",
-		"interestsHeading": "Что мне нравится",
-		"facts": {
-			"experince": {
-				"value": "2+",
-				"name": "Лет опыта"
-			},
-			"projects": {
-				"value": "55+",
-				"name": "Проектов на GitHub"
-			},
-			"directions": {
-				"value": "5+",
-				"name": "Изученных направлений в IT"
-			}
-		},
-		"interests": {
-			"hiking": {
-				"value": "Прогулки на природе помогают мне перезагрузиться и яснее мыслить.",
-				"name": "Хайкинг",
-				"icon": "MountainSnow"
-			},
-			"cycling": {
-				"value": "Люблю ощущение свободы и концентрации, которое даёт велосипед.",
-				"name": "Велоспорт",
-				"icon": "Bike"
-			},
-			"gaming": {
-				"value": "Игры помогают расслабиться и поддерживать остроту ума.",
-				"name": "Игры",
-				"icon": "Gamepad2"
-			},
-			"astronomy": {
-				"value": "Меня вдохновляет масштаб и загадочность космоса.",
-				"name": "Астрономия",
-				"icon": "Telescope"
-			},
-			"sports": {
-				"value": "Спорт помогает сохранять дисциплину, энергию и баланс.",
-				"name": "Спорт",
-				"icon": "Dumbbell"
-			}
-		},
-		"learnMoreBtn": "Узнать больше"
-	},
-	"technologies": {
-		"heading": "Технологии",
-		"description": "Инструменты и технологии, которые я использую чаще всего"
-	},
-	"contact": {
-		"heading": "Свяжитесь со мной",
-		"description": "Давайте свяжемся и создадим что-то потрясающее.",
-		"form": {
-			"title": "Заполните форму",
-			"fields": {
-				"fullName": {
-					"label": "Полное имя",
-					"placeholder": "Иван Иванов",
-					"error": "Пожалуйста, укажите ваше имя"
-				},
-				"email": {
-					"label": "Эл. почта",
-					"placeholder": "you@example.com",
-					"error": "Пожалуйста, введите корректный адрес эл. почты"
-				},
-				"company": {
-					"label": "Компания",
-					"placeholder": "Walmart",
-					"error": "Пожалуйста, укажите название компании"
-				},
-				"message": {
-					"label": "Сообщение",
-					"placeholder": "У меня появилась идея...",
-					"error": "Сообщение не может быть пустым"
-				}
-			},
-			"button": {
-				"submit": "Отправить"
-			}
-		},
-		"toast": {
-			"sending": {
-				"title": "Отправка...",
-				"description": "Пожалуйста, подождите."
-			},
-			"validationError": {
-				"title": "Ошибка валидации",
-				"description": "Пожалуйста, проверьте правильность ввода."
-			},
-			"error": {
-				"title": "Ошибка",
-				"description": "Что-то пошло не так. Попробуйте позже."
-			},
-			"success": {
-				"title": "Сообщение отправлено",
-				"description": "Я свяжусь с вами в ближайшее время."
-			}
-		}
-	},
-	"testimonials": {
-		"heading": "Testimonials",
-		"description": "What people think of me ?"
-	},
-	"info": {
-		"heading": "Инфо",
-		"description": "Немного информации и статистики обо мне",
-		"status": "Three lights are lit, but the fourth one's out",
-		"stats": {
-			"experience": {
-				"name": "Опыт",
-				"value": "1.5 года"
-			},
-			"workStatus": {
-				"name": "Занятость",
-				"value": "В настоящее время работаю"
-			},
-			"hometown": {
-				"name": "Родной город",
-				"value": "Алматы, Казахстан"
-			},
-			"university": {
-				"name": "Университет",
-				"value": "МУИТ"
-			},
-			"age": {
-				"name": "Возраст",
-				"value": "20"
-			},
-			"languages": {
-				"name": "Языки",
-				"value": "Русский, Английский, Казахский"
-			}
-		},
-		"closeBtn": "Закрыть"
-	},
-	"seo": {
-		"title": "Ivgam | Артём Галай",
-		"description": "Добро пожаловать в моё портфолио, я Fullstack разработчик, увлечённый созданием функциональных, удобных и масштабируемых веб-решений."
-	}
+  "intro": {
+    "title": {
+      "hello": "Артём Галай",
+      "artyom": "Full-stack разработчик"
+    },
+    "role": "Next.js / React / Node.js",
+    "desc": "Создаю production-ready сайты и веб-приложения с фокусом на скорость, SEO, поддерживаемую архитектуру и понятный пользовательский опыт.",
+    "buttons": {
+      "git": "https://github.com/artades",
+      "work": "Смотреть проекты",
+      "contact": "Связаться"
+    },
+    "stats": {
+      "experience": {
+        "value": "2+",
+        "label": "Года в веб-разработке"
+      },
+      "production": {
+        "value": "6+",
+        "label": "Production проектов"
+      },
+      "focus": {
+        "value": "Fullstack",
+        "label": "Frontend, backend, SEO"
+      }
+    }
+  },
+  "navigation": {
+    "services": "Услуги",
+    "projects": "Работы",
+    "about": "Обо мне",
+    "technologies": "Стек",
+    "contact": "Связаться"
+  },
+  "services": {
+    "heading": "Что я делаю",
+    "description": "Помогаю превращать идеи, лендинги и интернет-магазины в быстрые, удобные и поддерживаемые production-сайты.",
+    "items": {
+      "frontend": {
+        "title": "Frontend разработка",
+        "description": "Адаптивные интерфейсы на React, Next.js, TypeScript, SCSS и компонентной UI-структуре.",
+        "icon": "LayoutTemplate"
+      },
+      "fullstack": {
+        "title": "Full-stack веб-приложения",
+        "description": "Server-side логика, API routes, формы, CMS-сценарии, авторизация и функции с базой данных.",
+        "icon": "ServerCog"
+      },
+      "commerce": {
+        "title": "E-commerce и лендинги",
+        "description": "Каталоги, страницы товаров, формы заявок и страницы с фокусом на понятность, конверсию и SEO.",
+        "icon": "ShoppingCart"
+      },
+      "seo": {
+        "title": "SEO и производительность",
+        "description": "Семантическая структура страниц, метаданные, техническое SEO, скорость и аккуратная production-подготовка.",
+        "icon": "SearchCheck"
+      },
+      "systems": {
+        "title": "CMS и админ-процессы",
+        "description": "Сценарии управления контентом, панели и практичные инструменты, которые упрощают поддержку проекта.",
+        "icon": "Workflow"
+      },
+      "quality": {
+        "title": "Поддержка и развитие",
+        "description": "Улучшение существующих сайтов, исправление UX-проблем, чистка кода и подготовка фич к релизу.",
+        "icon": "Gauge"
+      }
+    }
+  },
+  "projects": {
+    "heading": "Избранные работы",
+    "description": "Коммерческие и личные проекты, где я занимался frontend, full-stack функциями, SEO и production-запуском.",
+    "items": {
+      "st": {
+        "name": "Swiss Time",
+        "category": "E-commerce",
+        "description": "Интернет-магазин швейцарских часов с аккуратным каталогом и SEO-ориентированной структурой страниц.",
+        "button": "Посмотреть",
+        "image": "/images/swisstime.webp",
+        "role": {
+          "title": "Роль",
+          "values": "Front-end, SEO"
+        },
+        "impact": "Работал над адаптивным UI, продуктовыми страницами и поисково-ориентированной реализацией production-магазина.",
+        "stack": ["React", "Next.js", "SCSS", "SEO"],
+        "link": "https://swisstime.kz",
+        "inProduction": true,
+        "icon": "Watch"
+      },
+      "vv": {
+        "name": "Ветер Времени",
+        "category": "E-commerce",
+        "description": "Магазин fashion часов и аксессуаров с продуктовыми страницами, адаптивным UI и SEO.",
+        "button": "Посмотреть",
+        "image": "/images/vv.png",
+        "role": {
+          "title": "Роль",
+          "values": "Fullstack, SEO"
+        },
+        "impact": "Делал frontend и backend-ориентированные улучшения для production retail-проекта.",
+        "stack": ["Next.js", "Node.js", "SCSS", "SEO"],
+        "link": "https://vetervremeni.kz",
+        "inProduction": true,
+        "icon": "PocketKnife"
+      },
+      "gf": {
+        "name": "G-Factory",
+        "category": "E-commerce",
+        "description": "Интернет-магазин японских часов с понятной навигацией и удобным поиском товаров.",
+        "button": "Посмотреть",
+        "image": "/images/gf.avif",
+        "role": {
+          "title": "Роль",
+          "values": "Front-end, SEO"
+        },
+        "impact": "Работал над интерфейсом, адаптивными layout-ами и SEO-ready страницами.",
+        "stack": ["React", "Next.js", "SCSS", "SEO"],
+        "link": "https://g-factory.kz",
+        "inProduction": true,
+        "icon": "Watch"
+      },
+      "wo": {
+        "name": "Watches Outlet",
+        "category": "E-commerce",
+        "description": "Дисконт-магазин часов с каталогом, SEO-страницами и сценарием заявки на выкуп.",
+        "button": "Посмотреть",
+        "image": "/images/wo.webp",
+        "role": {
+          "title": "Роль",
+          "values": "Fullstack, SEO, UX/UI"
+        },
+        "impact": "Реализовывал production-функции на уровне UI, форм и SEO-ориентированных страниц магазина.",
+        "stack": ["Next.js", "React", "Forms", "SEO"],
+        "link": "https://watchesoutlet.kz",
+        "inProduction": true,
+        "icon": "Cog"
+      },
+      "albrokso": {
+        "name": "Albrokso",
+        "category": "Лендинг",
+        "description": "Маркетинговый сайт для курсов английского с понятной записью и технической SEO-базой.",
+        "button": "Посмотреть",
+        "image": "/images/albrokso.png",
+        "role": {
+          "title": "Роль",
+          "values": "Fullstack, SEO, UX/UI"
+        },
+        "impact": "Собрал структуру лендинга, сценарий онлайн-заявки и адаптивный UI для реального образовательного бизнеса.",
+        "stack": ["Next.js", "React", "Forms", "SEO"],
+        "link": "https://albrokso.com",
+        "inProduction": true,
+        "icon": "School"
+      },
+      "ivgam-blog": {
+        "name": "Ivgam Blog",
+        "category": "CMS / Blog",
+        "description": "Платформа личного блога с Markdown-контентом, авторизацией и CMS-сценарием публикации.",
+        "button": "Посмотреть репозиторий",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Роль",
+          "values": "Fullstack, CMS, UX/UI"
+        },
+        "impact": "Спроектировал структуру приложения и реализовал full-stack функции управления контентом.",
+        "stack": ["Next.js", "Prisma", "PostgreSQL", "Auth"],
+        "link": "https://github.com/Artades/ivgam-blog-client",
+        "inProduction": false,
+        "icon": "PencilLine"
+      },
+      "ivgam-vault": {
+        "name": "Ivgam Vault",
+        "category": "CLI / Безопасность",
+        "description": "Консольный менеджер паролей, который хранит зашифрованные данные локально.",
+        "button": "Посмотреть на npm",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Роль",
+          "values": "Автор, CLI, безопасность"
+        },
+        "impact": "Спроектировал и опубликовал npm-пакет с интерактивной оболочкой и командами для управления безопасным локальным хранилищем.",
+        "stack": ["TypeScript", "Node.js", "CLI", "Шифрование"],
+        "link": "https://www.npmjs.com/package/ivgam-vault",
+        "inProduction": true,
+        "icon": "LockKeyhole"
+      },
+      "g-admin": {
+        "name": "G-Admin",
+        "category": "Внутренняя админ-панель",
+        "description": "Закрытое рабочее пространство для сотрудников компании: управление продающими сайтами, отзывами, отчётами и операционным контентом.",
+        "button": "Закрытый проект",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Роль",
+          "values": "Frontend"
+        },
+        "impact": "Разрабатывал frontend-сценарии для внутренних команд: управление контентом, модерация отзывов, отчётные экраны и ежедневные admin-операции.",
+        "stack": ["React", "Next.js", "TypeScript", "Admin UI"],
+        "link": "",
+        "inProduction": true,
+        "icon": "LockKeyhole"
+      },
+      "time-app": {
+        "name": "Time App",
+        "category": "Marketplace платформа",
+        "description": "Крупное приложение-маркетплейс по продаже часов в Казахстане с продуктовыми, каталожными и бизнес-процессами.",
+        "button": "Закрытый проект",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Роль",
+          "values": "Backend, DevOps, CI/CD"
+        },
+        "impact": "Работал над backend-сервисами, настраивал deployment и CI/CD pipeline для крупнейшего приложения по продаже часов в Казахстане.",
+        "stack": ["Node.js", "Backend", "CI/CD", "Deploy"],
+        "link": "",
+        "inProduction": true,
+        "icon": "ShieldCheck"
+      },
+      "testing-platform": {
+        "name": "Testing Platform",
+        "category": "Внутренняя платформа",
+        "description": "Закрытая платформа для тестирования сотрудников компании, проверки знаний и контроля результатов обучения.",
+        "button": "Закрытый проект",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Роль",
+          "values": "Backend"
+        },
+        "impact": "Разрабатывал backend-логику для тестов, обработки ответов, расчёта результатов и сценариев управления проверками внутри компании.",
+        "stack": ["Node.js", "Backend", "API", "Business logic"],
+        "link": "",
+        "inProduction": true,
+        "icon": "ClipboardCheck"
+      }
+    },
+    "buttons": {
+      "showMore": "Показать больше",
+      "hide": "Скрыть"
+    }
+  },
+  "about": {
+    "heading": "Обо мне",
+    "description": "Коротко о подходе к работе и задачам.",
+    "text": "Я full-stack разработчик из Алматы. Мне нравится доводить проекты до состояния, когда ими удобно пользоваться, их легко поддерживать и можно спокойно развивать дальше. В работе я стараюсь смотреть не только на код, но и на задачу целиком: что нужно пользователю, что важно бизнесу и как сделать решение достаточно простым, чтобы оно не стало проблемой через месяц.",
+    "factsHeading": "Факты обо мне",
+    "highlightsHeading": "Как я работаю",
+    "facts": {
+      "experince": {
+        "value": "2+",
+        "name": "Лет опыта"
+      },
+      "projects": {
+        "value": "55+",
+        "name": "Проектов на GitHub"
+      },
+      "directions": {
+        "value": "5+",
+        "name": "Изученных направлений в IT"
+      }
+    },
+    "highlights": {
+      "production": {
+        "value": "Думаю о запуске, поддержке и реальном использовании ещё во время разработки.",
+        "name": "Ориентация на результат",
+        "icon": "FolderCodeIcon"
+      },
+      "architecture": {
+        "value": "Стараюсь делать решения понятными, предсказуемыми и без лишнего усложнения.",
+        "name": "Простая структура",
+        "icon": "FolderCodeIcon"
+      },
+      "business": {
+        "value": "Учитываю не только интерфейс, но и то, как проект помогает процессам, продажам или внутренней работе команды.",
+        "name": "Бизнес-контекст",
+        "icon": "Pin"
+      },
+      "communication": {
+        "value": "Люблю, когда требования, ограничения и следующие шаги понятны всем участникам проекта.",
+        "name": "Понятная работа",
+        "icon": "Pin"
+      }
+    }
+  },
+  "technologies": {
+    "heading": "Технологический стек",
+    "description": "Основные технологии и инструменты, с которыми я работаю в frontend, backend и production-процессах.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "Sass", "Tailwind CSS", "Zustand", "Redux"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["Node.js", "Express", "NestJS"]
+      },
+      "database": {
+        "title": "Database / ORM",
+        "items": ["PostgreSQL", "Prisma", "SQL"]
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "items": ["Docker", "CI/CD", "Deployment", "Nginx", "Ubuntu", "AWS"]
+      },
+      "tools": {
+        "title": "Инструменты",
+        "items": ["Git", "GitHub", "Figma", "Postman"]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Свяжитесь со мной",
+    "description": "Открыт к freelance-проектам, frontend/full-stack ролям и сотрудничеству над практичными веб-продуктами.",
+    "title": "Лучше написать напрямую",
+    "text": "Если есть проект, вакансия или идея для сотрудничества — проще всего связаться со мной в Telegram или LinkedIn. Я обычно отвечаю быстрее там, чем через формы на сайте.",
+    "links": {
+      "telegram": {
+        "label": "Telegram",
+        "value": "@ive_got_a_migraine",
+        "href": "https://t.me/ive_got_a_migraine",
+        "icon": "Send"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Artyom Galay",
+        "href": "https://www.linkedin.com/in/artyom-galay-752629359/",
+        "icon": "Linkedin"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "Artades",
+        "href": "https://github.com/Artades",
+        "icon": "Github"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "value": "@_ive_got_a_migraine",
+        "href": "https://instagram.com/_ive_got_a_migraine",
+        "icon": "Instagram"
+      }
+    },
+    "form": {
+      "title": "Расскажите о проекте",
+      "fields": {
+        "fullName": {
+          "label": "Полное имя",
+          "placeholder": "Иван Иванов",
+          "error": "Пожалуйста, укажите ваше имя"
+        },
+        "email": {
+          "label": "Эл. почта",
+          "placeholder": "you@example.com",
+          "error": "Пожалуйста, введите корректный адрес эл. почты"
+        },
+        "company": {
+          "label": "Компания",
+          "placeholder": "Компания или проект",
+          "error": "Пожалуйста, укажите название компании"
+        },
+        "message": {
+          "label": "Сообщение",
+          "placeholder": "Нужен сайт / фича / редизайн...",
+          "error": "Сообщение не может быть пустым"
+        }
+      },
+      "button": {
+        "submit": "Отправить"
+      }
+    },
+    "toast": {
+      "sending": {
+        "title": "Отправка...",
+        "description": "Пожалуйста, подождите."
+      },
+      "validationError": {
+        "title": "Ошибка валидации",
+        "description": "Пожалуйста, проверьте правильность ввода."
+      },
+      "error": {
+        "title": "Ошибка",
+        "description": "Что-то пошло не так. Попробуйте позже."
+      },
+      "success": {
+        "title": "Сообщение отправлено",
+        "description": "Я свяжусь с вами в ближайшее время."
+      }
+    }
+  },
+  "seo": {
+    "title": "Ivgam | Артём Галай",
+    "description": "Портфолио Артёма Галая, full-stack разработчика, который создаёт production-ready сайты и веб-приложения на Next.js, React и Node.js."
+  }
 }

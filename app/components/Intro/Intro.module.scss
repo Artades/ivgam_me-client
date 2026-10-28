@@ -1,10 +1,13 @@
+@import "../../styles/mixins.scss";
+
 .intro {
-  padding: 5rem 0;
+  padding: 6rem 0 4rem;
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 28rem);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 6rem);
   background: transparent;
 
   .introContent {
@@ -25,18 +28,28 @@
 
     .introHeading {
       font-weight: 700;
-      font-size: 5.2em;
+      max-width: 58rem;
+      font-size: clamp(3rem, 8vw, 6rem);
       color: var(--color-light);
-      line-height: 1.1em;
+      line-height: 0.98;
 
       & span {
+        display: block;
         color: var(--color-accent);
       }
     }
 
+    .introRole {
+      color: var(--color-accent);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
     .introText {
       font-weight: 300;
-      max-width: 60%;
+      max-width: 48rem;
       font-size: 1.2rem;
       opacity: 0;
       transform: translateY(30px);
@@ -53,68 +66,77 @@
     .introBtnGroup {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 1rem;
     }
   }
 
-  .introImage {
-    width: clamp(15rem, 30vw, 35rem);
-    aspect-ratio: 9 / 10;
-    position: relative;
-    padding: clamp(0.5rem, 1vw, 1rem);
-    border: 0.2rem outset var(--color-accent);
-    border-radius: clamp(1.5rem, 4vw, 3rem);
-    overflow: hidden;
-    margin-bottom: 0;
+  .introStats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    opacity: 0;
+  }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      border-radius: inherit;
+  .introStat {
+    @include cardStyle();
+    padding: var(--spacing-lg);
+    cursor: default;
+
+    strong {
+      display: block;
+      color: var(--color-light);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1;
+    }
+
+    span {
+      display: block;
+      margin-top: var(--spacing-sm);
+      color: var(--color-light-darken);
+      font-size: var(--fz-sm);
+      line-height: 1.4;
     }
   }
 
   @media (max-width: 1200px) {
-    padding: 3rem 0;
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding: 4rem 0 3rem;
+
     .introContent {
       .introHeading {
-        font-size: 3.5rem;
-        max-width: 70%;
+        max-width: 100%;
       }
 
       .introText {
         font-size: 1.1rem;
-        max-width: 80%;
+        max-width: 90%;
       }
+    }
+
+    .introStats {
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   @media (max-width: 768px) {
     padding: 2.5rem 0;
-    flex-direction: column-reverse;
 
     .introContent {
-      align-items: center;
-      text-align: center;
-
       .introHeading {
-        font-size: 3rem;
-        max-width: 80%;
+        max-width: 100%;
       }
 
       .introText {
         font-size: 1.2rem;
-        max-width: 90%;
+        max-width: 100%;
       }
     }
 
-    .introImage {
-      width: 100%;
-      height: 25rem;
-      max-width: 35rem;
-      margin-bottom: 2rem;
+    .introStats {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -123,7 +145,6 @@
       gap: 2rem;
 
       .introHeading {
-        font-size: 2.5rem;
         max-width: 90%;
       }
 
@@ -133,14 +154,12 @@
       }
     }
 
-    .introImage {
-      max-height: 23rem;
-      max-width: 80%;
-      border-radius: 3rem;
-      padding: 0.7rem;
+    .introBtnGroup {
+      width: 100%;
 
-      img {
-        border-radius: 2rem;
+      a,
+      button {
+        width: 100%;
       }
     }
   }
@@ -159,24 +178,12 @@
         max-width: 100%;
       }
     }
-
-    .introImage {
-      max-height: 15rem;
-      max-width: 70%;
-      border-radius: 2.5rem;
-      padding: 0.5rem;
-
-      img {
-        border-radius: 1.5rem;
-      }
-    }
   }
 }
 
 @media screen and (max-width: 1000px) and (max-height: 600px) {
   .intro {
-    flex-direction: row;
-    height: auto;
+    grid-template-columns: 1fr;
     padding: 1rem 0;
 
     .introContent {
@@ -193,11 +200,8 @@
         max-width: 70%;
       }
     }
-
-    .introImage {
-      width: clamp(15rem, 30vw, 35rem);
-      aspect-ratio: 7 / 10;
-      // height: calc(100vh - 2rem);
+    .introStats {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

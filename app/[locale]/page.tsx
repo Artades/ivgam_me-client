@@ -5,8 +5,7 @@ import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import Technologies from "../components/Technologies/Technologies";
 import Contact from "../components/Contact/Contact";
-// import Testimonials from "../components/Testimonials/Testimonials";
-// import { getTestimonials } from "@/actions/testimonials";
+import Services from "../components/Services/Services";
 
 export default async function Page(props: {
   params: Promise<{ locale: Locale }>;
@@ -15,15 +14,14 @@ export default async function Page(props: {
 
   const content = await getContent(locale);
 
-  // const testimonials = await getTestimonials();
   return (
     <>
       <Intro content={content["intro"]} />
+      <Services content={content["services"]} />
       <Projects content={content["projects"]} />
-      <About content={content["about"]} />
       <Technologies content={content["technologies"]} />
+      <About content={content["about"]} />
       <Contact content={content["contact"]} />
-      {/* <Testimonials content={content["testimonials"]} testimonials={testimonials} /> */}
     </>
   );
 }

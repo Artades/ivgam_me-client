@@ -7,10 +7,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
-import Image from "next/image";
 import { getContent } from "@/utils/getContent";
 import { scrollToSection } from "@/helpers/scroll";
-import { LucideGithub } from "lucide-react";
+import { ArrowDownRight, LucideGithub } from "lucide-react";
 import Link from "next/link";
 
 interface IntroProps {
@@ -21,8 +20,8 @@ export default function Intro({ content }: IntroProps) {
   const headingRef = useRef(null);
   const textRef = useRef(null);
   const buttonRef = useRef(null);
+  const statsRef = useRef(null);
   const container = useRef(null);
-  const introImageRef = useRef(null);
 
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -34,7 +33,7 @@ export default function Intro({ content }: IntroProps) {
         gsap.set(headingRef.current, { opacity: 1, y: 30 });
         gsap.set(textRef.current, { opacity: 1, y: 0 });
         gsap.set(buttonRef.current, { opacity: 1, y: 0 });
-        gsap.set(introImageRef.current, { opacity: 1 });
+        gsap.set(statsRef.current, { opacity: 1, y: 0 });
         return;
       }
 
@@ -42,7 +41,7 @@ export default function Intro({ content }: IntroProps) {
       gsap.set(headingRef.current, { opacity: 0, y: 50 });
       gsap.set(textRef.current, { opacity: 0, y: 30 });
       gsap.set(buttonRef.current, { opacity: 0, y: 20 });
-      gsap.set(introImageRef.current, { opacity: 0, y: 20 });
+      gsap.set(statsRef.current, { opacity: 0, y: 20 });
       gsap.set(container.current, { opacity: 1 });
 
       const tl = gsap.timeline();
@@ -74,7 +73,7 @@ export default function Intro({ content }: IntroProps) {
         duration: 0.6,
         ease: "power4.out",
       });
-      tl.to(introImageRef.current, {
+      tl.to(statsRef.current, {
         opacity: 1,
         y: 0,
         duration: 0.5,
@@ -88,18 +87,23 @@ export default function Intro({ content }: IntroProps) {
     <div className={styles.intro} ref={container}>
       <div className={styles.introContent}>
         <div ref={headingLine} className={styles.introHeadingLine} />
+        <p className={styles.introRole}>{content.role}</p>
         <h1 className={styles.introHeading} ref={headingRef}>
-          {content.title.hello} <br />
+          {content.title.hello}
           <span>{content.title.artyom}</span>
         </h1>
         <p className={styles.introText} ref={textRef}>
           {content.desc}
         </p>
         <div className={styles.introBtnGroup} ref={buttonRef}>
+          <Button onClick={() => scrollToSection("projects")}>
+            {content.buttons.work}
+            <ArrowDownRight />
+          </Button>
           <Button onClick={() => scrollToSection("contact")}>
             {content.buttons.contact}
           </Button>
-          <Link href={content.buttons.git}>
+          <Link href={content.buttons.git} target="_blank">
             <Button variant={EButtonVariants.OUTLINE}>
               <LucideGithub />
               Git Hub
@@ -107,15 +111,13 @@ export default function Intro({ content }: IntroProps) {
           </Link>
         </div>
       </div>
-      <div className={styles.introImage} ref={introImageRef}>
-        <Image
-          priority
-          src="/images/me.webp"
-          alt="Artyom Galay Profile Photo"
-          width={2000}
-          height={2000}
-          quality={100}
-        />
+      <div className={styles.introStats} ref={statsRef}>
+        {Object.values(content.stats).map((stat) => (
+          <div className={styles.introStat} key={stat.label}>
+            <strong>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

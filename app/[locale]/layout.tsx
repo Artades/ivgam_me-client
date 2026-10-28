@@ -7,7 +7,6 @@ import Header from "@/app/components/Layout/Header/Header";
 import MobileMenu from "@/app/components/Layout/MobileMenu/MobileMenu";
 import { i18n, type Locale } from "../../i18n";
 import { getContent } from "@/utils/getContent";
-import InfoModal from "../components/Modals/InfoModal/InfoModal";
 import Toast from "../components/ui/Toast/Toast";
 
 const notoSans = Nunito({
@@ -73,7 +72,6 @@ export default async function RootLayout({
           <Header content={content["navigation"]} />
           <BackgroundEffect />
           <MobileMenu content={content["navigation"]} />
-          <InfoModal content={content["info"]} />
           {children}
         </Container>
         <Toast />

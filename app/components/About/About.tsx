@@ -1,20 +1,12 @@
 "use client";
 
-import React, { ReactNode, useRef } from "react";
+import React, { useRef } from "react";
 import styles from "./About.module.scss";
 import { TContent } from "@/types/content";
 import {
-  BadgeInfo,
-  Bike,
-  Dumbbell,
   FolderCodeIcon,
-  Gamepad2,
-  MountainSnow,
   Pin,
-  Telescope,
 } from "lucide-react";
-import Button from "../ui/Button/Button";
-import { useInfoModalFacade } from "@/facades/useInfoModalFacade";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import usePrefersReducedMotion from "@/hooks/ui/usePrefersReducedMotion";
@@ -23,27 +15,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 type AboutProps = TContent<"about">;
 
 const icons: Record<string, React.ElementType> = {
-  MountainSnow,
-  Bike,
-  Gamepad2,
-  Telescope,
-  Dumbbell,
   Pin,
   FolderCodeIcon,
 };
 
 const About = ({ content }: AboutProps) => {
   const prefersReducedMotion = usePrefersReducedMotion();
-  const { toggleModal } = useInfoModalFacade();
 
   const container = useRef<HTMLElement>(null);
-  const interestsRefs = useRef<HTMLDivElement[]>([]);
+  const highlightsRefs = useRef<HTMLDivElement[]>([]);
   const textRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
       if (prefersReducedMotion) {
-        gsap.set([container.current, textRef.current, ...interestsRefs.current], {
+        gsap.set([container.current, textRef.current, ...highlightsRefs.current], {
           opacity: 1,
           y: 0,
         });
@@ -54,7 +40,7 @@ const About = ({ content }: AboutProps) => {
 
 
       gsap.set(textRef.current, { opacity: 0, y: 20 });
-      interestsRefs.current.forEach((el, i) => {
+      highlightsRefs.current.forEach((el, i) => {
         gsap.set(el, { opacity: 0, y: i * 20 });
       });
 
@@ -69,7 +55,7 @@ const About = ({ content }: AboutProps) => {
 
       tl.to(textRef.current, { opacity: 1, y: 0, duration: 0.5 });
 
-      interestsRefs.current.forEach((el, i) => {
+      highlightsRefs.current.forEach((el) => {
         tl.to(el, {
           opacity: 1,
           y: 0,
@@ -85,30 +71,6 @@ const About = ({ content }: AboutProps) => {
     },
     { scope: container }
   );
-
-  const renderInterests = (): ReactNode => {
-    return Object.values(content.interests).map((interest, i) => {
-      const Icon = icons[interest.icon];
-      return (
-        <div
-          className={styles.aboutInterest}
-          key={i}
-          ref={(el) => {
-            if (el) interestsRefs.current[i] = el;
-            else delete interestsRefs.current[i];
-          }}
-        >
-          <div className={styles.aboutInterestIconWrapper}>
-            {Icon && <Icon className={styles.aboutInterestIconWrapperIcon} />}
-          </div>
-          <div>
-            <h4 className={styles.aboutInterestName}>{interest.name}</h4>
-            <p className={styles.aboutInterestValue}>{interest.value}</p>
-          </div>
-        </div>
-      );
-    });
-  };
 
   return (
     <section id="about" className={styles.about} ref={container}>
@@ -126,15 +88,33 @@ const About = ({ content }: AboutProps) => {
         </div>
 
         <div className={styles.aboutInterestsBlock}>
-          <h3 className={styles.sectionTitle}>{content.interestsHeading}</h3>
-          <div className={styles.aboutInterests}>{renderInterests()}</div>
-        </div>
+          <h3 className={styles.sectionTitle}>{content.highlightsHeading}</h3>
+          <div className={styles.aboutInterests}>
+            {Object.values(content.highlights).map((highlight, i) => {
+              const Icon = icons[highlight.icon];
 
-        <div className={styles.aboutButtons}>
-          <Button onClick={toggleModal}>
-            <BadgeInfo />
-            <span>{content["learnMoreBtn"]}</span>
-          </Button>
+              return (
+                <div
+                  className={styles.aboutInterest}
+                  key={highlight.name}
+                  ref={(el) => {
+                    if (el) highlightsRefs.current[i] = el;
+                    else delete highlightsRefs.current[i];
+                  }}
+                >
+                  <div className={styles.aboutInterestIconWrapper}>
+                    {Icon && (
+                      <Icon className={styles.aboutInterestIconWrapperIcon} />
+                    )}
+                  </div>
+                  <div>
+                    <h4 className={styles.aboutInterestName}>{highlight.name}</h4>
+                    <p className={styles.aboutInterestValue}>{highlight.value}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -16,13 +16,15 @@ import Button from "../ui/Button/Button";
 import { EButtonSizes } from "@/types/ui";
 import {
   Cog,
+  ClipboardCheck,
   FolderCodeIcon,
+  LockKeyhole,
   LucideGithub,
   LucideProjector,
   PencilLine,
   PocketKnife,
-  Salad,
   School,
+  ShieldCheck,
   Watch,
 } from "lucide-react";
 import { TContent } from "@/types/content";
@@ -39,7 +41,9 @@ const icons: Record<string, React.ElementType> = {
   Cog,
   School,
   PencilLine,
-  Salad
+  LockKeyhole,
+  ShieldCheck,
+  ClipboardCheck,
 };
 
 const Projects = ({ content }: ProjectsProps) => {
@@ -49,12 +53,14 @@ const Projects = ({ content }: ProjectsProps) => {
   const cards = useMemo(() => {
     return Object.entries(content.items).map(([key, project]) => ({
       key,
-      backgroundImage: project.image,
       name: project.name,
+      category: project.category,
       description: project.description,
       button: project.button,
       roleTitle: project.role.title,
       roleValues: project.role.values,
+      impact: project.impact,
+      stack: project.stack,
       icon: icons[project.icon],
       inProduction: project.inProduction,
       link: project.link,
@@ -168,18 +174,34 @@ const Projects = ({ content }: ProjectsProps) => {
             <div className={styles.cardBody}>
               <div className={styles.cardHeader}>
                 <card.icon />
-                <h3 className={styles.cardTitle}>{card.name}</h3>
+                <div>
+                  <span className={styles.cardCategory}>{card.category}</span>
+                  <h3 className={styles.cardTitle}>{card.name}</h3>
+                </div>
               </div>
               <p className={styles.cardDescription}>{card.description}</p>
               <div className={styles.cardRole}>
+                <span>{card.roleTitle}</span>
                 <p>{card.roleValues}</p>
               </div>
-              <Link href={card.link} target="_blank">
-                <Button size={EButtonSizes.DEFAULT}>
-                  {card.button}{" "}
-                  {card.inProduction ? <LucideProjector /> : <LucideGithub />}
+              <p className={styles.cardImpact}>{card.impact}</p>
+              <div className={styles.cardStack}>
+                {card.stack.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
+              {card.link ? (
+                <Link href={card.link} target="_blank">
+                  <Button size={EButtonSizes.DEFAULT}>
+                    {card.button}{" "}
+                    {card.inProduction ? <LucideProjector /> : <LucideGithub />}
+                  </Button>
+                </Link>
+              ) : (
+                <Button size={EButtonSizes.DEFAULT} disabled>
+                  {card.button} <LockKeyhole />
                 </Button>
-              </Link>
+              )}
             </div>
           </div>
         ))}

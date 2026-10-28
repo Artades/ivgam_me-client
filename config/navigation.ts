@@ -1,19 +1,23 @@
 export const navigation = [
   {
+    id: 1,
+    key: "services",
+  },
+  {
     id: 2,
     key: "projects",
   },
   {
-    id: 1,
+    id: 3,
     key: "about",
   },
   {
-    id: 5,
+    id: 4,
     key: "technologies",
   },
 
   {
-    id: 4,
+    id: 5,
     key: "contact",
   },
 

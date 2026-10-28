@@ -1,281 +1,393 @@
 {
-	"intro": {
-		"title": {
-			"hello": "Hola, soy ",
-			"artyom": "Artyom"
-		},
-		"desc": "Desarrollador enfocado en crear aplicaciones web avanzadas y orientadas al usuario que combinan creatividad y funcionalidad.",
-		"buttons": {
-			"git": "https://github.com/artades",
-			"contact": "Contáctame"
-		}
-	},
-	"navigation": {
-		"about": "Sobre mí",
-		"projects": "Proyectos",
-		"technologies": "Technologies",
-		"contact": "Contáctame"
-	},
-	"projects": {
-		"heading": "Experiencia",
-		"description": "Proyectos en los que he trabajado: desde pequeñas ideas hasta aplicaciones completas.",
-		"items": {
-			"st": {
-				"name": "Swiss Time",
-				"description": "Tienda online de relojes suizos con una interfaz elegante y optimización SEO.",
-				"button": "Ver proyecto",
-				"image": "/images/swisstime.webp",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Front-end, SEO"
-				},
-				"link": "https://swisstime.kz",
-				"inProduction": true,
-				"icon": "Watch"
-			},
-			"vv": {
-				"name": "Veter Vremeni",
-				"description": "Tienda de relojes de moda y accesorios con diseño moderno y SEO.",
-				"button": "Ver proyecto",
-				"image": "/images/vv.png",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Fullstack, SEO"
-				},
-				"link": "https://vetervremeni.kz",
-				"inProduction": true,
-				"icon": "PocketKnife"
-			},
-			"gf": {
-				"name": "G-Factory",
-				"description": "Tienda en línea de relojes japoneses con una interfaz de usuario fácil de usar.",
-				"button": "Ver proyecto",
-				"image": "/images/gf.avif",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Front-end, SEO"
-				},
-				"link": "https://g-factory.kz",
-				"inProduction": true,
-				"icon": "Watch"
-			},
-			"wo": {
-				"name": "Watches Outlet",
-				"description": "Tienda de relojes con descuentos, SEO y opción de vender tus relojes.",
-				"button": "Ver proyecto",
-				"image": "/images/wo.webp",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Fullstack, SEO, UX/UI"
-				},
-				"link": "https://watchesoutlet.kz",
-				"inProduction": true,
-				"icon": "Cog"
-			},
-			"albrokso": {
-				"name": "Albrokso",
-				"description": "Landing page para cursos de inglés con inscripción online y SEO.",
-				"button": "Ver proyecto",
-				"image": "/images/albrokso.png",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Fullstack, SEO, UX/UI"
-				},
-				"link": "https://albrokso.com",
-				"inProduction": true,
-				"icon": "School"
-			},
-			"ivgam-blog": {
-				"name": "Ivgam Blog",
-				"description": "Blog personal con soporte de Markdown, autenticación y CMS.",
-				"button": "Ver repo",
-				"image": "/images/ivgamblog.jpg",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Fullstack, CMS, UX/UI"
-				},
-				"link": "https://github.com/Artades/ivgam-blog-client",
-				"inProduction": false,
-				"icon": "PencilLine"
-			},
-			"green-yera": {
-				"name": "Green Yera",
-				"description": "Una landing page compacta diseñada para promover el conocimiento sobre los microgreens y sus beneficios.",
-				"button": "Ver",
-				"image": "/images/ivgamblog.jpg",
-				"role": {
-					"title": "Responsabilidades",
-					"values": "Frontend, UX/UI"
-				},
-				"link": "https://green-yera.vercel.app",
-				"inProduction": true,
-				"icon": "Salad"
-			}
-		},
-		"buttons": {
-			"showMore": "Mostrar más",
-			"hide": "Ocultar"
-		}
-	},
-	"about": {
-		"heading": "Sobre mí",
-		"description": "Desarrollador impulsado por la curiosidad y la creatividad.",
-		"text": "Soy un desarrollador full-stack con más de 1.5 años de experiencia en la creación de aplicaciones web reales. Me apasiona la arquitectura de sistemas, disfruto escribiendo código limpio y mantenible, y me encanta convertir ideas en soluciones confiables. Siempre estoy mejorando mis habilidades, ya sea a través de proyectos personales, contribuciones open-source o explorando nuevas tecnologías y herramientas.",
-		"factsHeading": "Datos rápidos",
-		"interestsHeading": "Lo que disfruto",
-		"facts": {
-			"experince": {
-				"value": "2+",
-				"name": "Años de experiencia"
-			},
-			"projects": {
-				"value": "55+",
-				"name": "Proyectos en GitHub"
-			},
-			"directions": {
-				"value": "5+",
-				"name": "Áreas tecnológicas exploradas"
-			}
-		},
-		"interests": {
-			"hiking": {
-				"value": "Pasar tiempo en la naturaleza me ayuda a recargar energías y a pensar con claridad.",
-				"name": "Senderismo",
-				"icon": "MountainSnow"
-			},
-			"cycling": {
-				"value": "Me encanta la sensación de libertad y concentración que aporta el ciclismo.",
-				"name": "Ciclismo",
-				"icon": "Bike"
-			},
-			"gaming": {
-				"value": "Los videojuegos me ayudan a relajarme y mantener la mente ágil.",
-				"name": "Videojuegos",
-				"icon": "Gamepad2"
-			},
-			"astronomy": {
-				"value": "Me fascina la inmensidad y el misterio del espacio.",
-				"name": "Astronomía",
-				"icon": "Telescope"
-			},
-			"sports": {
-				"value": "El deporte me mantiene disciplinado, con energía y equilibrado.",
-				"name": "Deporte",
-				"icon": "Dumbbell"
-			}
-		},
-		"learnMoreBtn": "Saber más"
-	},
-	"technologies": {
-		"heading": "Technologies",
-		"description": "Tools and frameworks I use regularly.",
-		"items": {
-			"react": {
-				"name": "React",
-				"icon": "Atom"
-			},
-			"nextjs": {
-				"name": "Next.js",
-				"icon": "SquareStack"
-			},
-			"typescript": {
-				"name": "TypeScript",
-				"icon": "Code2"
-			},
-			"gsap": {
-				"name": "GSAP",
-				"icon": "Sparkles"
-			}
-		}
-	},
-	"contact": {
-		"heading": "Contáctame",
-		"description": "Conectemos y creemos algo grandioso.",
-		"form": {
-			"title": "Rellena el formulario",
-			"fields": {
-				"fullName": {
-					"label": "Nombre completo",
-					"placeholder": "Juan Pérez",
-					"error": "El nombre completo es obligatorio"
-				},
-				"email": {
-					"label": "Correo electrónico",
-					"placeholder": "you@example.com",
-					"error": "Por favor, introduce un correo electrónico válido"
-				},
-				"company": {
-					"label": "Empresa",
-					"placeholder": "Walmart",
-					"error": "El nombre de la empresa es obligatorio"
-				},
-				"message": {
-					"label": "Mensaje",
-					"placeholder": "Se me ocurrió una idea...",
-					"error": "El mensaje no puede estar vacío"
-				}
-			},
-			"button": {
-				"submit": "Enviar"
-			}
-		},
-		"toast": {
-			"sending": {
-				"title": "Enviando...",
-				"description": "Por favor, espera un momento."
-			},
-			"validationError": {
-				"title": "Error de validación",
-				"description": "Por favor, revisa los datos introducidos."
-			},
-			"error": {
-				"title": "Error",
-				"description": "Algo salió mal. Inténtalo de nuevo más tarde."
-			},
-			"success": {
-				"title": "Mensaje enviado",
-				"description": "Me pondré en contacto contigo pronto."
-			}
-		}
-	},
-	"testimonials": {
-		"heading": "Testimonials",
-		"description": "What people think of me ?"
-	},
-	"info": {
-		"heading": "Info",
-		"description": "Un poco de información básica y estadísticas sobre mí",
-		"status": "Three lights are lit, but the fourth one's out",
-		"stats": {
-			"experience": {
-				"name": "Experiencia",
-				"value": "1.5 años"
-			},
-			"workStatus": {
-				"name": "Empleo",
-				"value": "Actualmente trabajando"
-			},
-			"hometown": {
-				"name": "Ciudad natal",
-				"value": "Almatý, Kazajistán"
-			},
-			"university": {
-				"name": "Universidad",
-				"value": "IITU"
-			},
-			"age": {
-				"name": "Edad",
-				"value": "20"
-			},
-			"languages": {
-				"name": "Idiomas",
-				"value": "Ruso, Inglés, Kazajo"
-			}
-		},
-		"closeBtn": "Cerrar"
-	},
-	"seo": {
-		"title": "Ivgam | Artyom Galay",
-		"description": "Bienvenido a mi portafolio, soy un desarrollador fullstack apasionado por crear soluciones web funcionales, amigables para el usuario y escalables."
-	}
+  "intro": {
+    "title": {
+      "hello": "Artyom Galay",
+      "artyom": "Desarrollador full-stack"
+    },
+    "role": "Next.js / React / Node.js",
+    "desc": "Construyo sitios web y aplicaciones listas para producción, con foco en rendimiento, SEO, arquitectura mantenible y una experiencia de usuario clara.",
+    "buttons": {
+      "git": "https://github.com/artades",
+      "work": "Ver trabajos",
+      "contact": "Contáctame"
+    },
+    "stats": {
+      "experience": {
+        "value": "2+",
+        "label": "Años creando productos web"
+      },
+      "production": {
+        "value": "6+",
+        "label": "Proyectos en producción"
+      },
+      "focus": {
+        "value": "Fullstack",
+        "label": "Frontend, backend, SEO"
+      }
+    }
+  },
+  "navigation": {
+    "services": "Servicios",
+    "projects": "Trabajo",
+    "about": "Sobre mí",
+    "technologies": "Stack",
+    "contact": "Contacto"
+  },
+  "services": {
+    "heading": "Qué hago",
+    "description": "Ayudo a convertir ideas, landing pages y tiendas online en sitios rápidos, mantenibles y listos para producción.",
+    "items": {
+      "frontend": {
+        "title": "Desarrollo frontend",
+        "description": "Interfaces responsive con React, Next.js, TypeScript, SCSS y una estructura UI basada en componentes.",
+        "icon": "LayoutTemplate"
+      },
+      "fullstack": {
+        "title": "Aplicaciones full-stack",
+        "description": "Lógica server-side, API routes, formularios, flujos CMS, autenticación y funciones con base de datos.",
+        "icon": "ServerCog"
+      },
+      "commerce": {
+        "title": "E-commerce y landing pages",
+        "description": "Catálogos, páginas de producto, formularios de contacto y páginas pensadas para claridad, conversión y SEO.",
+        "icon": "ShoppingCart"
+      },
+      "seo": {
+        "title": "SEO y rendimiento",
+        "description": "Estructura semántica, metadata, SEO técnico, implementación rápida y preparación cuidada para producción.",
+        "icon": "SearchCheck"
+      },
+      "systems": {
+        "title": "CMS y paneles",
+        "description": "Flujos de edición de contenido, dashboards y herramientas prácticas para mantener mejor los proyectos.",
+        "icon": "Workflow"
+      },
+      "quality": {
+        "title": "Soporte e iteración",
+        "description": "Mejoras en sitios existentes, corrección de problemas UX, limpieza de código y preparación de features para release.",
+        "icon": "Gauge"
+      }
+    }
+  },
+  "projects": {
+    "heading": "Trabajos seleccionados",
+    "description": "Proyectos comerciales y personales donde trabajé en frontend, funciones full-stack, SEO y entrega a producción.",
+    "items": {
+      "st": {
+        "name": "Swiss Time",
+        "category": "E-commerce",
+        "description": "Tienda online de relojes suizos con experiencia de catálogo cuidada y estructura enfocada en SEO.",
+        "button": "Ver proyecto",
+        "image": "/images/swisstime.webp",
+        "role": {
+          "title": "Rol",
+          "values": "Front-end, SEO"
+        },
+        "impact": "Trabajé en UI responsive, páginas de producto e implementación preparada para búsquedas en una tienda real.",
+        "stack": ["React", "Next.js", "SCSS", "SEO"],
+        "link": "https://swisstime.kz",
+        "inProduction": true,
+        "icon": "Watch"
+      },
+      "vv": {
+        "name": "Veter Vremeni",
+        "category": "E-commerce",
+        "description": "Tienda de relojes fashion y accesorios con páginas de producto, UI responsive y SEO.",
+        "button": "Ver proyecto",
+        "image": "/images/vv.png",
+        "role": {
+          "title": "Rol",
+          "values": "Fullstack, SEO"
+        },
+        "impact": "Entregué mejoras de frontend y backend para un proyecto retail en producción.",
+        "stack": ["Next.js", "Node.js", "SCSS", "SEO"],
+        "link": "https://vetervremeni.kz",
+        "inProduction": true,
+        "icon": "PocketKnife"
+      },
+      "gf": {
+        "name": "G-Factory",
+        "category": "E-commerce",
+        "description": "Tienda online de relojes japoneses con navegación clara y descubrimiento simple de productos.",
+        "button": "Ver proyecto",
+        "image": "/images/gf.avif",
+        "role": {
+          "title": "Rol",
+          "values": "Front-end, SEO"
+        },
+        "impact": "Trabajé en la implementación de interfaz, layouts responsive y páginas listas para SEO.",
+        "stack": ["React", "Next.js", "SCSS", "SEO"],
+        "link": "https://g-factory.kz",
+        "inProduction": true,
+        "icon": "Watch"
+      },
+      "wo": {
+        "name": "Watches Outlet",
+        "category": "E-commerce",
+        "description": "Tienda de relojes con descuento, catálogo, páginas SEO y flujo de solicitud de recompra.",
+        "button": "Ver proyecto",
+        "image": "/images/wo.webp",
+        "role": {
+          "title": "Rol",
+          "values": "Fullstack, SEO, UX/UI"
+        },
+        "impact": "Construí funciones de producción para UI, formularios y páginas de tienda enfocadas en SEO.",
+        "stack": ["Next.js", "React", "Forms", "SEO"],
+        "link": "https://watchesoutlet.kz",
+        "inProduction": true,
+        "icon": "Cog"
+      },
+      "albrokso": {
+        "name": "Albrokso",
+        "category": "Landing page",
+        "description": "Sitio de marketing para cursos de inglés con inscripción clara y base técnica SEO.",
+        "button": "Ver proyecto",
+        "image": "/images/albrokso.png",
+        "role": {
+          "title": "Rol",
+          "values": "Fullstack, SEO, UX/UI"
+        },
+        "impact": "Construí la estructura de la landing, el flujo de formulario y la UI responsive para un negocio educativo real.",
+        "stack": ["Next.js", "React", "Forms", "SEO"],
+        "link": "https://albrokso.com",
+        "inProduction": true,
+        "icon": "School"
+      },
+      "ivgam-blog": {
+        "name": "Ivgam Blog",
+        "category": "CMS / Blog",
+        "description": "Plataforma de blog personal con Markdown, autenticación y flujo de publicación tipo CMS.",
+        "button": "Ver repo",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Rol",
+          "values": "Fullstack, CMS, UX/UI"
+        },
+        "impact": "Diseñé la estructura de la aplicación e implementé funciones full-stack para gestión de contenido.",
+        "stack": ["Next.js", "Prisma", "PostgreSQL", "Auth"],
+        "link": "https://github.com/Artades/ivgam-blog-client",
+        "inProduction": false,
+        "icon": "PencilLine"
+      },
+      "ivgam-vault": {
+        "name": "Ivgam Vault",
+        "category": "CLI / Seguridad",
+        "description": "Gestor de contraseñas por línea de comandos que guarda credenciales cifradas localmente.",
+        "button": "Ver en npm",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Rol",
+          "values": "Autor, CLI, seguridad"
+        },
+        "impact": "Diseñé y publiqué un paquete npm con shell interactiva y comandos para gestionar un almacén local seguro.",
+        "stack": ["TypeScript", "Node.js", "CLI", "Cifrado"],
+        "link": "https://www.npmjs.com/package/ivgam-vault",
+        "inProduction": true,
+        "icon": "LockKeyhole"
+      },
+      "g-admin": {
+        "name": "G-Admin",
+        "category": "Panel admin interno",
+        "description": "Workspace privado para empleados de la empresa: gestión de sitios de venta, reseñas, reportes y contenido operativo.",
+        "button": "Proyecto privado",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Rol",
+          "values": "Frontend"
+        },
+        "impact": "Construí flujos frontend para equipos internos: gestión de contenido, moderación de reseñas, pantallas de reportes y operaciones admin diarias.",
+        "stack": ["React", "Next.js", "TypeScript", "Admin UI"],
+        "link": "",
+        "inProduction": true,
+        "icon": "LockKeyhole"
+      },
+      "time-app": {
+        "name": "Time App",
+        "category": "Plataforma marketplace",
+        "description": "Aplicación marketplace de gran escala para venta de relojes en Kazajistán, con flujos de producto, catálogo y negocio.",
+        "button": "Proyecto privado",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Rol",
+          "values": "Backend, DevOps, CI/CD"
+        },
+        "impact": "Trabajé en servicios backend, configuración de deploy y pipelines CI/CD para la app más grande de venta de relojes en Kazajistán.",
+        "stack": ["Node.js", "Backend", "CI/CD", "Deploy"],
+        "link": "",
+        "inProduction": true,
+        "icon": "ShieldCheck"
+      },
+      "testing-platform": {
+        "name": "Testing Platform",
+        "category": "Plataforma interna",
+        "description": "Plataforma privada para evaluar empleados de la empresa, comprobar conocimientos y seguir resultados de formación.",
+        "button": "Proyecto privado",
+        "image": "/images/ivgamblog.jpg",
+        "role": {
+          "title": "Rol",
+          "values": "Backend"
+        },
+        "impact": "Construí lógica backend para tests, procesamiento de respuestas, cálculo de resultados y flujos internos de evaluación.",
+        "stack": ["Node.js", "Backend", "API", "Business logic"],
+        "link": "",
+        "inProduction": true,
+        "icon": "ClipboardCheck"
+      }
+    },
+    "buttons": {
+      "showMore": "Mostrar más",
+      "hide": "Ocultar"
+    }
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "description": "Una nota corta sobre cómo abordo el trabajo y las tareas de producto.",
+    "text": "Soy un desarrollador full-stack de Almaty. Me gusta llevar los proyectos a un punto donde sean fáciles de usar, simples de mantener y listos para seguir creciendo. En el trabajo intento mirar más allá del código: qué necesita el usuario, qué importa para el negocio y cómo mantener la solución lo suficientemente simple para que no se convierta en un problema después.",
+    "factsHeading": "Datos rápidos",
+    "highlightsHeading": "Cómo trabajo",
+    "facts": {
+      "experince": {
+        "value": "2+",
+        "name": "Años de experiencia"
+      },
+      "projects": {
+        "value": "55+",
+        "name": "Proyectos en GitHub"
+      },
+      "directions": {
+        "value": "5+",
+        "name": "Áreas tecnológicas exploradas"
+      }
+    },
+    "highlights": {
+      "production": {
+        "value": "Pienso en lanzamiento, mantenimiento y uso real mientras la feature todavía se está construyendo.",
+        "name": "Orientado a resultados",
+        "icon": "FolderCodeIcon"
+      },
+      "architecture": {
+        "value": "Intento mantener las soluciones comprensibles, predecibles y sin complejidad innecesaria.",
+        "name": "Estructura simple",
+        "icon": "FolderCodeIcon"
+      },
+      "business": {
+        "value": "Considero no solo la interfaz, sino también cómo el proyecto ayuda a ventas, operaciones o flujos internos del equipo.",
+        "name": "Entrega con contexto",
+        "icon": "Pin"
+      },
+      "communication": {
+        "value": "Me gusta que los requisitos, restricciones y siguientes pasos sean claros para todos.",
+        "name": "Colaboración clara",
+        "icon": "Pin"
+      }
+    }
+  },
+  "technologies": {
+    "heading": "Tech Stack",
+    "description": "Tecnologías y herramientas principales que uso en frontend, backend y flujos de producción.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "Sass", "Tailwind CSS", "Zustand", "Redux"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["Node.js", "Express", "NestJS"]
+      },
+      "database": {
+        "title": "Database / ORM",
+        "items": ["PostgreSQL", "Prisma", "SQL"]
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "items": ["Docker", "CI/CD", "Deployment", "Nginx", "Ubuntu", "AWS"]
+      },
+      "tools": {
+        "title": "Herramientas",
+        "items": ["Git", "GitHub", "Figma", "Postman"]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contacto",
+    "description": "Abierto a proyectos freelance, roles frontend/full-stack y colaboración en productos web prácticos.",
+    "title": "Los mensajes directos funcionan mejor",
+    "text": "Si tienes un proyecto, una posición o una idea de colaboración, la forma más fácil de contactarme es por Telegram o LinkedIn. Normalmente respondo más rápido allí que por formularios web.",
+    "links": {
+      "telegram": {
+        "label": "Telegram",
+        "value": "@ive_got_a_migraine",
+        "href": "https://t.me/ive_got_a_migraine",
+        "icon": "Send"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Artyom Galay",
+        "href": "https://www.linkedin.com/in/artyom-galay-752629359/",
+        "icon": "Linkedin"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "Artades",
+        "href": "https://github.com/Artades",
+        "icon": "Github"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "value": "@_ive_got_a_migraine",
+        "href": "https://instagram.com/_ive_got_a_migraine",
+        "icon": "Instagram"
+      }
+    },
+    "form": {
+      "title": "Cuéntame sobre el proyecto",
+      "fields": {
+        "fullName": {
+          "label": "Nombre completo",
+          "placeholder": "Juan Pérez",
+          "error": "El nombre completo es obligatorio"
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "placeholder": "you@example.com",
+          "error": "Por favor, introduce un correo electrónico válido"
+        },
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Empresa o proyecto",
+          "error": "El nombre de la empresa es obligatorio"
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Necesito un sitio / feature / rediseño...",
+          "error": "El mensaje no puede estar vacío"
+        }
+      },
+      "button": {
+        "submit": "Enviar"
+      }
+    },
+    "toast": {
+      "sending": {
+        "title": "Enviando...",
+        "description": "Por favor, espera un momento."
+      },
+      "validationError": {
+        "title": "Error de validación",
+        "description": "Por favor, revisa los datos introducidos."
+      },
+      "error": {
+        "title": "Error",
+        "description": "Algo salió mal. Inténtalo de nuevo más tarde."
+      },
+      "success": {
+        "title": "Mensaje enviado",
+        "description": "Me pondré en contacto contigo pronto."
+      }
+    }
+  },
+  "seo": {
+    "title": "Ivgam | Artyom Galay",
+    "description": "Portafolio de Artyom Galay, desarrollador full-stack que crea sitios web y aplicaciones listas para producción con Next.js, React y Node.js."
+  }
 }
